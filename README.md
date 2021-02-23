@@ -66,3 +66,16 @@ View the repository in GitHub []()
 2) As a **Potential Parent of a player of the game** I want to;
    1) Easily **contact the author** to find out more about available tutorials.  
    2) Read a small bio to understand the author’s background.
+
+### Stakeholder Goals 
+---
+* To lead the Parental user to;
+  1) Contact Gemma using the **contact form** if user is a **potential client for language teaching**. 
+  2) To provide a free game with the potential for future development into a paid progressive learning app. 
+
+### User Requirements and Expectations 
+---
+1) Responsive design for accessibility across a range of devices.
+2) Minimal design for easy navigation.
+3) Easy to contact Gemma directly or through social media links.
+4) Ability to change language to mothertongue for instructions and Bio / About. 
