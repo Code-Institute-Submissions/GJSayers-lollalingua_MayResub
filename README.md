@@ -55,3 +55,14 @@ View the repository in GitHub []()
   2) **serve** instructions to the user about in their mother tongue.  
   3) **gain approaches via email** for language tutoring. 
 
+### User Goals 
+---
+1) As a **Potential player of the game**, I want to;
+   1) Easily **engage with and receive feedback from interaction with the game** to feel comfortable with trying to learn a new language, and be encouraged along the way.  
+   2) Easily **navigate instructions on how to play in the mother tongue**.
+   3) Keep **track of progress** through a leaderboard, on-page scoring or similar. 
+   4) **Use an avatar** so that I feel part of the game.   
+
+2) As a **Potential Parent of a player of the game** I want to;
+   1) Easily **contact the author** to find out more about available tutorials.  
+   2) Read a small bio to understand the author’s background.
