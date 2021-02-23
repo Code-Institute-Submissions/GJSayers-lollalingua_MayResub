@@ -45,3 +45,13 @@ View the repository in GitHub []()
   * Method
   
 * Credits
+
+# UX #
+---
+### Project Goals & Objectives 
+---
+* To provide a free memory game site that serves to;
+  1) **teach** the user basic language skills through memory learning.
+  2) **serve** instructions to the user about in their mother tongue.  
+  3) **gain approaches via email** for language tutoring. 
+
