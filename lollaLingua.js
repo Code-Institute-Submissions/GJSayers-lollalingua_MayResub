@@ -1,10 +1,13 @@
-h1.onmouseover 
-function wanttostudy(){
+
+
+
+
+h1.onmouseover = function () {
     if (chosenlangfr) {
-        onclick=
+       "qu'est-ce que vous voulez apprendre aujord'hui?"
         
-    } else {
-        
+    } else if (chosenlangit){ 
+        "Cosa vuoi imparare oggi?"
     }
 }
 
