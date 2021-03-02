@@ -24,6 +24,12 @@ $("#lang-button-it").click
 
 // onclick subject page choice action - click card, card flips click card 2, card flips:
 
+// ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr
+
+$('.game-card').click(function(){
+  $(this).toggleClass('flipped');
+});
+
 // if match congratulations:
 
 // if match score point:
