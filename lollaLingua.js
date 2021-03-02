@@ -11,6 +11,14 @@ $("#lang-button-it").click
     $("#french").hide(1000);
     $("#italian").show(1000);
 });
+
+// onclick subject page choice action - click card, card flips click card 2, card flips:
+
+// ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr
+
+$('.game-card').click(function(){
+  $(this).toggleClass('flipped');
+});
 });
 
 
@@ -22,13 +30,7 @@ $("#lang-button-it").click
 
 // onclick subject choice action - flip then clik through to page:
 
-// onclick subject page choice action - click card, card flips click card 2, card flips:
 
-// ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr
-
-$('.game-card').click(function(){
-  $(this).toggleClass('flipped');
-});
 
 // if match congratulations:
 
