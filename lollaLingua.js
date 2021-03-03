@@ -12,14 +12,21 @@ $("#lang-button-it").click
     $("#italian").show(1000);
 });
 
-// onclick subject page choice action - click card, card flips click card 2, card flips:
+// onclick subject page choice action - click card, card flips click card 2, card flips:  from https://medium.com/free-code-camp/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae
+const cards = document.querySelectorAll('.game-card');
 
-// ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr
+function flipCard() {
+  this.classList.toggle('flip');
+}
 
-$('.game-card').click(function(){
-  $(this).toggleClass('flipped');
-});
-});
+cards.forEach(card => card.addEventListener('click', flipCard));
+
+}
+
+
+// ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr. (deleted, re-visit page to re-instate)
+
+
 
 
 // choose avatar:
@@ -39,7 +46,4 @@ $('.game-card').click(function(){
 // if not match better luck & missed attempt score:
 
 // when all matched = well done! & display score:
-
-
-
-
+)
