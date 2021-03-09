@@ -1,19 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  background: #060AB2;
-}
 
 .welcome {
     padding: 25px;
+    text-align: justify;
     display: flexbox;
 }
 
@@ -60,13 +50,25 @@ body {
   transform: rotateY(180deg);
 }
 
+.choose-language {
+    display: sticky;
+    justify-content: center;
+    padding: 25px;
+    margin-left: 50px;
+    margin-left: 50px;
+}
+
+.btn {
+    display: sticky;
+    justify-content: center;
+    padding: 25px;
+}
+
 #lang-button-fr img {
   width: 50px;
   height: 50px;
-  border-style: hidden;
   border-radius: 50%;
-  margin: auto 5px;
-  
+  margin: 15px; 
 }
 
 #lang-button-fr img:hover {
@@ -78,9 +80,9 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: auto 5px;
-  
+  margin: 15px;
 }
+
 #lang-button-fr img:hover {
     cursor: pointer;
 }
