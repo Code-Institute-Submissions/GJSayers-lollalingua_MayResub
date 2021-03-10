@@ -32,7 +32,22 @@ if (cardsTurned > 2 && check($(".turned"))== false) {
 
 // work out if cards are a match
 
+function isPair() {
+    if 
+    // cardOne === CardTwo {
+        $(this).addClass('.matched');
+    }
+}
+
 // if match congratulations:
+
+$(".matched").function() {
+    alert ("Well Done!");
+    $(".welldone").show();
+    
+}
+
+
 
 // if match score point:
 
