@@ -8,11 +8,11 @@ let cardsTurned = 0;
 
 // when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
 
-$(".game-card").on('click', flipCards)
-function flipCards(){
+$(".game-card").click(function(){
+$(this).addClass('flip'); 
+});
 
-  $(this).toggleClass('flip'); 
-};
+
 
 //  two cards are flipped stop futher cards from being flipped and re-place deck all face down
 
