@@ -1,5 +1,5 @@
+
 $(document).ready(function() {
-$();
 // choose language:
 $("#lang-button-fr").click
 (function(){

@@ -79,3 +79,10 @@ View the repository in GitHub []()
 2) Minimal design for easy navigation.
 3) Easy to contact Gemma directly or through social media links.
 4) Ability to change language to mothertongue for instructions and Bio / About. 
+
+### Bugs
+---
+  *  Development Bug & Fixes
+  1) Problem seeing active flip cards on click even though was sure script was correct - Google dev tools errored showing 'Uncaught reference error: $ is not defined'
+   - Fix -- Add jquery reference script to Animals html file to define $ in scripts.js - this fixed the issue
+  *  Pre-Deployment Bugs & Fixes
