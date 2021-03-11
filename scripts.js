@@ -17,19 +17,19 @@ let cardOne,cardTwo;
 
 // when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
 
-if ({ 
+if (
 
-$("div .flip").first() && $(newLocal).second() (function(){
+$(".flip").first() && $(newLocal).second() (function() {
 
     $(".game-card").click(function() {
         $().off("click");
-    }
+      }
  
 //     $(".game-card").first.is($("#cat")) && $(".game-card").second.is($("#cat")) {
 //      $(this).addClass('.matched');
-)
+  
 
-} 
+
 
 // work out if cards are a match
 
@@ -75,5 +75,5 @@ $("div .flip").first() && $(newLocal).second() (function(){
 
 // when all matched = well done! & display score:
 
-});
+)}));
 })
