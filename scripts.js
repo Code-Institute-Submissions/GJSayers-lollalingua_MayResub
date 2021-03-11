@@ -11,41 +11,41 @@ let cardsTurned = 0;
 $(".game-card").on('click', flipCards)
 function flipCards(){
 
-  $(this).addClass('flip'); 
+  $(this).toggleClass('flip'); 
 };
 
 //  two cards are flipped stop futher cards from being flipped and re-place deck all face down
 
-$(".game-card").on(click,
-function() {
+//$(".game-card").on(click,
+//function() {
 
-    cardsTurned +=1 
-    $(this).toggleClass("turned");
+//    cardsTurned +=1 
+ //   $(this).toggleClass("turned");
 
-if (cardsTurned > 2 && check($(".turned"))== false) {
-    deckReset();
-}
-})
+//if (cardsTurned > 2 && check($(".turned"))== false) {
+ //   deckReset();
+//}
+//})
 
 
 
 
 // work out if cards are a match
 
-function isPair() {
-    if 
+//function isPair() {
+ //   if 
     // cardOne === CardTwo {
-        $(this).addClass('.matched');
-    }
-}
+ //       $(this).addClass('.matched');
+//    }
+// //}
 
 // if match congratulations:
 
-$(".matched").function() {
-    alert ("Well Done!");
-    $(".welldone").show();
+//$(".matched").function() {
+ //   alert ("Well Done!");
+   // $(".welldone").show();
     
-}
+//}
 
 
 
