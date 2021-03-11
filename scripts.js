@@ -11,34 +11,25 @@ $(this).addClass("flip");
 });
 //let frontCard = (".card-front");
 //let backCard = (".card-back");
-//let cardOne,cardTwo;
+let cardOne,cardTwo;
+    const newLocal = ".game-card";
 //let cardsTurned = 0;
 
 // when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
 
-//let flippedCard;
+if ({ 
 
+$("div .flip").first() && $(newLocal).second() (function(){
 
+    $(".game-card").click(function() {
+        $().off("click");
+    }
+ 
+//     $(".game-card").first.is($("#cat")) && $(".game-card").second.is($("#cat")) {
+//      $(this).addClass('.matched');
+)
 
-
-
-
-
-//  two cards are flipped stop futher cards from being flipped and re-place deck all face down
-
-//$(".game-card").on(click,
-//function() {
-
-//    cardsTurned +=1 
- //   $(this).toggleClass("turned");
-
-//if (cardsTurned > 2 && check($(".turned"))== false) {
- //   deckReset();
-//}
-//})
-
-
-
+} 
 
 // work out if cards are a match
 
@@ -48,6 +39,25 @@ $(this).addClass("flip");
  //       $(this).addClass('.matched');
 //    }
 // //}
+
+
+//  two cards are flipped, stop futher cards from being flipped and re-place deck all face down
+
+//$(".game-card").on(click,
+//function() {
+
+ //  turnedCard +=1 
+ // $(this).addClass("turned");
+
+
+
+
+
+
+
+
+
+
 
 // if match congratulations:
 
@@ -66,3 +76,4 @@ $(this).addClass("flip");
 // when all matched = well done! & display score:
 
 });
+})
