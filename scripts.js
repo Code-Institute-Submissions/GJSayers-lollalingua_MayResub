@@ -93,9 +93,16 @@ function validateCardFlip(){
 
 
 // work out if cards are a match
+let cardOne
+let cardTwo 
+function isPair() {
 
-//function isPair() {
- //   if 
+    if (cardOne.dataset.value === cardTwo.dataset.value) {
+        $(".game-card").addClass(".matched");
+        
+    }
+}
+ 
     // cardOne === CardTwo {
  //       $(this).addClass('.matched');
 //    }
