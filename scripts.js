@@ -16,24 +16,14 @@ function startGame(){
 }
 
 function shuffleDeck() {
-   // const gameCards = Array.from(document.getElementsByClassName(".game-card"));
     $(".game-card").each(function() {
         let shuffledDeck = Math.floor(Math.random()* 21);
         console.log(shuffledDeck);
         console.log(this.style.order);    
      this.style.order = shuffledDeck;
-      
-
-    },)
-
- 
-}
+    },)   
+  }
 },)
- //   })
-//for (let i = 0; i < gameCards.length; i++) {
- //    let shuffledDeck = Math.floor(Math.random()*(gameCards.length - 1) + 1);
- //    gameCards.style.order = shuffledDeck;
-// }
 
 validateCardFlip();
 
@@ -42,13 +32,24 @@ validateCardFlip();
 // 0 or 1 cards are already flipped
 // not all pairs have already been matched 
 // the card has not already been matched
-function validateCardFlip(gameCard){
+function validateCardFlip(){
+
     if 
-        (!$(this).hasClass("flip") && !$(this).hasClass(".matched"));
-    
-$(".game-card").on("click",function(){
-$(this).addClass("flip"); 
-})}
+        (!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched")) {
+
+            $(".game-card").on("click",function(){
+                $(this).addClass("flip"); 
+                });
+            }
+        }    
+        console.log(validateCardFlip);      
+    //    else {
+          
+    //($(this).click(function() {
+    //      $().off("click"))
+   // }
+
+
 
 //let frontCard = (".card-front");
 //let backCard = (".card-back");
