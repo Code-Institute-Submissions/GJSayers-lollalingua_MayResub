@@ -4,9 +4,10 @@ $(document).ready(function(){
 
 
 
-var gameCards = (".game-card");
+var gameCards = Array.from(document.getElementsByClassName(".game-card"));
 
-$(".game-card").on("click",function(){
+// when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
+$(".game-card").each.on("click",function(){
 $(this).addClass("flip"); 
 });
 //let frontCard = (".card-front");
@@ -15,15 +16,40 @@ let cardOne,cardTwo;
     const newLocal = ".game-card";
 //let cardsTurned = 0;
 
+
+
+
+
+
+
+//    $(".game-card").click(function() {
+//        $().off("click");
+ //     }
+
+      // code option;
+    //  var gameCards = (".game-card");
+
+//$(".game-card").on("click",function(){
+//$(this).addClass("flip"); 
+//});
+//let frontCard = (".card-front");
+//let backCard = (".card-back");
+//let flippedCard= $(".game-card").hasClass("flip")
+//let secondCard= flippedCard*2;
+ //   const  newLocal = ".game-card";
+//let cardsTurned = 0;
+
 // when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
 
-if (
+//if 
+//  (secondCard=2,
 
-$(".flip").first() && $(newLocal).second() (function() {
-
-    $(".game-card").click(function() {
-        $().off("click");
-      }
+//    $(".game-card").click(function() {
+//        $().off("click");
+   
+//       $(".game-card").removeClass("flip");
+//      })
+ 
  
 //     $(".game-card").first.is($("#cat")) && $(".game-card").second.is($("#cat")) {
 //      $(this).addClass('.matched');
