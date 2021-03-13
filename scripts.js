@@ -10,10 +10,24 @@ startGame();
 
 function startGame(){
     shuffleDeck();
-    // startTimer
+    countdownTimer();
     // startClickCounter
     // startPairCounter
 }
+
+function countdownTimer(){
+
+    let secondsLeft = 60;
+    setInterval(function(){
+        if (secondsLeft <= 0) {
+            clearInterval(secondsLeft = 0);
+            $('#timer').html("<h3>Time's Up!</h3>");
+        } 
+            $('#time').text(secondsLeft);
+            secondsLeft -=1
+        },  1000);
+    } 
+
 
 function shuffleDeck() {
     $(".game-card").each(function() {
