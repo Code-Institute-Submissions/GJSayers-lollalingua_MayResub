@@ -13,6 +13,7 @@ function startGame(){
     countdownTimer();
     // startClickCounter
     // startPairCounter
+    // addClicks
 }
 
 function countdownTimer(){
@@ -49,7 +50,7 @@ validateCardFlip();
 function validateCardFlip(){
 
     if 
-        (!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched")) {
+      (!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched")) {
 
             $(".game-card").on("click",function(){
                 $(this).addClass("flip"); 
@@ -62,57 +63,29 @@ function validateCardFlip(){
         $().off("click")
     })
     )}
-    
 
+    let flippedCards = [];
 
+  function flippedCard() {
+      flippedCards.push(this);
+      var cardslength = flippedCards.length;
+      if (cardslength === 2) {
+          addClicks();
+          if(cardslength[0].type === cardslength[1].type) {
+              isPair();
+          } else {
+              isNotPair();
+          }
 
+      }
+  } console.log(flippedCards.length);
 
-
-//let frontCard = (".card-front");
-//let backCard = (".card-back");
-//let cardOne,cardTwo;
- //   const newLocal = ".game-card";
-//let cardsTurned = 0;
-
-//    $(".game-card").click(function() {
-//        $().off("click");
- //     }
-
-      // code option;
-    //  var gameCards = (".game-card");
-
-//$(".game-card").on("click",function(){
-//$(this).addClass("flip"); 
-//});
-//let frontCard = (".card-front");
-//let backCard = (".card-back");
-//let flippedCard= $(".game-card").hasClass("flip")
-//let secondCard= flippedCard*2;
- //   const  newLocal = ".game-card";
-//let cardsTurned = 0;
-
-// when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
-
-//if 
-//  (secondCard=2,
-
-//    $(".game-card").click(function() {
-//        $().off("click");
-   
-//       $(".game-card").removeClass("flip");
-//      })
- 
- 
-//     $(".game-card").first.is($("#cat")) && $(".game-card").second.is($("#cat")) {
-//      $(this).addClass('.matched');
-  
-
- let flippedCards = [];
+// let flippedCards = [];
 
 // work out if cards are a match
-let flippedCard = $(".game-card").hasClass((".flip"));
-let pushedCard = flippedCards.push(flippedCard.dataset);
-console.log(flippedCards,[]);
+////let flippedCard = $(".game-card").hasClass((".flip"));
+////let pushedCard = flippedCards.push(flippedCard.dataset);
+//console.log(flippedCards,[]);
 //let checkPair = 
 //let cardOne = flippedCard.length
 //let cardTwo = cardOne
