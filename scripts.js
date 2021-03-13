@@ -57,11 +57,14 @@ function validateCardFlip(){
             }
         }    
         console.log(validateCardFlip);      
-    //    else {
-          
-    //($(this).click(function() {
-    //      $().off("click"))
-   // }
+    {        
+    ($(this).click(function() {
+        $().off("click")
+    })
+    )}
+    
+
+
 
 
 
@@ -104,19 +107,25 @@ function validateCardFlip(){
 //      $(this).addClass('.matched');
   
 
-
+ let flippedCards = [];
 
 // work out if cards are a match
-let cardOne
-let cardTwo 
-function isPair() {
+let flippedCard = $(".game-card").hasClass((".flip"));
+let pushedCard = flippedCards.push(flippedCard.dataset);
+console.log(flippedCards,[]);
+//let checkPair = 
+//let cardOne = flippedCard.length
+//let cardTwo = cardOne
+//function isPair() {
 
-    if (cardOne.dataset.value === cardTwo.dataset.value) {
-        $(".game-card").addClass(".matched");
+//    if (cardOne.dataset.value === cardTwo.dataset.value) {
+//        $(".game-card").addClass(".matched");
         
-    }
-}
- 
+//    }
+//  }
+//};
+
+
     // cardOne === CardTwo {
  //       $(this).addClass('.matched');
 //    }
