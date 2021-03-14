@@ -8,9 +8,15 @@
   
 }
 body {
-  background-image: url("/assets/terrazzo-background-smaller.png");
+  background-image: url("/assets/terrazzo-background-smaller-web.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.body-block {
+    background-color: rgba(240, 240, 240, 0.5);
+    margin 25px:
+    
 }
 .welcome {
     padding: 25px;
