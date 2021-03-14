@@ -7,8 +7,9 @@
 }
 .welcome {
     padding: 25px;
-    text-align: justify;
-    display: flexbox;
+    text-align: center;
+    background: #E9897E;
+
 }
 
 .language-game {
