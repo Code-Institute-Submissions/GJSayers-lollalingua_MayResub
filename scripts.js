@@ -47,71 +47,66 @@ validateCardFlip();
 // 0 or 1 cards are already flipped
 // not all pairs have already been matched 
 // the card has not already been matched
+
 function validateCardFlip(){
-
+        let secondsLeft;
+        let flippedCards = [];
     if 
-      (!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched")) {
-
+    (((!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
             $(".game-card").on("click",function(){
                 $(this).addClass("flip"); 
+                flippedCards.push($(".game-card").hasClass(".flip"));
+                console.log(flippedCards.length);
                 });
-            }
-        }    
-        console.log(validateCardFlip);      
-    {        
-    ($(this).click(function() {
-        $().off("click")
-    })
-    )}
 
-    let flippedCards = [];
+               
+            }  if ((($(this).hasClass(".flip") ||
+             $(this).hasClass(".matched"))) || (secondsLeft < 1));
+            {        
+  
+        $(this).click(function() {
+          $(".flip").off("click");
+          $(".matched").off("click");
+          $(".matched").off("click");
+        });
+    };
+        };
+        
 
-  function flippedCard() {
-      flippedCards.push(this);
+    
+
+  function checkForMatch() {
+      let flippedCards = [];
+      let cardOne = flippedCards[0];
+      let cardTwo = flippedCards[1];
       var cardslength = flippedCards.length;
-      if (cardslength === 2) {
-          addClicks();
-          if(cardslength[0].type === cardslength[1].type) {
-              isPair();
-          } else {
-              isNotPair();
-          }
+      console.log(flippedCards.length);
+      
+         if (cardslength === 2) {
+          (cardOne.dataset.index === cardTwo.dataset.index); {
+             $(".game-card").addClass(".matched");
+            
+          };
 
       }
-  } console.log(flippedCards.length);
+  } 
 
 // let flippedCards = [];
 
 // work out if cards are a match
 ////let flippedCard = $(".game-card").hasClass((".flip"));
-////let pushedCard = flippedCards.push(flippedCard.dataset);
+//let pushedCard = flippedCards.push(flippedCard.dataset);
 //console.log(flippedCards,[]);
 //let checkPair = 
 //let cardOne = flippedCard.length
 //let cardTwo = cardOne
 //function isPair() {
 
-//    if (cardOne.dataset.value === cardTwo.dataset.value) {
-//        $(".game-card").addClass(".matched");
-        
-//    }
-//  }
-//};
-
-
-    // cardOne === CardTwo {
- //       $(this).addClass('.matched');
-//    }
-// //}
+    
+  
 
 
 //  two cards are flipped, stop futher cards from being flipped and re-place deck all face down
-
-//$(".game-card").on(click,
-//function() {
-
- //  turnedCard +=1 
- // $(this).addClass("turned");
 
 // if match congratulations:
 
