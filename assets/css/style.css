@@ -41,16 +41,16 @@ body {
 }
 
 .language-game {
-  width: 640px;
-  height: 640px;
+  width: 640px; 
+  height: 640px; 
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   perspective: 1000px;
 }
 .game-card {
   width: calc(25% - 5px);
-  height: calc(25% - 5px);
+  height: calc(25% - 5px); 
   margin: 5px;
   position: relative;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
@@ -78,11 +78,19 @@ body {
 
 .game-card.flip {
   transform: rotateY(180deg);
+  
 }
 
 .card-front {
   transform: rotateY(180deg);
 }
+
+.card-matched {
+  transform: rotateZ(10deg);
+  transition: transform .1s;
+  transform: rotateZ(-10deg);
+  transition: transform .1s;
+} 
 
 .choose-language {
     display: sticky;
