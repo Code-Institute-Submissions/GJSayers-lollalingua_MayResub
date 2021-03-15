@@ -35,40 +35,71 @@ function shuffleDeck() {
         let shuffledDeck = Math.floor(Math.random()* 21);
         console.log(shuffledDeck);
         console.log(this.style.order);    
-     this.style.order = shuffledDeck;
+        this.style.order = shuffledDeck;
     },)   
-  }
-},)
+    }
+    },)
 
 playGame(); 
-    function playGame(){
+        
+function playGame(){
         let secondsLeft = 60;
-        let flippedCards = [];
+        const flippedCards = [];
         $(".game-card").on("click",function () {
         $(this).addClass("flip"); 
                 flippedCards.push($(".game-card").hasClass(".flip"));
                 console.log(flippedCards.length);
         });
 
-        $(".game-card").on("click",function validateCardFlip(){
-            if ((secondsLeft > 0) && (flippedCards.length = 2));
-
-            checkForMatch();
-        });
- 
-
-  function checkForMatch() {
-      let flippedCards = [];
-      let cardOne = flippedCards[0];
-      let cardTwo = flippedCards[1];
-      console.log(flippedCards.length);
-      
-         if (flippedCards.length === 2) {
-          (cardOne.dataset.indexNum === cardTwo.dataset.indexNum); {
-             $(".game-card").addClass(".matched");
+            $(".game-card").on("click",function validateCardFlip(){
             
-          
-     };
+                if ((secondsLeft > 0) && (flippedCards.length = 2)){
+
+            
+            const cardOne = flippedCards[0];
+            const cardTwo = flippedCards[1];
+            console.log(cardOne);
+            console.log(cardTwo);
+            }
+
+            checkCardsLength();
+            
+        });
+            console.log(flippedCards.length);
+        var checkCardsLength = function() {
+        if (flippedCards.length === 2) {
+
+            var disableClick = function(){
+            $(this).click(function() {
+            $(".game-card").off("click");   
+            $(".game-card").removeClass("flip");  
+          }, 2000);
+
+        }
+            
+            var checkForMatch = function() {
+                if
+                (cardOne.dataset.indexNum === cardTwo.dataset.indexNum){
+                    console.log('matching pair!');
+                }
+            } 
+
+            
+            {
+            $(".game-card").addClass("matched");  
+           
+        }
+         if (flippedCards.length !== 2) {
+            let isNotPair = true;
+            $(".game-card").removeClass("flip"); 
+            
+        } else {
+            
+        }
+        {
+            
+
+        } 
     }
 }
 }
