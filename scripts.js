@@ -60,29 +60,27 @@ function validateCardFlip(){
                 });
 
                
-            }  if ((($(this).hasClass(".flip") ||
-             $(this).hasClass(".matched"))) || (secondsLeft < 1));
-            {        
+            }  // if ((( flippedCards.length >= 2 ||
+             //$(this).hasClass(".matched"))) || (secondsLeft < 1));
+            //{        
   
-        $(this).click(function() {
-          $(".flip").off("click");
-          $(".matched").off("click");
-          $(".matched").off("click");
-        });
-    };
-        };
+        //$(this).click(function() {
+         // $(".game-card").off("click");
         
-
+       // });
+    };
+        //};
+        
+  checkForMatch();
     
 
   function checkForMatch() {
       let flippedCards = [];
       let cardOne = flippedCards[0];
       let cardTwo = flippedCards[1];
-      var cardslength = flippedCards.length;
       console.log(flippedCards.length);
       
-         if (cardslength === 2) {
+         if (flippedCards.length === 2) {
           (cardOne.dataset.index === cardTwo.dataset.index); {
              $(".game-card").addClass(".matched");
             
