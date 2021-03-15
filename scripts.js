@@ -68,30 +68,35 @@ function playGame(){
             console.log(flippedCards.length);
         var checkCardsLength = function() {
         if (flippedCards.length === 2) {
-
+            disableClick();
             var disableClick = function(){
             $(this).click(function() {
             $(".game-card").off("click");   
-            $(".game-card").removeClass("flip");  
+            $(this).removeClass("flip");  
           }, 2000);
 
         }
-            
+            checkForMatch();
             var checkForMatch = function() {
                 if
                 (cardOne.dataset.indexNum === cardTwo.dataset.indexNum){
+                    $(".flip").addClass("matched"); 
                     console.log('matching pair!');
+
+                } else {
+                   $("game-card").removeClass("flip"); 
                 }
             } 
 
             
             {
-            $(".game-card").addClass("matched");  
+             
            
         }
          if (flippedCards.length !== 2) {
             let isNotPair = true;
             $(".game-card").removeClass("flip"); 
+            console.log(isNotPair, true);
             
         } else {
             
