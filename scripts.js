@@ -53,21 +53,13 @@ validateCardFlip();
                 let secondsLeft;
                 let flippedCards = [];
                                 
-                $(".game-card").addEventListener("click",function(){
+                document.getElementsByClassName(".game-card").addEventListener("click",function(){
                 $(this).addClass("flip"); 
                 flippedCards.push($(".game-card").hasClass(".flip"));
                 console.log(flippedCards.length);
                 });
-                
-    if 
-    (((!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
 
-      $(this).click(function() {
-      $(".game-card").off("click");      
-    });
- 
-      
-  checkForMatch();
+checkForMatch();
     
 
   function checkForMatch() {
@@ -81,11 +73,21 @@ validateCardFlip();
              $(".game-card").addClass(".matched");
             
           };
+                
+    if 
+    ((($(".game-card").hasClass(".flip") || $(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
+
+       $(this).click(function() {
+       $(".game-card").off("click");      
+       });
+ 
+      
+  
 
       }
-  } 
+    } 
+  }
 }
-         }
 
 
 // let flippedCards = [];
