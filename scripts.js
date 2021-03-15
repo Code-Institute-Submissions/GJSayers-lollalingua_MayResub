@@ -40,27 +40,22 @@ function shuffleDeck() {
   }
 },)
 
-
-
-// when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
-// rules - flip card only if:
-// 0 or 1 cards are already flipped
-// not all pairs have already been matched 
-// the card has not already been matched
-validateCardFlip();  
-   
-         function validateCardFlip(){
-                let secondsLeft;
-                let flippedCards = [];
-                                
-                document.getElementsByClassName(".game-card").addEventListener("click",function(){
-                $(this).addClass("flip"); 
+playGame(); 
+    function playGame(){
+        let secondsLeft = 60;
+        let flippedCards = [];
+        $(".game-card").on("click",function () {
+        $(this).addClass("flip"); 
                 flippedCards.push($(".game-card").hasClass(".flip"));
                 console.log(flippedCards.length);
-                });
+        });
 
-checkForMatch();
-    
+        $(".game-card").on("click",function validateCardFlip(){
+            if ((secondsLeft > 0) && (flippedCards.length = 2));
+
+            checkForMatch();
+        });
+ 
 
   function checkForMatch() {
       let flippedCards = [];
@@ -69,25 +64,30 @@ checkForMatch();
       console.log(flippedCards.length);
       
          if (flippedCards.length === 2) {
-          (cardOne.dataset.index === cardTwo.dataset.index); {
+          (cardOne.dataset.indexNum === cardTwo.dataset.indexNum); {
              $(".game-card").addClass(".matched");
             
-          };
-                
-    if 
-    ((($(".game-card").hasClass(".flip") || $(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
+          
+     };
+    }
+}
+}
+    
 
-       $(this).click(function() {
-       $(".game-card").off("click");      
-       });
+                
+    //if 
+    //((($(".game-card").hasClass(".flip") || $(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
+
+     //  $(this).click(function() {
+      // $(".game-card").off("click");      
+      // });
  
       
   
 
-      }
-    } 
-  }
-}
+
+ 
+//}
 
 
 // let flippedCards = [];
