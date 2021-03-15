@@ -40,37 +40,33 @@ function shuffleDeck() {
   }
 },)
 
-validateCardFlip();
+
 
 // when clicked a card flips to hide back face (card-back) and show front face (card-front) face. 
 // rules - flip card only if:
 // 0 or 1 cards are already flipped
 // not all pairs have already been matched 
 // the card has not already been matched
-
-function validateCardFlip(){
-        let secondsLeft;
-        let flippedCards = [];
-    if 
-    (((!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
-            $(".game-card").on("click",function(){
+validateCardFlip();  
+   
+         function validateCardFlip(){
+                let secondsLeft;
+                let flippedCards = [];
+                                
+                $(".game-card").addEventListener("click",function(){
                 $(this).addClass("flip"); 
                 flippedCards.push($(".game-card").hasClass(".flip"));
                 console.log(flippedCards.length);
                 });
+                
+    if 
+    (((!$(".game-card").hasClass(".flip") || !$(".game-card").hasClass(".matched"))) && (secondsLeft > 0)); {
 
-               
-            }  // if ((( flippedCards.length >= 2 ||
-             //$(this).hasClass(".matched"))) || (secondsLeft < 1));
-            //{        
-  
-        //$(this).click(function() {
-         // $(".game-card").off("click");
-        
-       // });
-    };
-        //};
-        
+      $(this).click(function() {
+      $(".game-card").off("click");      
+    });
+ 
+      
   checkForMatch();
     
 
@@ -88,6 +84,9 @@ function validateCardFlip(){
 
       }
   } 
+}
+         }
+
 
 // let flippedCards = [];
 
