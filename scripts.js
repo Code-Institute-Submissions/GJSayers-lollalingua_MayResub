@@ -69,17 +69,17 @@ function playGame(){
         var checkCardsLength = function() {
         if (flippedCards.length === 2) {
             disableClick();
-            var disableClick = function(){
+            function disableClick (){
             $(this).click(function() {
             $(".game-card").off("click");   
-            $(this).removeClass("flip");  
-          }, 2000);
+            $(this).removeClass(".flip");  
+            })
 
         }
             checkForMatch();
-            var checkForMatch = function() {
+             function checkForMatch () {
                 if
-                (cardOne.dataset.indexNum === cardTwo.dataset.indexNum){
+                ((cardOne.dataset.indexNum) === (cardTwo.dataset.indexNum)){
                     $(".flip").addClass("matched"); 
                     console.log('matching pair!');
 
@@ -108,6 +108,7 @@ function playGame(){
     }
 }
 }
+
     
 
                 
