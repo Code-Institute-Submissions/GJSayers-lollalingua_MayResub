@@ -65,19 +65,31 @@ gameCards.forEach(gameCard => gameCard.addEventListener("click",playGame))
 
 function isPair() {
     if (cardOne.dataset.ident === cardTwo.dataset.ident) {
-        cardOne.classList.remove("flip").add("card-matched");
-        cardTwo.classList.remove("flip").add("card-matched");
+       unFlipCards();
         
         // check functionality of add class matched
     } else {
-       disableClick(); 
+       disableCardClick(); 
     }
 
-function disableClick() {
+function disableCardClick() {
         cardOne.removeEventListener("click",playGame);
         cardTwo.removeEventListener("click",playGame);
          // check functionality - change to plain js?       
                 }
+
+function unFlipCards() {
+    freezePlay = true;
+    setTimeout(() => {
+         cardOne.classList.remove("flip");
+         cardTwo.classList.remove("flip");
+         
+         freezePlay = false;
+    },1300);
+
+        
+
+}                
             };
 
 
