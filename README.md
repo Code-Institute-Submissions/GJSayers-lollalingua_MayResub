@@ -86,4 +86,7 @@ View the repository in GitHub []()
   1) Problem seeing active flip cards on click even though was sure script was correct - Google dev tools errored showing 'Uncaught reference error: $ is not defined'
    - Fix -- Add jquery reference script to Animals html file to define $ in scripts.js - this fixed the issue
   2) Issue with background size & location.  Initial size of background caused failed loading of page, before discovering it was also in the wrong location - general styling rules rather than in the body.  Researched best sizes and re-sized image to 1920 x 1080 pixels. 
+  3) problem with using jquery to try and identify a first and second card when allowing flipping.  
+  4) decided that needed a different design for the back of each different language so as not to frustrat the user. 
+  5) tried to add a match-card img class to use in js function, but two images seem to be the only possibility. 
   *  Pre-Deployment Bugs & Fixes
