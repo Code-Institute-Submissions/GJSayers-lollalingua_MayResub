@@ -80,32 +80,9 @@ function disableClick() {
                 })
             };
 }
-}
 
- checkForMatch(); 
 
-            function checkForMatch() {
-                let flippedCards = [];
-                flippedCards.push($(this).hasClass(".flip"));
-                console.log(flippedCards.length);
-                
-                var cardOne = flippedCards[0];
-                var cardTwo = flippedCards[1];
-                console.log(flippedCards.length);
-                let flippedCard = flippedCards.push($(this).hasClass(".flip"));
-                console.log(cardOne.img.class);
-                console.log(cardTwo.img.class);
-                if
-                    ((cardOne.img.class) === (cardTwo.img.class)) {
-                    $(".flip").addClass("matched");
-                    console.log(cardOne.img.class);
-                    console.log(cardTwo.img.class);
-                    console.log('matching pair!');
-
-                } else {
-                    $(this).removeClass("flip");
-                }
-            }
+        
              // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
       
    // function validateCardFlip() {
