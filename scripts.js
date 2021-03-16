@@ -57,12 +57,22 @@ function playGame() {
    } else {
        isFlippedCard = false;
        cardTwo = this;
+       isPair();
    }        
 }
 
-$(".game-card").click(function(){
-         $(".game-gard").trigger("validateCardFlip");
-});
+$(".game-card").on("click",playGame());
+
+function isPair() {
+    if (cardOne.dataset.ident === cardTwo.dataset.ident) {
+        cardOne.classList.remove("flip").add("card-matched");
+        cardTwo.classList.remove("flip").add("card-matched");
+        
+        // check functionality of add class matched
+    } else {
+        
+    }
+}
 }
              // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
       
