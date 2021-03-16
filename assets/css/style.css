@@ -48,6 +48,22 @@ body {
   flex-wrap: wrap; 
   perspective: 1000px;
 }
+.language-game-it {
+  width: 640px; 
+  height: 640px; 
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; 
+  perspective: 1000px;
+}
+.language-game-fr {
+  width: 640px; 
+  height: 640px; 
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; 
+  perspective: 1000px;
+}
 .game-card {
   width: calc(25% - 5px);
   height: calc(25% - 5px); 
@@ -65,8 +81,28 @@ body {
 }
 
 .card-front,
-.card-back,
-.card-matched {
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 0px;
+  background: #40A3A7;
+  backface-visibility: hidden;
+}
+.card-front-it,
+.card-back-it {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 0px;
+  background: #40A3A7;
+  backface-visibility: hidden;
+}
+
+.card-front-fr,
+.card-back-fr {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -82,6 +118,14 @@ body {
 }
 
 .card-front {
+  transform: rotateY(180deg);
+}
+
+.card-front-it {
+  transform: rotateY(180deg);
+}
+
+.card-front-fr {
   transform: rotateY(180deg);
 }
 
