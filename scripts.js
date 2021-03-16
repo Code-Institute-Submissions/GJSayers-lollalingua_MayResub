@@ -37,6 +37,23 @@ $(document).ready(function () {
             this.style.order = shuffledDeck;
         })
     }
+    //NEED TO SET INDIVIDUAL SHUFFLE PER COUNTRY DECK
+   // function shuffleDeckFrench() {
+   //     $(".language-game-fr").children(".game-card").each(function () {
+   //        let shuffledDeck = Math.floor(Math.random() * 21);
+   //        console.log(shuffledDeck);
+   //        console.log(this.style.order);
+   //        this.style.order = shuffledDeck;
+   //   })
+   //}
+    //function shuffleDeckItalian() {
+     //   $(".language-game-it").children(".game-card").each(function () {
+      //      let shuffledDeck = Math.floor(Math.random() * 21);
+       //     console.log(shuffledDeck);
+       ////     console.log(this.style.order);
+        //    this.style.order = shuffledDeck;
+       // })
+    //}
 })
 
 // global variables 
@@ -65,11 +82,12 @@ gameCards.forEach(gameCard => gameCard.addEventListener("click",playGame))
 
 function isPair() {
     if (cardOne.dataset.ident === cardTwo.dataset.ident) {
-       unFlipCards();
+        disableCardClick();
+        return;
         
         // check functionality of add class matched
     } else {
-       disableCardClick(); 
+        unFlipCards();
     }
 
 function disableCardClick() {
@@ -86,11 +104,12 @@ function unFlipCards() {
          
          freezePlay = false;
     },1300);
-
+};
+}
         
 
-}                
-            };
+               
+          
 
 
 
