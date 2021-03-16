@@ -89,4 +89,5 @@ View the repository in GitHub []()
   3) problem with using jquery to try and identify a first and second card when allowing flipping.  
   4) decided that needed a different design for the back of each different language so as not to frustrat the user. 
   5) tried to add a match-card img class to use in js function, but two images seem to be the only possibility. 
+  6) issue with hidden non-uniform card in the English card container set. 
   *  Pre-Deployment Bugs & Fixes
