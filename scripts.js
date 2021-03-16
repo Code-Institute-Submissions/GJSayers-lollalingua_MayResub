@@ -70,41 +70,19 @@ function isPair() {
         
         // check functionality of add class matched
     } else {
-        
+       disableClick(); 
     }
-}
-}
-             // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
-      
-    function validateCardFlip() {
-        this.flippedCards = [];
-        flippedCards.push($(this).hasClass(".flip"));
-        console.log(flippedCards.length);
 
-        if ((secondsLeft > 0) && (flippedCards.length = 2)) {
-            
-            checkCardsLength();
-        }
-    } 
-        
-             // checks how many cards have been flipped
-    function checkCardsLength() {
-        console.log(flippedCards.length);{
-        if (flippedCards.length === 2) {
-            disableClick(); };
-        }
-        };
-            // prevents further cards from being turned and returns unmatched pairs to facedown position
-            
-    function disableClick() {
-        $(this).click(function () {
-                $(".game-card").off("click");
-                $(this).removeClass(".flip");
+function disableClick() {
+        $(this).on("click",function playGame() {
+                $(this).off("click");
+         // check functionality - change to plain js?       
                 })
             };
-        
-            // checks if the two flipped cards are a matching pair
-            checkForMatch(); 
+}
+}
+
+ checkForMatch(); 
 
             function checkForMatch() {
                 let flippedCards = [];
@@ -128,6 +106,32 @@ function isPair() {
                     $(this).removeClass("flip");
                 }
             }
+             // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
+      
+   // function validateCardFlip() {
+   //     this.flippedCards = [];
+    //    flippedCards.push($(this).hasClass(".flip"));
+     //   console.log(flippedCards.length);
+
+     //   if ((secondsLeft > 0) && (flippedCards.length = 2)) {
+            
+    //        checkCardsLength();
+     //   }
+    //} 
+        
+             // checks how many cards have been flipped
+   // function checkCardsLength() {
+    //    console.log(flippedCards.length);{
+    //    if (flippedCards.length === 2) {
+     //       disableClick(); };
+     //   }
+     //   };
+            // prevents further cards from being turned and returns unmatched pairs to facedown position
+            
+    
+        
+            // checks if the two flipped cards are a matching pair
+           
            // if (flippedCards.length !== 2) {
            //     let isNotPair = true;
            //     $(this).removeClass("flip");
