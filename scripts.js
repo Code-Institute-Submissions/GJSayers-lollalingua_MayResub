@@ -61,7 +61,7 @@ function playGame() {
    }        
 }
 
-$(".game-card").on("click",playGame());
+gameCards.forEach(gameCard => gameCard.addEventListener("click",playGame))
 
 function isPair() {
     if (cardOne.dataset.ident === cardTwo.dataset.ident) {
@@ -74,12 +74,12 @@ function isPair() {
     }
 
 function disableClick() {
-        $(this).on("click",function playGame() {
-                $(this).off("click");
+        cardOne.removeEventListener("click",playGame);
+        cardTwo.removeEventListener("click",playGame);
          // check functionality - change to plain js?       
-                })
+                }
             };
-}
+
 
 
         
