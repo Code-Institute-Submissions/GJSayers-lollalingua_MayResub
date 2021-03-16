@@ -9,8 +9,12 @@ $("#lang-button-fr").click
 $("#lang-button-it").click
 (function(){
     $("#french").hide(1000);
+    $(".language-game-fr").hide(1000);
     $("#italian").show(1000);
+    $(".language-game-it").show(1000);
+    
 });
+
 
 
 
