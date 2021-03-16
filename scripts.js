@@ -46,12 +46,19 @@ let freezePlay = false; // to reference during checking function to ensure not t
 let cardOne,cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
 
 function playGame() {
-    let secondsLeft = 60;
-    $(".game-card").on("click", function () {
+    
+   if (freezePlay) return;
+   if (this === cardOne) return;
         $(this).addClass("flip");
-        
-        
-})
+
+   if (!isFlippedCard) {
+     isFlippedCard = true;
+     cardOne = this;
+   } else {
+       isFlippedCard = false;
+       cardTwo = this;
+   }        
+}
 
 $(".game-card").click(function(){
          $(".game-gard").trigger("validateCardFlip");
