@@ -28,7 +28,7 @@ $(document).ready(function () {
         }, 1000);
     }
 
-
+    // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs ***works**
     function shuffleDeck() {
         $(".game-card").each(function () {
             let shuffledDeck = Math.floor(Math.random() * 21);
@@ -39,7 +39,11 @@ $(document).ready(function () {
     }
 })
 
-playGame();
+// global variables 
+const gameCards = document.querySelectorAll(".game-card"); //allows access to call and edit game-cards throughout the game
+let isFlippedCard = false; // to identify which cards are turned 
+let freezePlay = false; // to reference during checking function to ensure not too many cards are turned or checked at once
+let cardOne,cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
 
 function playGame() {
     let secondsLeft = 60;
@@ -50,13 +54,14 @@ function playGame() {
 })
 
 $(".game-card").click(function(){
-         $(".flip").trigger("validateCardFlip");
+         $(".game-gard").trigger("validateCardFlip");
 });
 }
              // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
       
     function validateCardFlip() {
         this.flippedCards = [];
+        flippedCards.push($(this).hasClass(".flip"));
         console.log(flippedCards.length);
 
         if ((secondsLeft > 0) && (flippedCards.length = 2)) {
@@ -85,19 +90,21 @@ $(".game-card").click(function(){
             checkForMatch(); 
 
             function checkForMatch() {
-                this.flippedCards = [];
+                let flippedCards = [];
+                flippedCards.push($(this).hasClass(".flip"));
                 console.log(flippedCards.length);
-                this.cardOne = flippedCards[0];
-                this.cardTwo = flippedCards[1];
+                
+                var cardOne = flippedCards[0];
+                var cardTwo = flippedCards[1];
                 console.log(flippedCards.length);
-                let flippedCard = $(".game-card").hasClass((".flip"));
+                let flippedCard = flippedCards.push($(this).hasClass(".flip"));
                 console.log(cardOne.img.class);
-                console.log(this.cardTwo.img.class);
+                console.log(cardTwo.img.class);
                 if
                     ((cardOne.img.class) === (cardTwo.img.class)) {
                     $(".flip").addClass("matched");
-                    console.log(this.cardOne.img.class);
-                    console.log(this.cardTwo.img.class);
+                    console.log(cardOne.img.class);
+                    console.log(cardTwo.img.class);
                     console.log('matching pair!');
 
                 } else {
