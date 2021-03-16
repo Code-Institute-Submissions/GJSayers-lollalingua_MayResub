@@ -9,6 +9,8 @@ $(document).ready(function () {
 
     function startGame() {
         shuffleDeck();
+        shuffleDeckFrench();
+        shuffleDeckItalian();
         countdownTimer();
         // startClickCounter
         // startPairCounter
@@ -29,31 +31,31 @@ $(document).ready(function () {
     }
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs ***works**
-    function shuffleDeck() {
-        $(".game-card").each(function () {
+    function shuffleDeckEn() {
+        $(".language-game-en > game-card").each(function () {
             let shuffledDeck = Math.floor(Math.random() * 21);
             console.log(shuffledDeck);
             console.log(this.style.order);
             this.style.order = shuffledDeck;
         })
     }
-    //NEED TO SET INDIVIDUAL SHUFFLE PER COUNTRY DECK
-   // function shuffleDeckFrench() {
-   //     $(".language-game-fr").children(".game-card").each(function () {
-   //        let shuffledDeck = Math.floor(Math.random() * 21);
-   //        console.log(shuffledDeck);
-   //        console.log(this.style.order);
-   //        this.style.order = shuffledDeck;
-   //   })
-   //}
-    //function shuffleDeckItalian() {
-     //   $(".language-game-it").children(".game-card").each(function () {
-      //      let shuffledDeck = Math.floor(Math.random() * 21);
-       //     console.log(shuffledDeck);
-       ////     console.log(this.style.order);
-        //    this.style.order = shuffledDeck;
-       // })
-    //}
+    //NEED TO SET INDIVIDUAL SHUFFLE PER COUNTRY DECK - **** NOT YET WORKING ****
+   function shuffleDeckFrench() {
+       $(".language-game-fr > game-card").each(function () {
+           let shuffledDeck = Math.floor(Math.random() * 21);
+           console.log(shuffledDeck);
+          console.log(this.style.order);
+           this.style.order = shuffledDeck;
+      })
+   }
+function shuffleDeckItalian() {
+       $(".language-game-it > game-card").each(function () {
+           let shuffledDeck = Math.floor(Math.random() * 21);
+           console.log(shuffledDeck);
+           console.log(this.style.order);
+           this.style.order = shuffledDeck;
+       })
+    }
 })
 
 // global variables 
