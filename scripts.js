@@ -40,95 +40,103 @@ $(document).ready(function () {
         })
     }
     //NEED TO SET INDIVIDUAL SHUFFLE PER COUNTRY DECK - **** NOT YET WORKING ****
-   function shuffleDeckFrench() {
-       $(".game-card-fr").each(function () {
-           let shuffleDeckFrench = Math.floor(Math.random() * 21);
-           console.log(shuffleDeckFrench);
-          console.log(this.style.order);
-           this.style.order = shuffleDeckFrench;
-      })
-   }
-function shuffleDeckItalian() {
-       $(".game-card-it").each(function () {
-           let shuffleDeckItalian = Math.floor(Math.random() * 21);
-           console.log(shuffleDeckItalian);
-           console.log(this.style.order);
-           this.style.order = shuffleDeckItalian;
-       })
+    function shuffleDeckFrench() {
+        $(".game-card-fr").each(function () {
+            let shuffleDeckFrench = Math.floor(Math.random() * 21);
+            console.log(shuffleDeckFrench);
+            console.log(this.style.order);
+            this.style.order = shuffleDeckFrench;
+        })
+    }
+    function shuffleDeckItalian() {
+        $(".game-card-it").each(function () {
+            let shuffleDeckItalian = Math.floor(Math.random() * 21);
+            console.log(shuffleDeckItalian);
+            console.log(this.style.order);
+            this.style.order = shuffleDeckItalian;
+        })
+    }
+
+
+    // global variables 
+    const gameCards = document.querySelectorAll(".game-card"); //allows access to call and edit game-cards throughout the game
+    let isFlippedCard = false; // to identify which cards are turned 
+    let freezePlay = false; // to reference during checking function to ensure not too many cards are turned or checked at once
+    let cardOne, cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
+    playGame();
+    function playGame() {
+
+        if (freezePlay) return;
+        if (this === cardOne) return;
+        $(this).addClass("flip");
+
+
+        if (!isFlippedCard) {
+            isFlippedCard = true;
+            cardOne = this;
+
+        } else {
+            isFlippedCard = false;
+            cardTwo = this;
+
+            isPair();
+        }
+        function isPair() {
+            if (cardOne.dataset.ident === cardTwo.dataset.ident) {
+                disableCardClick();
+                // check functionality of add class matched - matched score point to be added here
+            } else {
+                unFlipCards();
+            }
+        }
+
+        function disableCardClick() {
+            cardOne.removeEventListener("click", playGame);
+            cardTwo.removeEventListener("click", playGame);
+            // check functionality - changed to plain js
+
+        }
+
+        function unFlipCards() {
+            freezePlay = true;
+            setTimeout(() => {
+                cardOne.classList.remove("flip");
+                cardTwo.classList.remove("flip");
+
+                clearDeck();
+            }, 1300);
+        }
+        function clearDeck() {
+            isFlippedCard = false;
+            freezePlay = false;
+            cardOne = null;
+            cardTwo = null;
+        }
+
+        gameCards.forEach(gameCard => gameCard.addEventListener("click", playGame));
+
     }
 })
 
-// global variables 
-const gameCards = document.querySelectorAll(".game-card"); //allows access to call and edit game-cards throughout the game
-let isFlippedCard = false; // to identify which cards are turned 
-let freezePlay = false; // to reference during checking function to ensure not too many cards are turned or checked at once
-let cardOne,cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
-
-function playGame() {
-    
-   if (freezePlay) return;
-   if (this === cardOne) return;
-        $(this).addClass("flip");
-
-   if (!isFlippedCard) {
-     isFlippedCard = true;
-     cardOne = this;
-   } else {
-       isFlippedCard = false;
-       cardTwo = this;
-       isPair();
-   }        
-}
-
-gameCards.forEach(gameCard => gameCard.addEventListener("click",playGame))
-
-function isPair() {
-    if (cardOne.dataset.ident === cardTwo.dataset.ident) {
-        disableCardClick();
-        return;
-        
-        // check functionality of add class matched
-    } else {
-        unFlipCards();
-    }
-
-function disableCardClick() {
-        cardOne.removeEventListener("click",playGame);
-        cardTwo.removeEventListener("click",playGame);
-         // check functionality - change to plain js?       
-                }
-
-function unFlipCards() {
-    freezePlay = true;
-    setTimeout(() => {
-         cardOne.classList.remove("flip");
-         cardTwo.classList.remove("flip");
-         
-         freezePlay = false;
-    },1300);
-};
-}
-        
-
-               
-          
 
 
 
-        
+
+
+
              // works out if it is a relevant time in the card to allow a card to be clicked to face up (to add class flip) ---**logic looks wrong, check**!!
-      
+
    // function validateCardFlip() {
    //     this.flippedCards = [];
     //    flippedCards.push($(this).hasClass(".flip"));
      //   console.log(flippedCards.length);
 
      //   if ((secondsLeft > 0) && (flippedCards.length = 2)) {
-            
+
     //        checkCardsLength();
      //   }
     //} 
-        
+
              // checks how many cards have been flipped
    // function checkCardsLength() {
     //    console.log(flippedCards.length);{
@@ -137,18 +145,18 @@ function unFlipCards() {
      //   }
      //   };
             // prevents further cards from being turned and returns unmatched pairs to facedown position
-            
-    
-        
+
+
+
             // checks if the two flipped cards are a matching pair
-           
+
            // if (flippedCards.length !== 2) {
            //     let isNotPair = true;
            //     $(this).removeClass("flip");
            //    console.log(isNotPair, true);
-            
-        
-    
+
+
+
 
 
 
