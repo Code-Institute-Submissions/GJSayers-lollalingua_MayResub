@@ -63,11 +63,14 @@ $(document).ready(function () {
     let isFlippedCard = false; // to identify which cards are turned 
     let freezePlay = false; // to reference during checking function to ensure not too many cards are turned or checked at once
     let cardOne, cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
+    var matchedPairs = [];
+    var matchedPair = 0;
+
     playGame();
     function playGame() {
 
-        if (freezePlay) return;
-        if (this === cardOne) return;
+        //if (!freezePlay) return;
+       //
         $(this).addClass("flip");
 
 
@@ -78,11 +81,18 @@ $(document).ready(function () {
         } else {
             isFlippedCard = false;
             cardTwo = this;
+            console.log(cardOne);
+            console.log(cardTwo);
 
             isPair();
         }
+
+
         function isPair() {
             if (cardOne.dataset.ident === cardTwo.dataset.ident) {
+                matchedPair = matchedPair + 1;
+                matchedPairs.push.matchedPair.value;
+                console.log(matchedPairs.value);
                 disableCardClick();
                 // check functionality of add class matched - matched score point to be added here
             } else {
@@ -98,7 +108,7 @@ $(document).ready(function () {
         }
 
         function unFlipCards() {
-            freezePlay = true;
+            //freezePlay = true;
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
