@@ -5,6 +5,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Paytone One', sans-serif;
+  color: #2B3D4B;
+  
   
 }
 
@@ -142,6 +144,17 @@ body {
     padding: 25px;
     margin-left: 50px;
     margin-left: 50px;
+}
+
+.choose-subject {
+    color: ;
+}
+
+.choose-subject-card {
+  padding: 5%;
+  position: relative;
+  border-radius: 0px;
+  background: #40A3A7;
 }
 
 .btn.action-button {
