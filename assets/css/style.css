@@ -147,7 +147,8 @@ body {
 }
 
 .choose-subject {
-    color: ;
+    justify-content: center;
+    text-align: center;
 }
 
 .choose-subject-card {
