@@ -4,7 +4,9 @@ $(document).ready(function() {
 $("#lang-button-fr").click
 (function(){
     $("#italian").hide(1000);
+    $(".language-game-it").hide(1000);
     $("#french").show(1000);
+    $(".language-game-fr").show(1000);
 });
 $("#lang-button-it").click
 (function(){
@@ -12,6 +14,7 @@ $("#lang-button-it").click
     $(".language-game-fr").hide(1000);
     $("#italian").show(1000);
     $(".language-game-it").show(1000);
+    
     
 });
 
