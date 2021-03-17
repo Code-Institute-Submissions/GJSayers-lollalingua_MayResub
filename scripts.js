@@ -8,7 +8,7 @@ $(document).ready(function () {
     startGame();
 
     function startGame() {
-        shuffleDeck();
+        shuffleDeckEn();
         shuffleDeckFrench();
         shuffleDeckItalian();
         countdownTimer();
