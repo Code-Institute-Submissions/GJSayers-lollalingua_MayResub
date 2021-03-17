@@ -32,28 +32,28 @@ $(document).ready(function () {
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs ***works**
     function shuffleDeckEn() {
-        $(".language-game-en > game-card").each(function () {
-            let shuffledDeck = Math.floor(Math.random() * 21);
-            console.log(shuffledDeck);
+        $(".game-card-en").each(function () {
+            let shuffledDeckEn = Math.floor(Math.random() * 21);
+            console.log(shuffledDeckEn);
             console.log(this.style.order);
-            this.style.order = shuffledDeck;
+            this.style.order = shuffledDeckEn;
         })
     }
     //NEED TO SET INDIVIDUAL SHUFFLE PER COUNTRY DECK - **** NOT YET WORKING ****
    function shuffleDeckFrench() {
-       $(".language-game-fr > game-card").each(function () {
-           let shuffledDeck = Math.floor(Math.random() * 21);
-           console.log(shuffledDeck);
+       $(".game-card-fr").each(function () {
+           let shuffleDeckFrench = Math.floor(Math.random() * 21);
+           console.log(shuffleDeckFrench);
           console.log(this.style.order);
-           this.style.order = shuffledDeck;
+           this.style.order = shuffleDeckFrench;
       })
    }
 function shuffleDeckItalian() {
-       $(".language-game-it > game-card").each(function () {
-           let shuffledDeck = Math.floor(Math.random() * 21);
-           console.log(shuffledDeck);
+       $(".game-card-it").each(function () {
+           let shuffleDeckItalian = Math.floor(Math.random() * 21);
+           console.log(shuffleDeckItalian);
            console.log(this.style.order);
-           this.style.order = shuffledDeck;
+           this.style.order = shuffleDeckItalian;
        })
     }
 })
