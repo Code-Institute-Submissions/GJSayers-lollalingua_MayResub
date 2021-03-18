@@ -93,7 +93,7 @@ $(document).ready(function () {
                 $(this).addClass("matched");
                 matchedPairs.push($(".matched"));
 
-                console.log(matchedPairs);
+                console.log(matchedPairs.length);
                 disableCardClick();
                 // check functionality of add class matched - matched score point to be added here
             } else {
