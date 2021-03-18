@@ -36,7 +36,8 @@ header {
     background-color: #E9897E;
 }
 body {
-  background-image: url("/assets/terrazzo-background-smaller-web.png");
+  /*background-image: url("/assets/terrazzo-background-smaller-web.png");*/
+  background-color: #2B3D4B;
   background-size: cover;
   background-repeat: no-repeat;
 }
