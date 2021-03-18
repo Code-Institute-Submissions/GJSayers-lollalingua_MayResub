@@ -72,17 +72,11 @@ $(document).ready(function () {
         if (freezePlay) return;
         if (this === cardOne) return;
         $(this).addClass("flip");
-       
-        //
-        
-        
-
 
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
             
-
         } else {
             isFlippedCard = false;
             cardTwo = this;
@@ -129,10 +123,9 @@ $(document).ready(function () {
             cardOne = null;
             cardTwo = null;
         }
-
-       
-
     }
+
+    //fucntion push scores to score board & add star per matched page. 
 })
 
 
