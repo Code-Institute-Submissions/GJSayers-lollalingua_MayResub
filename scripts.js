@@ -90,7 +90,8 @@ $(document).ready(function () {
 
         function isPair() {
             if (cardOne.dataset.ident === cardTwo.dataset.ident) {
-                $(this).addClass("matched");
+                cardOne.classList.add("matched");
+                cardTwo.classList.add("matched");
                 matchedPairs.push($(".matched"));
 
                 console.log(matchedPairs.length);
@@ -109,7 +110,7 @@ $(document).ready(function () {
         }
 
         function unFlipCards() {
-            //freezePlay = true;
+           // freezePlay = true;
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
