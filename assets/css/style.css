@@ -55,25 +55,31 @@ body {
 
 .language-game-en {
   width: 350px; 
-  height: 350px; 
+  height: 250px; 
   margin: auto;
   display: flex;
+  position:sticky;
+  justify-content:space-evenly;
   flex-wrap: wrap; 
   perspective: 1000px;
 }
 .language-game-it {
   width: 350px; 
-  height: 350px;
+  height: 250px; 
   margin: auto;
   display: flex;
+  position:sticky;
+  justify-content:space-evenly;
   flex-wrap: wrap; 
   perspective: 1000px;
 }
 .language-game-fr {
   width: 350px; 
-  height: 350px; 
+  height: 250px; 
   margin: auto;
   display: flex;
+  position:sticky;
+  justify-content:space-evenly;
   flex-wrap: wrap; 
   perspective: 1000px;
 }
