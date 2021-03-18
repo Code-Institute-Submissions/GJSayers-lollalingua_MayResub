@@ -79,7 +79,7 @@ body {
 }
 .game-card {
   width: calc(30% - 5px);
-  height: calc(30% - 5px); 
+  height: calc(45% - 5px); 
   margin: 5px;
   position: relative;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
@@ -210,5 +210,10 @@ footer {
     background-color: #2B3D4B;
     color: #40A3A7;
     justify-content: center;
+}
+
+.about.contact {
+    color: #40A3A7;
+
 }
 
