@@ -149,7 +149,7 @@ body {
   transform: rotateY(180deg);
 }
 
-.card-matched {
+.matched {
   transform: rotateZ(10deg);
   transition: transform .1s;
   transform: rotateZ(-10deg);
