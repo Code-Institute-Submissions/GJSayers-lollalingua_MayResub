@@ -209,7 +209,8 @@ body {
 footer {
     background-color: #2B3D4B;
     color: #40A3A7;
-    justify-content: center;
+    min-width:350px;
+    justify-content:space-evenly;
 }
 
 .about.contact {
