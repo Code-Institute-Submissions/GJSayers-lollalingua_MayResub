@@ -42,6 +42,8 @@ body {
   background-repeat: no-repeat;
 }
 
+/*----blocks & modals-----*/
+
 .body-block {
     position: relative;
     max-width: auto;
@@ -53,6 +55,30 @@ body {
     padding: 25px;
     text-align: center;
 }
+
+.bubble {
+    color: #2B3D4B;
+    background: #40A3A7;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 300px;
+}
+
+.bubble::after {
+    position: absolute;
+    content:"";
+    border: 20px solid transparent;
+}
+.bottom.bubble::after {
+    border-top-color:#40A3A7;
+    border-bottom: 0;
+    bottom: -20px;
+    left: 20%;
+    margin-left: -20px;
+}
+
+/*----Game sections-----*/
 
 .language-game-en {
   width: 350px; 
@@ -84,6 +110,8 @@ body {
   flex-wrap: wrap; 
   perspective: 1000px;
 }
+
+/*----Game-cards-----*/
 .game-card {
   width: calc(30% - 5px);
   height: calc(45% - 5px); 
@@ -156,6 +184,8 @@ body {
   transition: transform .1s;
 } 
 
+/*----choices-----*/
+
 .choose-language {
     display: sticky;
     justify-content: center;
@@ -175,6 +205,8 @@ body {
   border-radius: 0px;
   background: #40A3A7;
 }
+
+/*----buttons----*/
 
 .btn.action-button {
 
@@ -213,6 +245,8 @@ body {
     
 }
 
+/*----footer-----*/
+
 footer {
     background-color: #2B3D4B;
     color: #40A3A7;
@@ -222,6 +256,19 @@ footer {
 
 .about.contact {
     color: #40A3A7;
+
+}
+
+/*----avatars-----*/
+
+.avatar-1 {
+  padding: 5%;
+  position: relative;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: url("assets/lion-cat.png");
+  border-color: solid #40A3A7 4px;
 
 }
 
