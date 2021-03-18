@@ -114,7 +114,7 @@ $(document).ready(function () {
                 cardTwo.classList.remove("flip");
 
                 clearDeck();
-            }, 1300);
+            }, 1700);
         }
         function clearDeck() {
             isFlippedCard = false;
