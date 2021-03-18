@@ -19,17 +19,17 @@ body {
     background-color: #2B3D4B;
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 375px;
+    justify-content: space-evenly;
 }
 
 .welcome-section {
 
-    max-width: 375px;
+  
 }
 
 .game-section {
 
-    max-width: 375px;
+
 
 }
 
@@ -74,7 +74,8 @@ body {
     position: relative;
     padding: 20px;
     border-radius: 15px;
-    margin: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
@@ -89,7 +90,7 @@ body {
     border-bottom: 0; 
     bottom: -20px;
     left: 20%;
-    margin-left: -20px;
+    
 }
 
 .bubble-pink {
@@ -98,7 +99,8 @@ body {
     position: relative;
     padding: 20px;
     border-radius: 15px;
-    margin: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
@@ -113,12 +115,13 @@ body {
     border-bottom: 0;
     bottom: -20px;
     left: 80%;
-    margin-left: -20px;
+    
 }
 /*----Game sections-----*/
-
+ /* width: 350px; 
+  height: 250px; */
 .language-game-en {
-  width: 350px; 
+  max-width: 700px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -128,7 +131,7 @@ body {
   perspective: 1000px;
 }
 .language-game-it {
-  width: 350px; 
+  max-width: 700px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -138,7 +141,7 @@ body {
   perspective: 1000px;
 }
 .language-game-fr {
-  width: 350px; 
+  max-width: 700px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -150,14 +153,18 @@ body {
 
 /*----Game-cards-----*/
 .game-card {
-  width: calc(30% - 5px);
-  height: calc(45% - 5px); 
+  width: 50%;
+  height: 50%; 
   margin: 5px;
-  position: relative;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
+}
+.game-card:after {
+    content:"";
+    display: block;
+    padding-bottom: 100%;
 }
 
 .game-card:active {
