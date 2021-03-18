@@ -89,10 +89,11 @@ $(document).ready(function () {
 
 
         function isPair() {
-            if (cardOne.dataset.ident === cardTwo.dataset.ident) {
-                matchedPair = matchedPair + 1;
-                matchedPairs.push.matchedPair.value;
-                console.log(matchedPairs.value);
+            if (cardOne.dataset.ident.value === cardTwo.dataset.ident.value) {
+                $(this).addClass("matched");
+                matchedPairs.push($(".matched"));
+               
+                console.log(matchedPairs);
                 disableCardClick();
                 // check functionality of add class matched - matched score point to be added here
             } else {
