@@ -66,17 +66,22 @@ $(document).ready(function () {
     var matchedPairs = [];
     var matchedPair = 0;
 
-    playGame();
-    function playGame() {
-
-        //if (!freezePlay) return;
-        //
+   // playGame();
+    gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
+    function playGame(){
+        if (freezePlay) return;
+        if (this === cardOne) return;
         $(this).addClass("flip");
+       
+        //
+        
+        
 
 
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
+            
 
         } else {
             isFlippedCard = false;
@@ -110,7 +115,7 @@ $(document).ready(function () {
         }
 
         function unFlipCards() {
-           // freezePlay = true;
+            freezePlay = true;
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
@@ -125,7 +130,7 @@ $(document).ready(function () {
             cardTwo = null;
         }
 
-        gameCards.forEach(gameCard => gameCard.addEventListener("click", playGame));
+       
 
     }
 })
