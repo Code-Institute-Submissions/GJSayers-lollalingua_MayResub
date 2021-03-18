@@ -6,26 +6,41 @@
   box-sizing: border-box;
   font-family: 'Paytone One', sans-serif;
   color: #2B3D4B;
-  
-  
 }
 
-header {
+.jumbotron {
    
-    justify-content: center;
-    padding: 10px;
+   
     margin: 0px;
+    
 }
 
+body {
+    background-color: #2B3D4B;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 375px;
+}
+
+.welcome-section {
+
+    max-width: 375px;
+}
+
+.game-section {
+
+    max-width: 375px;
+
+}
 
 .logo {
-    display: block;
+    
     margin: auto;
     max-width: 300px;
    
 }
 .info {
-    display: flexbox;
+    display: inline-flexbox;
     max-width: 200px;
     min-width: fit-content;
     min-width: fit-content;
@@ -35,12 +50,9 @@ header {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
     background-color: #E9897E;
 }
-body {
-  /*background-image: url("/assets/terrazzo-background-smaller-web.png");*/
-  background-color: #2B3D4B;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+
+
+
 
 /*----blocks & modals-----*/
 
@@ -62,7 +74,7 @@ body {
     position: relative;
     padding: 20px;
     border-radius: 15px;
-    margin: 5%;
+    margin: 10%;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
@@ -74,30 +86,29 @@ body {
 }
 .bottom.bubble::after {
     border-top-color:#40A3A7;
-    border-bottom: 0;
-    
+    border-bottom: 0; 
     bottom: -20px;
     left: 20%;
     margin-left: -20px;
 }
 
-.bubble-2 {
+.bubble-pink {
     color: #2B3D4B;
     background: #E9897E;
     position: relative;
     padding: 20px;
     border-radius: 15px;
-    margin: 5%;
+    margin: 10%;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
 
-.bubble-2::after {
+.bubble-pink::after {
     position: absolute;
     content:"";
     border: 20px solid transparent;
 }
-.bottom2.bubble-2::after {
+.bottom-pink.bubble-pink::after {
     border-top-color: #E9897E;
     border-bottom: 0;
     bottom: -20px;
@@ -203,12 +214,28 @@ body {
   transform: rotateY(180deg);
 }
 
-.matched {
-  transform: rotateZ(10deg);
-  transition: transform .1s;
-  transform: rotateZ(-10deg);
-  transition: transform .1s;
+.game-card.matched {
+  width: 100px;
+  height: 100px;
+  background-color: #0CB1C4;
+  transition-delay: 1000ms;
+  transition-property: animation-name;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  animation-delay: 150ms;
+  animation-duration: 2000ms;
+  animation-iteration-count: 2;
+
 } 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 /*----choices-----*/
 
@@ -294,7 +321,7 @@ footer {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
   width: 60px;
   height: 60px;
-  margin: 5%;
+  margin: 10%;
   border: solid #40A3A7 3px;
   float: left;
 
