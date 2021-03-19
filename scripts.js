@@ -9,7 +9,7 @@ $(document).ready(function () {
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
         countdownTimer(); // starts the game timer on load 
-        scoreCounter(); // initites the score counter on load
+     //   
     }
 
     // displays countdown time in the info div
@@ -65,6 +65,9 @@ $(document).ready(function () {
 
     // this funtion checks if cards are valid to play,  adds a flip class to cards that are valid, and also identifies which are first and second cards in play, then calls isPair. 
     gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
+    gameCards.forEach(gameCards => gameCards.addEventListener("touchstart", playGame));
+   
+
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
@@ -87,6 +90,7 @@ $(document).ready(function () {
                 matchedPairs.push($(".matched"));
 
                 disableCardClick();
+                scoreCounter(); // initites the score counter on load
             } else {
                 unFlipCards();
             }
@@ -121,11 +125,11 @@ $(document).ready(function () {
     //fucntion push scores to score board & add star per matched page.
     function scoreCounter() {
 
-        matchedPair = $(matchedPairs.length);
+        matchedPair = matchedPairs;
         if (matchedPair += 1) {
             $("#score").append(`
         <div class="star">
-            <img src="#">
+            <img src="assets/star-point-removebg-preview.png">
         </div>
             `);
             console.log(matchedPair);
