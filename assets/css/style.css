@@ -291,7 +291,7 @@ body {
     background: #40A3A7;
 }
 
-/*----buttons/*----
+/*----buttons----*/
 
 .btn.action-button {
 
@@ -307,30 +307,35 @@ body {
 #lang-button-fr img {
     width: 50px;
     height: 50px;
+    display: inline-flex;
     border-radius: 50%;
     margin: 15px; 
 }
 
 #lang-button-fr img:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 
 #lang-button-it img {
   width: 50px;
   height: 50px;
+  display: inline-flex;
   border-radius: 50%;
   margin: 15px;
 }
 
 #lang-button-it img:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
     
 }
+
+
+
 
 /*----footer-----*/
 
@@ -373,5 +378,6 @@ footer {
     float: left;
 
 }
+
 
 
