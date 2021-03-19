@@ -1,25 +1,31 @@
 
 $(document).ready(function () {
 
-    // speech bubbles hover diplay french / italian versions
+    $("#game-it").hide();
+    $("#game-fr").hide();
+
     // choose language:
     $("#lang-button-fr").click
         (function () {
             $("#italian").hide(1000);
-            $(".language-game-it").hide(1000);
+            $("#game-it").hide(1000);
             $("#french").show(1000);
-            $(".language-game-fr").show(1000);
+            $("#game-fr").show(1000);
+            $("#lang-button-fr").hide();
+            $("#lang-button-it").show();
+            
         });
     $()
     $("#lang-button-it").click
         (function () {
             $("#french").hide(1000);
-            $(".language-game-fr").hide(1000);
+            $("#game-fr").hide(1000);
             $("#italian").show(1000);
-            $(".language-game-it").show(1000);
-
+            $("#game-it").show(1000);
+            $("#lang-button-fr").show();
+            $("#lang-button-it").hide();
             });
-
+// speech bubbles hover diplay french / italian versions
             $("#welcome-en").hover(
                 function () {
                     $("#welcome-en").text("Andiamo a giocare a un gioco di coppie di abbinamento per imparare l'inglese");
