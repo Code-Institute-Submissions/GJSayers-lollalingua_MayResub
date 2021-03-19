@@ -4,112 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#2B3D4B"/>
+    <meta name="theme-color" content="#2B3D4B" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Lollalingua - At School</title>
 </head>
 
 <body>
-    <header>
-        <div>
+    <header class="jumbotron">
+        <div class="info">
             <span id="timer">
-                <span id="time">60</span>Seconds      
+                <span id="time"> 60</span> Seconds
+            </span>
+            <span id="points">
+                <span id="score">Score:</span> 00
             </span>
         </div>
+        <div class="col-12">
+            <div class="col-5 lang-button-fr" id="lang-button-fr" style="color: antiquewhite;">
+                <img src="assets/french-flag-removebg-preview.png" alt="french-flag"> Parlez Français?
+            </div>
+            <div class="col-5 lang-button-it" id="lang-button-it" style="color: antiquewhite;"> <img alt="italian-flag"
+                    src="assets/italy-flag-removebg-preview.png"> Parli Italiano?
+            </div>
+        </div>
     </header>
-    <section class="language-game-en">
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-index="1">
-            <img class="card-front sharpener" src="assets/at-school-images/sharpener-text-en.png" alt="sharpener-image">
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-           
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-ident="2">
-            <img class="card-front notebook" src="assets/at-school-images/notebook-text-en.png" alt="notebook" >
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-            
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-ident="3">
-            <img class="card-front paintbrush" src="assets/at-school-images/paintbrush-text-en.png" alt="paintbrush">
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-ident="4">
-            <img class="card-front rubber" src="assets/at-school-images/rubber-text-en.png" alt="rubber" >
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-            
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-ident="5">
-            <img class="card-front pen" src="assets/at-school-images/pen-text-en.png" alt="pen" >
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-            
-            <div class="game-card game-card-en col-sm-6 col-md-4" data-ident="6">
-           <img class="card-front scissors" src="assets/at-school-images/scissors-text-en.png" alt="scissors" >
-            <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
-            </div>
-            
-         
-        </section>
-    
-    <section class="language-game-it">
-         <div class="game-card game-card-it language-game-it col-sm-6 col-md-4 col-lg-2" data-ident="1" id="italian">
-            <img class="card-front-it language-game-it sharpener" src="assets/at-school-images/sharpener-text-it.png" alt="sharpener-image" >
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="2">
-            <img class="card-front-it notebook" src="assets/at-school-images/notebook-text-it.png" alt="notebook" >
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-it language-game-it col-sm-6 col-md-3" data-ident="3">
-            <img class="card-front-it paintbrush" src="assets/at-school-images/paintbrush-text-it.png" alt="paintbrush">
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="4">
-            <img class="card-front-it rubber" src="assets/at-school-images/rubber-text-it.png" alt="rubber" >
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="5">
-            <img class="card-front-it pen" src="assets/at-school-images/pen-text-it.png" alt="pen" >
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+    <section class="row-no-gutters">
+        <section class="language-game-en">
+            <div class="game-card game-card-en  col-md-4" data-ident="1">
+                <img class="card-front sharpener" src="assets/at-school-images/sharpener-text-en.png"
+                    alt="sharpener-image">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
             </div>
 
-          <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="6">
-            <img class="card-front-it scissors" src="assets/at-school-images/scissors-text-it.png" alt="scissors" >
-            <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
-            </div>
-        </section>
-    <container class="language-game-fr">
-         <div class="game-card game-card-fr col-sm-6 col-md-4" data-ident="1">
-            <img class="card-front-fr sharpener" src="assets/at-school-images/sharpener-text-fr.png" alt="sharpener-image" >
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-fr language-game-fr col-sm-6 col-md-4" data-ident="2">
-            <img class="card-front-fr notebook" src="assets/at-school-images/notebook-text-fr.png" alt="notebook" >
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-fr language-game-fr col-sm-6 col-md-3" data-ident="3">
-            <img class="card-front-fr paintbrush" src="assets/at-school-images/paintbrush-text-fr.png" alt="paintbrush">
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-fr language-game-fr col-sm-6 col-md-4" data-ident="4">
-             <img class="card-front-fr rubber" src="assets/at-school-images/rubber-text-fr.png" alt="rubber" >
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
-            </div>
-        <div class="game-card game-card-fr language-game-fr col-sm-6 col-md-4" data-ident="5">
-            <img class="card-front-fr pen" src="assets/at-school-images/pen-text-fr.png" alt="pen" >
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            <div class="game-card game-card-en  col-md-4" data-ident="2">
+                <img class="card-front notebook" src="assets/at-school-images/notebook-text-en.png" alt="notebook">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
             </div>
 
-          <div class="game-card game-card-fr language-game-fr col-sm-6 col-md-4" data-ident="6">
-            <img class="card-front-fr scissors" src="assets/at-school-images/scissors-text-fr.png" alt="scissors" >
-            <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            <div class="game-card game-card-en col-md-4" data-ident="3">
+                <img class="card-front paintbrush" src="assets/at-school-images/paintbrush-text-en.png"
+                    alt="paintbrush">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
             </div>
-    </container>
-        <footer></footer>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            <div class="game-card game-card-en  col-md-4" data-ident="4">
+                <img class="card-front rubber" src="assets/at-school-images/rubber-text-en.png" alt="rubber">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="game-card game-card-en  col-md-4" data-ident="5">
+                <img class="card-front pen" src="assets/at-school-images/pen-text-en.png" alt="pen">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="game-card game-card-en col-md-4" data-ident="6">
+                <img class="card-front scissors" src="assets/at-school-images/scissors-text-en.png" alt="scissors">
+                <img class="card-back" src="assets/british-flag.png" alt="test-card-back">
+            </div>
+        </section>
+
+        <section id="game-it" class="language-game-it">
+            <div class="game-card game-card-it language-game-it  col-md-4" data-ident="1" id="italian">
+                <img class="card-front-it language-game-it sharpener"
+                    src="assets/at-school-images/sharpener-text-it.png" alt="sharpener-image">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="2">
+                <img class="card-front-it notebook" src="assets/at-school-images/notebook-text-it.png" alt="notebook">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="3">
+                <img class="card-front-it paintbrush" src="assets/at-school-images/paintbrush-text-it.png"
+                    alt="paintbrush">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-it language-game-it col-sm-6 col-md-4" data-ident="4">
+                <img class="card-front-it rubber" src="assets/at-school-images/rubber-text-it.png" alt="rubber">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-it language-game-it col-md-4" data-ident="5">
+                <img class="card-front-it pen" src="assets/at-school-images/pen-text-it.png" alt="pen">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="game-card game-card-it language-game-it col-md-4" data-ident="6">
+                <img class="card-front-it scissors" src="assets/at-school-images/scissors-text-it.png" alt="scissors">
+                <img class="card-back-it" src="assets/italy-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+        <section id="game-fr" class="language-game-fr">
+            <div class="game-card game-card-fr  col-md-4" data-ident="1">
+                <img class="card-front-fr sharpener" src="assets/at-school-images/sharpener-text-fr.png"
+                    alt="sharpener-image">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-fr language-game-fr col-md-4" data-ident="2">
+                <img class="card-front-fr notebook" src="assets/at-school-images/notebook-text-fr.png" alt="notebook">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-fr language-game-fr col-md-4" data-ident="3">
+                <img class="card-front-fr paintbrush" src="assets/at-school-images/paintbrush-text-fr.png"
+                    alt="paintbrush">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-fr language-game-fr col-md-4" data-ident="4">
+                <img class="card-front-fr rubber" src="assets/at-school-images/rubber-text-fr.png" alt="rubber">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="game-card game-card-fr language-game-fr col-md-4" data-ident="5">
+                <img class="card-front-fr pen" src="assets/at-school-images/pen-text-fr.png" alt="pen">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="game-card game-card-fr language-game-fr col-md-4" data-ident="6">
+                <img class="card-front-fr scissors" src="assets/at-school-images/scissors-text-fr.png" alt="scissors">
+                <img class="card-back-fr" src="assets/french-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-        <script src="lollaLingua.js"></script>
-        <script src="scripts.js"></script>
+    <script src="lollaLingua.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
