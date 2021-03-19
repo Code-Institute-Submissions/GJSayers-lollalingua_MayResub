@@ -3,11 +3,11 @@
 
 A Langauages based memory game site designed to provide free learning to children and also to promote tuition availability. 
 
-View the live project []()
+View the live project [Lollalingua](https://gjsayers.github.io/lollalingua/)
 
-View the repository in GitHub []()
+View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalingua)
 
-![]()
+![Screenshot here](assets/design/Screenshot - lollalingua.png)
 
 ## Contents 
 ---
@@ -82,6 +82,7 @@ View the repository in GitHub []()
 ---
     * Layout & Wireframes
     1) I used [Balsamiq](https://balsamiq.com) was used to create, save and export my wireframes.  My final layout differs from my initial wireframes as ulimately as a game the initial layout and choices were to complex and as well as impacting UX were not practical. 
+    original wireframes are [here](assets/css/design.html)
      
     * Colours
     1) I researched which colours create a positive emoitional response for learning and found that  [Shiftelearning](https://www.shiftelearning.com/blog/how-do-colors-influence-learning) was really helpful to guide me in the right colour choices, and recommended greens for concentration, blues for productivity and orange for mood lifting. 
