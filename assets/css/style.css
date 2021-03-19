@@ -2,16 +2,14 @@
 
 * {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
   font-family: 'Paytone One', sans-serif;
   color: #2B3D4B;
 }
 
 .jumbotron {
-   
-   
     margin: 0px;
+    max-height: 15%;
     
 }
 
@@ -20,21 +18,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: space-evenly;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-.welcome-section {
+/*.welcome-section {
 
   
-}
-
-.game-section {
+}*/
 
 
-
-}
-
-.logo {
-    
+.logo {  
     margin: auto;
     max-width: 300px;
    
@@ -68,14 +62,20 @@ body {
     text-align: center;
 }
 
+.welcome-it {
+    display: none;
+}
+
+.welcome-fr {
+    display: none;
+}
+
 .bubble {
     color: #2B3D4B;
     background: #40A3A7;
     position: relative;
     padding: 20px;
     border-radius: 15px;
-    margin-top: 10%;
-    margin-bottom: 10%;
     max-width: 300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
 }
@@ -118,10 +118,19 @@ body {
     
 }
 /*----Game sections-----*/
- /* width: 350px; 
-  height: 250px; */
+.language-game-general {
+  width: 350px; 
+  height: 250px; 
+  margin: auto;
+  display: flex;
+  position:sticky;
+  justify-content:space-evenly;
+  flex-wrap: wrap; 
+  perspective: 1000px;
+}
+ 
 .language-game-en {
-  max-width: 700px; 
+  width: 350px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -131,7 +140,7 @@ body {
   perspective: 1000px;
 }
 .language-game-it {
-  max-width: 700px; 
+  width: 350px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -141,7 +150,7 @@ body {
   perspective: 1000px;
 }
 .language-game-fr {
-  max-width: 700px; 
+  width: 350px; 
   height: 250px; 
   margin: auto;
   display: flex;
@@ -153,19 +162,16 @@ body {
 
 /*----Game-cards-----*/
 .game-card {
-  width: 50%;
-  height: 50%; 
+  width: calc(30% - 5px);
+  height: calc(45% - 5px); 
   margin: 5px;
+  position: relative;  
   box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
 }
-.game-card:after {
-    content:"";
-    display: block;
-    padding-bottom: 100%;
-}
+
 
 .game-card:active {
  transform: scale(0.95);
@@ -309,7 +315,7 @@ body {
 
 footer {
     background-color: #2B3D4B;
-    color: #40A3A7;
+    text
     min-width:350px;
     justify-content:space-evenly;
 }
