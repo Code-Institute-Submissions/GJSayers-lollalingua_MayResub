@@ -122,16 +122,5 @@ $(document).ready(function () {
         }
     }
 
-    //fucntion push scores to score board & add star per matched page.
-    function scoreCounter() {
-
-        matchedPair = matchedPairs;
-        if (matchedPair += 1) {
-            var points = ('<div><img src="assets/star-point-removebg-preview.png"></div>');
-            $("#score").html(points);
-            console.log(matchedPair);
-            //$("#score").replace(value);
-
-        }
-    };
+ 
 })
