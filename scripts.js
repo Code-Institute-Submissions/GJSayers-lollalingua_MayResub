@@ -127,13 +127,11 @@ $(document).ready(function () {
 
         matchedPair = matchedPairs;
         if (matchedPair += 1) {
-            $("#score").append(`
-        <div class="star">
-            <img src="assets/star-point-removebg-preview.png">
-        </div>
-            `);
+            var points = ('<div><img src="assets/star-point-removebg-preview.png"></div>');
+            $("#score").html(points);
             console.log(matchedPair);
-            $("#score").html(matchedPair);
+            //$("#score").replace(value);
+
         }
     };
 })

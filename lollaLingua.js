@@ -3,8 +3,11 @@ $(document).ready(function () {
 
     $("#game-it").hide();
     $("#game-fr").hide();
+    $("#welcome-it").hide();
+    $("#welcome-fr").hide();
+    $("#go-it").hide();
+    $("#go-fr").hide();
 
-    // choose language:
     $("#lang-button-fr").click
         (function () {
             $("#italian").hide(1000);
@@ -13,7 +16,12 @@ $(document).ready(function () {
             $("#game-fr").show(1000);
             $("#lang-button-fr").hide();
             $("#lang-button-it").show();
-            
+            $("#welcome-en").hide(1000);
+            $("#welcome-fr").show(1000);
+            $("#welcome-it").hide(1000);
+            $("#go-it").hide(1000);
+            $("#go-fr").show(1000);
+            $("#go-en").hide(1000);           
         });
     $()
     $("#lang-button-it").click
@@ -24,28 +32,11 @@ $(document).ready(function () {
             $("#game-it").show(1000);
             $("#lang-button-fr").show();
             $("#lang-button-it").hide();
+            $("#welcome-en").hide(1000);
+            $("#welcome-it").show(1000);
+            $("#welcome-fr").hide(1000);
+            $("#go-it").show(1000);
+            $("#go-fr").hide(1000);
+            $("#go-en").hide(1000);
             });
-// speech bubbles hover diplay french / italian versions
-            $("#welcome-en").hover(
-                function () {
-                    $("#welcome-en").text("Andiamo a giocare a un gioco di coppie di abbinamento per imparare l'inglese");
-                    $("#welcome-en").text("Allons jouer àun jeu de paires pour apprendre l'anglaise!");
-                    $("#welcome-en").text("Let's learn English by playing a matching game!");
-                });         
-       
-
-    // animation example - jquery
-
-    // ref from codeopen.io https://codepen.io/urilee/pen/EEOyPr. (deleted, re-visit page to re-instate)
-
-
-    // onclick subject choice action - flip then clik through to page:
-
-
-    // choose avatar:
-
-    // display language on chosen subject page:
-
-    // spin subject button on hover:
-
 })
