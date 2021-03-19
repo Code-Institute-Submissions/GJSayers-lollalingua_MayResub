@@ -2,7 +2,7 @@
 
 * {
     padding: 0;
-    /*-moz-box-sizing: border-box;*/
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Paytone One', sans-serif;
     color: #2B3D4B;
@@ -29,7 +29,7 @@ body {
 }
 
 .info {
-   /* -webkit-display: inline-flexbox;*/
+    -webkit-display: inline-flexbox;
     display: inline-flexbox;
     max-width: 200px;
     min-width: fit-content;
@@ -168,12 +168,12 @@ body {
 
 
 .game-card:active {
-   /* -webkit-transform: scale(0.95);*
+    -webkit-transform: scale(0.95);
     transform: scale(0.95);
     -webkit-transition: transform .3s;
     -moz-transition: transform .3s;
     -ms-transition: transform .3s;
-    -o-transition: transform .3s;*/
+    -o-transition: transform .3s;
     transition: transform .3s;
 }
 
@@ -211,61 +211,61 @@ body {
 
 .game-card.flip {
     transform: rotateY(180deg);
-    /*-webkit-transform: rotateY(180deg);*/
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-   /* -webkit-transform: rotateY(180deg);*/
+    -webkit-transform: rotateY(180deg);
 }
 
 .card-front {
     transform: rotateY(180deg);
-   /* -webkit-transform: rotateY(180deg);*/
+    -webkit-transform: rotateY(180deg);
 }
 
 .card-front-it {
     transform: rotateY(180deg);
-    /* -webkit-transform: rotateY(180deg);*/
+     -webkit-transform: rotateY(180deg);
 }
 
 .card-front-fr {
     transform: rotateY(180deg);
-    /* -webkit-transform: rotateY(180deg);*/
+     -webkit-transform: rotateY(180deg);
 }
 
 .game-card.matched {
     width: 100px;
     height: 100px;
     background-color: #0CB1C4;
-   /* -webkit-transition-delay: 1000ms;
+    -webkit-transition-delay: 1000ms;
     -moz-transition-delay: 1000ms;
     -ms-transition-delay: 1000ms;
-    -o-transition-delay: 1000ms;*/
+    -o-transition-delay: 1000ms;
     transition-delay: 1000ms;
-    /* -webkit-transition-property: animation-name;
+     -webkit-transition-property: animation-name;
     -moz-transition-property: animation-name;
     -ms-transition-property: animation-name;
-    -o-transition-property: animation-name;*/
+    -o-transition-property: animation-name;
     transition-property: animation-name;
     animation-name: spin;
-    /*-webkit-animation-name: spin;
+    -webkit-animation-name: spin;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear; 
     animation-timing-function: linear; 
-    -webkit-animation-delay: 150ms;*/
+    -webkit-animation-delay: 150ms;
     animation-delay: 150ms;
-     /*-webkit-animation-duration: 2000ms;
+     -webkit-animation-duration: 2000ms;
     animation-duration: 2000ms;
-    -webkit-animation-iteration-count: 2; */
+    -webkit-animation-iteration-count: 2; 
     animation-iteration-count: 2;
 
 } 
 @keyframes spin {
     from {
         transform:rotate(0deg);
-        /*-webkit-transform:rotate(0deg);*/
+        -webkit-transform:rotate(0deg);
     }
     to {
         transform:rotate(360deg);
-        /*-webkit-transform:rotate(360deg);*/
+        -webkit-transform:rotate(360deg);
     }
 }
 
@@ -291,7 +291,7 @@ body {
     background: #40A3A7;
 }
 
-/*----buttons----*/
+/*----buttons/*----
 
 .btn.action-button {
 
@@ -327,7 +327,7 @@ body {
 
 #lang-button-it img:hover {
     cursor: pointer;
-    /*-webkit-transform: scale(1.1);*/
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     
 }
