@@ -72,7 +72,6 @@ $(document).ready(function () {
         if (freezePlay) return;
         if (this === cardOne) return;
         $(this).addClass("flip");
-
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
@@ -125,7 +124,16 @@ $(document).ready(function () {
         }
     }
 
-    //fucntion push scores to score board & add star per matched page. 
+    //fucntion push scores to score board & add star per matched page.
+    function scoreCounter(){
+        if (matchedPairs += 1) {
+     $("#score").append(`
+        <div class="star">
+          <img src="#">
+        </div>
+      `);
+      }
+    };
 })
 
 
