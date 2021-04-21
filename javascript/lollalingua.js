@@ -46,6 +46,10 @@ $(document).ready(function () {
 $( "#modal-play-btn" ).on("click",function() {
     $(".play-modal").css('display', 'block');
 });
+
+$( ".close-btn" ).on("click",function() {
+    $(".play-modal").css('display', 'none');
+});
             
 })
 
