@@ -47,8 +47,13 @@ $( "#modal-play-btn" ).on("click",function() {
     $(".play-modal").css('display', 'block');
 });
 
+$( "#modal-lang-btn" ).on("click",function() {
+    $(".lang-modal").css('display', 'block');
+});
+
 $( ".close-btn" ).on("click",function() {
     $(".play-modal").css('display', 'none');
+    $(".lang-modal").css('display', 'none');
 });
             
 })

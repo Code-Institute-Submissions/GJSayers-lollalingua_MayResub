@@ -128,6 +128,26 @@ body {
 
 }
 
+.lang-modal {
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(43, 42, 75, .4);
+}
+
+.choose-language {
+    background-color: silver;
+    margin: 20% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0;
+
+}
+
 .close-btn {
     color: slategrey;
     float: right;
@@ -140,6 +160,10 @@ body {
     cursor: pointer;
 
 }
+
+
+
+
 /*----Game sections-----*/
 .language-game-general {
     width: 350px; 

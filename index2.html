@@ -30,34 +30,13 @@
 
     <!--Welcome Section-->
 
-    <div class="container welcome-section">
-        <div id="welcome-en" class=" col-12 welcome bubble bottom">
-            Let's learn English by playing a matching game!
-        </div>
-        <div id="welcome-it" class=" col-12 welcome bubble bottom">
-            Andiamo a giocare a un gioco di coppie di abbinamento per imparare l'inglese!
-        </div>
-        <div id="welcome-fr" class=" col-12 welcome bubble bottom">
-            Allons jouer àun jeu de paires pour apprendre l'anglaise!
-        </div>
-
-        <div id="go-en" class="col-12 welcome bubble-pink bottom-pink">
-            Let's Go!
-        </div>
-        <div id="go-it" class="col-12 welcome bubble-pink bottom-pink">
-            Andiamo!
-        </div>
-        <div id="go-fr" class="col-12 welcome bubble-pink bottom-pink">
-            On y va!
-        </div>
-    </div>
-
     <!-- How to Play Modal -->
 <button id="modal-play-btn" class="col-5 btn action-button">How To Play</button>
 
     <div id="play-modal" class="play-modal">
         <div class="how-to-play">
             <span class="close-btn">&times;</span>
+            <h5>How to play</h5>
             <p>
             To play the game, first select your language, then choose your subject.
             See if you can match the pairs against the clock to win stars! Good Luck
@@ -67,15 +46,16 @@
 
     <!--Choose Language Section-->
   
+<button id="modal-lang-btn" class="col-5 btn action-button">Choose Language</button>
 
-
-
-    <container id="choose-language">
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <h5>Choose your language</h5>
+    <div id="lang-modal" class="lang-modal">
+        <div class="choose-language">
+            <span class="close-btn">&times;</span>
+            <h5>Choose your language</h5>
+            <div class="row justify-content-center">
+            <div class="col">
             </div>
-            <div class="col-xslang-button-fr" id="lang-button-fr">
+            <div class="col-xs lang-button-fr" id="lang-button-fr">
                 <img src="assets/images/flag-images/french-flag-removebg-preview.png" alt="french-flag">
             </div>
             <div class="col-xs lang-button-it" id="lang-button-it"> <img alt="italian-flag"
@@ -85,8 +65,8 @@
                     src="assets/images/flag-images/british-flag-removebg-preview.png">
             </div>
         </div>
-    </container>
-
+        </div>
+    </div>
 
     <!--Choose Game Section-->
     <container id="choose-game">
