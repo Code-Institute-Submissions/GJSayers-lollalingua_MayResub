@@ -107,6 +107,39 @@ body {
     left: 80%;
     
 }
+
+.play-modal {
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(43, 42, 75, .4);
+}
+
+.how-to-play {
+    background-color: silver;
+    margin: 20% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0;
+
+}
+
+.close-btn {
+    color: slategrey;
+    float: right;
+    font-size: 30px;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: #2B3D4B;
+    text-decoration: none;
+    cursor: pointer;
+
+}
 /*----Game sections-----*/
 .language-game-general {
     width: 350px; 
@@ -300,6 +333,7 @@ body {
     min-width: 100px;
     background-color: #40A3A7;
     border: solid #2B3D4B 2px;
+    border-radius: 15px;
 }
 
 .btn.action-button:hover {
@@ -309,7 +343,7 @@ body {
 #lang-button-fr img {
     width: 50px;
     height: 50px;
-    display: inline-flex;
+    display: inline;
     border-radius: 50%;
     margin: 15px; 
 }
@@ -324,12 +358,27 @@ body {
 #lang-button-it img {
   width: 50px;
   height: 50px;
-  display: inline-flex;
+  display: inline;
   border-radius: 50%;
   margin: 15px;
 }
 
 #lang-button-it img:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    
+}
+
+#lang-button-en img {
+  width: 50px;
+  height: 50px;
+  display: inline;
+  border-radius: 50%;
+  margin: 15px;
+}
+
+#lang-button-en img:hover {
     cursor: pointer;
     -webkit-transform: scale(1.3);
     transform: scale(1.3);

@@ -39,4 +39,14 @@ $(document).ready(function () {
             $("#go-fr").hide(1000);
             $("#go-en").hide(1000);
             });
+
+// get how to play modal using jquery click listner on play- button
+
+
+$( "#modal-play-btn" ).on("click",function() {
+    $(".play-modal").css('display', 'block');
+});
+            
 })
+
+
