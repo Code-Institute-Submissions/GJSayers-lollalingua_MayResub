@@ -71,6 +71,8 @@ $(document).ready(function () {
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
+       // if (this.parent.id  === cardOne.parent.id) return;
+
         $(this).addClass("flip");
         if (!isFlippedCard) {
             isFlippedCard = true;
@@ -78,6 +80,7 @@ $(document).ready(function () {
 
         } else {
             isFlippedCard = false;
+            // if (cardOne.parents('section').attr('id') !== cardTwo.parents('section').attr('id'));
             cardTwo = this;
             isPair();
         }
@@ -122,5 +125,4 @@ $(document).ready(function () {
         }
     }
 
- 
 })
