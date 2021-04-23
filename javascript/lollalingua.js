@@ -45,21 +45,30 @@ $(document).ready(function () {
 
 $( "#modal-play-btn" ).on("click",function() {
     $(".play-modal").css('display', 'block');
-    $("#modal-play-btn").hide(1000);
+    $(".welcome").hide(1000);
 });
 
 $( "#modal-lang-btn" ).on("click",function() {
     $(".lang-modal").css('display', 'block');
+    $(".welcome").hide(1000);
+});
+
+$( "#modal-subject-btn" ).on("click",function() {
+    $(".subject-modal").css('display', 'block');
+    $(".welcome").hide(1000);
 });
 
 $( ".close-btn" ).on("click",function() {
     $(".play-modal").css('display', 'none');
     $(".lang-modal").css('display', 'none');
+    $(".subject-modal").css('display', 'none');
+    $(".welcome").show(1000);
 });
 
 $( "#in-modal-lang-btn" ).on("click",function() {
     $(".play-modal").css('display', 'none');
     $(".lang-modal").css('display', 'block');
+    
 });
 
             
