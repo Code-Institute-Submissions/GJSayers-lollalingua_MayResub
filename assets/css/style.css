@@ -153,6 +153,11 @@ header {
 
 }
 
+.lang-choices {
+    text-align: center;
+    justify-content: space-around;
+}
+
 .subject-modal {
     justify-content: space-around;
     display: none;
@@ -204,6 +209,7 @@ header {
 }
 
 .language-game-en {
+    
     width: 350px; 
     height: 250px; 
     margin: auto;
@@ -214,7 +220,8 @@ header {
     perspective: 1000px;
 }
 .language-game-it {
-    width: 300px; 
+    
+    width: 350px; 
     height: 250px; 
     margin: auto;
     display: flex;
@@ -224,11 +231,12 @@ header {
     perspective: 1000px;
 }
 .language-game-fr {
+    
     width: 350px; 
     height: 250px; 
     margin: auto;
     display: flex;
-    position:sticky;
+    position: sticky;
     justify-content:space-evenly;
     flex-wrap: wrap; 
     perspective: 1000px;
