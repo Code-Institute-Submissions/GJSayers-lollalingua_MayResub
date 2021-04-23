@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     $("#lang-button-fr").click
         (function () {
-            $("#italian").hide(1000);
+        /*    $("#italian").hide(1000);
             $("#game-it").hide(1000);
             $("#french").show(1000);
             $("#game-fr").show(1000);
@@ -21,12 +21,12 @@ $(document).ready(function () {
             $("#welcome-it").hide(1000);
             $("#go-it").hide(1000);
             $("#go-fr").show(1000);
-            $("#go-en").hide(1000);           
+            $("#go-en").hide(1000); */          
         });
-    $()
+    
     $("#lang-button-it").click
         (function () {
-            $("#french").hide(1000);
+         /*   $("#french").hide(1000);
             $("#game-fr").hide(1000);
             $("#italian").show(1000);
             $("#game-it").show(1000);
@@ -37,28 +37,41 @@ $(document).ready(function () {
             $("#welcome-fr").hide(1000);
             $("#go-it").show(1000);
             $("#go-fr").hide(1000);
-            $("#go-en").hide(1000);
-            });
+            $("#go-en").hide(1000);*/
+            }); 
 
 // get how to play modal using jquery click listner on play- button
 
 
 $( "#modal-play-btn" ).on("click",function() {
     $(".play-modal").css('display', 'block');
-    $("#modal-play-btn").hide(1000);
+    $(".welcome-message").hide(1000);
+    $(".welcome").hide(1000);
+  
 });
 
 $( "#modal-lang-btn" ).on("click",function() {
-    $(".lang-modal").css('display', 'block');
-});
+    $("#lang-modal").css('display', 'block');
+    $(".welcome-message").hide(1000);
+    $(".welcome").hide(1000);
+   });
+
+$( "#modal-subject-btn" ).on("click",function() {
+    $("#subject-modal").css('display', 'block');
+    $(".welcome-message").hide(1000);
+    $(".welcome").hide(1000);
+   });   
 
 $( ".close-btn" ).on("click",function() {
-    $(".play-modal").css('display', 'none');
-    $(".lang-modal").css('display', 'none');
+    $("#play-modal").css('display', 'none');
+    $("#lang-modal").css('display', 'none');
+    $("#subject-modal").css('display', 'none');
+    $(".welcome-message").show(1000);
+    $(".welcome").show(1000);
 });
 
 $( "#in-modal-lang-btn" ).on("click",function() {
-    $(".play-modal").css('display', 'none');
+    $("#play-modal").css('display', 'none');
     $(".lang-modal").css('display', 'block');
 });
 
