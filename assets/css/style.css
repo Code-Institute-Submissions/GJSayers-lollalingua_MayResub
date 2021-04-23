@@ -14,25 +14,31 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: space-evenly;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 header {
-    margin: auto;
+    
     text-align: center;
     justify-content: space-around;
+    padding: 0%;
+}
+
+.header-content {
+    padding: 0%;
 }
 
 .logo {  
-    margin: auto;
+    margin: 0%;
     max-width: 300px;
 }
 
 .info {
     -webkit-display: inline-flexbox;
-    display: inline-flexbox;
-    max-width: 200px;
+    margin: 0%;
+    display: flexbox;
+    max-width: 90%;
     min-width: fit-content;
     min-width: fit-content;
     justify-content: flex-start;
@@ -197,7 +203,7 @@ header {
 
 
 /*----Game sections-----*/
-.language-game-general {
+/*.language-game-general {
     width: 350px; 
     height: 250px; 
     margin: auto;
@@ -206,40 +212,43 @@ header {
     justify-content:space-evenly;
     flex-wrap: wrap; 
     perspective: 1000px;
-}
+}*/
 
 .language-game-en {
     display: none;
-    width: 350px; 
-    height: 250px; 
-    margin: auto;
+    width: 365px; 
+    height: 240px; 
+    margin: 0%;
     display: flex;
-    position:sticky;
-    justify-content:space-evenly;
+    position:relative;
+    justify-content: center;
     flex-wrap: wrap; 
     perspective: 1000px;
+    align-content: center;
 }
 .language-game-it {
     display: none;
-    width: 350px; 
-    height: 250px; 
-    margin: auto;
+    width: 365px; 
+    height: 240px; 
+    margin: 0%;
     display: flex;
-    position:sticky;
-    justify-content:space-evenly;
+    position:relative;
+    justify-content:center;
     flex-wrap: wrap; 
     perspective: 1000px;
+    align-content: center;
 }
 .language-game-fr {
     display: none;
-    width: 350px; 
-    height: 250px; 
-    margin: auto;
+    width: 365px; 
+    height: 240px; 
+    margin: 0%;
     display: flex;
-    position: sticky;
-    justify-content:space-evenly;
+    position: relative;
+    justify-content: center;
     flex-wrap: wrap; 
     perspective: 1000px;
+    align-content: center;
 }
 
 /*----Game-cards-----*/
