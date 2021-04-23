@@ -29,9 +29,17 @@
     </header>
 
     <!--Welcome Section-->
-
+<section class="container-fluid welcome">
+    <button id="modal-play-btn" class="col-6 btn action-button">How To Play</button>
+    <br>
+    <button id="modal-lang-btn" class="col-6 btn action-button">Choose Language</button>
+    <br>
+    <button id="modal-subject-btn" class="col-6 btn action-button">Choose Subject</button>
+    <br>
+    <button id="modal-start-play-btn" class="col-6 btn action-button">Start Play</button>
+</section>
     <!-- How to Play Modal -->
-<button id="modal-play-btn" class="col-5 btn action-button">How To Play</button>
+
 
     <div id="play-modal" class="play-modal">
         <div class="how-to-play">
@@ -48,17 +56,15 @@
         </div>
     </div>
 
-    <!--Choose Language Section-->
+    <!--Choose Language Modal-->
   
-<button id="modal-lang-btn" class="col-5 btn action-button">Choose Language</button>
+
 
     <div id="lang-modal" class="lang-modal">
         <div class="choose-language">
             <span class="close-btn">&times;</span>
             <h5>Choose your native language</h5>
             <div class="row justify-content-center">
-            <div class="col">
-            </div>
             <div class="col-xs lang-button-fr" id="lang-button-fr">
                 <img src="assets/images/flag-images/french-flag-removebg-preview.png" alt="french-flag">
             </div>
@@ -73,14 +79,15 @@
     </div>
 
     <!--Choose Game Section-->
-    <container id="choose-game">
-        <div class="row justify-content-center button-div">
+    <section class="container-fluid">
+        <div id="choose-game" class="row justify-content-center button-div">
             <a class="col-5 btn action-button" href="at-school.html" target="_blank">Animals</a>
             <a class="col-5 btn action-button" href="animals.html" target="_blank">Classroom</a>
         </div>
-    </container>
+    </section>
+    
 
-    <!--Play Game Section-->
+    <!--Play Game Section
 
     <div class="info">
         <span id="timer">
@@ -89,7 +96,7 @@
         <span id="points">
             <span class="score">Score:</span> 00
         </span>
-    </div>
+    </div>-->
     <!--Animals Game Section-->
     
     <!--Animals Game English Section-->
