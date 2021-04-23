@@ -45,6 +45,7 @@ $(document).ready(function () {
 
 $( "#modal-play-btn" ).on("click",function() {
     $(".play-modal").css('display', 'block');
+    $("#modal-play-btn").hide(1000);
 });
 
 $( "#modal-lang-btn" ).on("click",function() {
