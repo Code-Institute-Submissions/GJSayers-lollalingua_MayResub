@@ -8,11 +8,6 @@
     color: #2B3D4B;
 }
 
-.jumbotron {
-    margin: 0px;
-    max-height: 15%;
-    
-}
 
 body {
     background-color: #2B3D4B;
@@ -48,7 +43,7 @@ body {
 
 .welcome {
     position: relative;
-    padding: 25px;
+    
     text-align: center;
 }
 
@@ -213,7 +208,7 @@ body {
     perspective: 1000px;
 }
 .language-game-it {
-    width: 350px; 
+    width: 300px; 
     height: 250px; 
     margin: auto;
     display: flex;
@@ -438,14 +433,14 @@ body {
 
 
 
-/*----footer-----*/
+/*----footer---
 
 footer {
     background-color: #2B3D4B;
     min-width:350px;
     color: #40A3A7;
     justify-content:space-evenly;
-}
+}--*/
 
 .about.contact {
     color: #40A3A7;
