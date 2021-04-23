@@ -209,7 +209,7 @@ header {
 }
 
 .language-game-en {
-    
+    display: none;
     width: 350px; 
     height: 250px; 
     margin: auto;
@@ -220,7 +220,7 @@ header {
     perspective: 1000px;
 }
 .language-game-it {
-    
+    display: none;
     width: 350px; 
     height: 250px; 
     margin: auto;
@@ -231,7 +231,7 @@ header {
     perspective: 1000px;
 }
 .language-game-fr {
-    
+    display: none;
     width: 350px; 
     height: 250px; 
     margin: auto;

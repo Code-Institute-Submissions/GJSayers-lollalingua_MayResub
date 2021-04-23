@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
 
+    $("#game-en").hide();
     $("#game-it").hide();
     $("#game-fr").hide();
     $("#welcome-it").hide();
@@ -61,6 +62,13 @@ $( "#modal-subject-btn" ).on("click",function() {
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
    });   
+
+$( "#modal-start-play-btn" ).on("click",function() {
+    $("#game-it").show(1000);
+    $("#game-en").show(1000);
+    $(".welcome-message").hide(1000);
+    $(".welcome").hide(1000);
+   });      
 
 $( ".close-btn" ).on("click",function() {
     $("#play-modal").css('display', 'none');
