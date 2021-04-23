@@ -18,6 +18,12 @@ body {
     margin-right: 5%;
 }
 
+header {
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+}
+
 .logo {  
     margin: auto;
     max-width: 300px;
@@ -43,8 +49,8 @@ body {
 
 .welcome {
     position: relative;
-    
     text-align: center;
+    justify-content: space-around;
 }
 
 .welcome-it {
