@@ -8,10 +8,6 @@
     color: #2B3D4B;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f1023f7e0f8cf7a36641b9c5a59dbb68f369cde0
 body {
     background-color: #2B3D4B;
     background-size: cover;
@@ -50,9 +46,6 @@ header {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
     background-color: #E9897E;
 }
-
-
-
 
 /*----blocks & modals-----*/
 
@@ -202,9 +195,6 @@ header {
 
 }
 
-
-
-
 /*----Game sections-----*/
 /*.language-game-general {
     width: 350px; 
@@ -327,12 +317,12 @@ header {
 
 .card-front-it {
     transform: rotateY(180deg);
-     -webkit-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .card-front-fr {
     transform: rotateY(180deg);
-     -webkit-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .game-card.matched {
@@ -344,7 +334,7 @@ header {
     -ms-transition-delay: 1000ms;
     -o-transition-delay: 1000ms;
     transition-delay: 1000ms;
-     -webkit-transition-property: animation-name;
+    -webkit-transition-property: animation-name;
     -moz-transition-property: animation-name;
     -ms-transition-property: animation-name;
     -o-transition-property: animation-name;
@@ -356,7 +346,7 @@ header {
     animation-timing-function: linear; 
     -webkit-animation-delay: 150ms;
     animation-delay: 150ms;
-     -webkit-animation-duration: 2000ms;
+    -webkit-animation-duration: 2000ms;
     animation-duration: 2000ms;
     -webkit-animation-iteration-count: 2; 
     animation-iteration-count: 2;
@@ -427,11 +417,11 @@ header {
 
 
 #lang-button-it img {
-  width: 50px;
-  height: 50px;
-  display: inline;
-  border-radius: 50%;
-  margin: 15px;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    border-radius: 50%;
+    margin: 15px;
 }
 
 #lang-button-it img:hover {
@@ -442,11 +432,11 @@ header {
 }
 
 #lang-button-en img {
-  width: 50px;
-  height: 50px;
-  display: inline;
-  border-radius: 50%;
-  margin: 15px;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    border-radius: 50%;
+    margin: 15px;
 }
 
 #lang-button-en img:hover {
@@ -476,7 +466,7 @@ footer {
 /*----avatars-----*/
 
 .avatar-1 {
- 
+
     position: relative;
     border-radius: 50%;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
@@ -489,7 +479,7 @@ footer {
 }
 
 .avatar-2 {
- 
+
     position: relative;
     border-radius: 50%;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
