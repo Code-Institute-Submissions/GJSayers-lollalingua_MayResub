@@ -18,10 +18,6 @@ $(document).ready(function () {
 
     // stops timer if all cards are matched
 
-    function stopTimer() {
-
-    }
-
     // displays countdown time in the info div
     function countdownTimer() {
         let secondsLeft = 60;
