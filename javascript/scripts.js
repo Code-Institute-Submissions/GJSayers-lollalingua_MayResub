@@ -9,46 +9,42 @@ $(document).ready(function () {
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
     }
-    // checks if timer should be started by validating the number of turns played (two revealed cards = 1 turn)
+
+    // checks if countdownTimer should be called by validating the number of turns played (two revealed cards = 1 turn and the start of the timer)
     function validateTimer() {
         if (turns === 1) {
             countdownTimer();
         }
     }
 
-    // stops timer if all cards are matched
-
     // displays countdown time in the info div
     function countdownTimer() {
         let secondsLeft = 60;
         setInterval(function () {
             if (secondsLeft <= 0) {
-
                 $('#timer').html("<h3>Time's Up!</h3>");
                 //   clearInterval(secondsLeft = 0);
             }
 
-            else if (turns === 6) {
+            else if (matchedPairs === 6) {
                 $('#timer').html("<h3>You won!</h3>");
                 $('#time').text(secondsLeft);
                 secondsLeft;
-
-                //   clearInterval(secondsLeft = 0);
             }
+
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-        }, 1000);
+            }, 1000);
+    };
 
-    }
-
-    // counts number of flips/turns a player has made and pushes them to the html for front-end display - calls validate timer function to see if the countDownTimer should be called
+    // counts number of flips/turns a player has made and pushes them to index.html for front-end display - calls validateTimer function to see if countdownTimer should be called.
     function turnsCounter() {
         $('#turns').text(turns);
         console.log(turns);
         validateTimer();
     }
 
-    // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs 
+    // this function ensures the English cards are not always displayed in the same format, and not next to each other in pairs 
     function shuffleDeckEn() {
         $(".game-card-en").each(function () {
             let shuffledDeckEn = Math.floor(Math.random() * 21);
@@ -57,7 +53,7 @@ $(document).ready(function () {
             this.style.order = shuffledDeckEn;
         });
     }
-    // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs for the French deck
+    // this function ensures the French cards are not always displayed in the same format, and not next to each other in pairs for the French deck
     function shuffleDeckFrench() {
         $(".game-card-fr").each(function () {
             let shuffleDeckFrench = Math.floor(Math.random() * 21);
@@ -67,7 +63,7 @@ $(document).ready(function () {
         });
     }
 
-    // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs for the Italian deck
+    // this function ensures the Italian cards are not always displayed in the same format, and not next to each other in pairs for the Italian deck
     function shuffleDeckItalian() {
         $(".game-card-it").each(function () {
             let shuffleDeckItalian = Math.floor(Math.random() * 21);
@@ -88,8 +84,8 @@ $(document).ready(function () {
     var matchedPairs = [];  // array populated by number of pairs matched in isPair function
     //  matchedPairs array length to display as score in info div
     var turns = [];  // array populated by number of clicks in turnCounter function
-    //  turns array length to display as score in info div
-    var enCardInPlay = [];
+    
+    var enCardInPlay = []; // to identify how many English cards are in play and avoid two flipping in any given turns
 
 
 
