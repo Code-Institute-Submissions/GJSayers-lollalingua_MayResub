@@ -45,32 +45,31 @@ $(document).ready(function () {
 // get how to play modal using jquery click listner on play- button
 
 
-$( "#modal-play-btn" ).on("click",function() {
+$("#modal-play-btn").on("click",function() {
     $(".play-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
-  
-});
+    });
 
-$( "#modal-lang-btn" ).on("click",function() {
+$("#modal-lang-btn").on("click",function() {
     $("#lang-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
-   });
+    });
 
-$( "#modal-subject-btn" ).on("click",function() {
+$("#modal-subject-btn").on("click",function() {
     $("#subject-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
-   });   
+    });   
 
-$( "#modal-start-play-btn" ).on("click",function() {
+$("#modal-start-play-btn").on("click",function() {
     $("#subject-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
-   });      
+    });      
 
-$( ".close-btn" ).on("click",function() {
+$(".close-btn").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
