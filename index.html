@@ -8,7 +8,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" href="assets/images/flag-images/british-flag-removebg-preview.png">
 
@@ -17,65 +18,319 @@
     <link rel="shortcut icon" href="assets/images/flag-images/british-flag-removebg-preview.png">
 </head>
 
-<body>
-    <header class="jumbotron">
-        <a href="index.html"><img class="rounded-rectangle logo" alt="lollalingua-logo"
-                src="assets/images/lollalingua-logo.png"></a>
-                
+<body class="container-fluid">
+    <!--Header Section-->
+    <header>
         <div class="row-no-gutters">
-            <div class="col-12 lang-button-fr" id="lang-button-fr">
-                <img src="assets/images/flag-images/french-flag-removebg-preview.png" alt="french-flag"> Parlez Français?
-            </div>
-            <div>
-
-            </div>
-            <div class="col-12 lang-button-it" id="lang-button-it"> <img alt="italian-flag"
-                    src="assets/images/flag-images/italy-flag-removebg-preview.png"> Parli Italiano?
+            <div class="col-12 header-content"><a href="index.html"><img class="rounded-rectangle logo"
+                        alt="lollalingua-logo" src="assets/images/lollalingua-logo.png"></a>
+                <h4 class="welcome-message">
+                    Lollalingua - the fun way to learn languages by matching pairs!
+                </h4>
             </div>
         </div>
-
     </header>
 
-    <div class="container welcome-section">
-        <div id="welcome-en" class=" col-12 welcome bubble bottom">
-            Let's learn English by playing a matching game!
+    <!--Welcome Section-->
+    <section class="container-fluid">
+        <div class="row  welcome">
+            <button id="modal-play-btn" class="col-6 btn action-button">How To Play</button>
+            <button id="modal-lang-btn" class="col-6 btn action-button">Choose Language</button>
+            <button id="modal-subject-btn" class="col-6 btn action-button">Choose Subject</button>
+            <button id="modal-start-play-btn" class="col-6 btn action-button">Start Play</button>
         </div>
-        <div id="welcome-it" class=" col-12 welcome bubble bottom">
-            Andiamo a giocare a un gioco di coppie di abbinamento per imparare l'inglese!
+    </section>
+
+    <!-- Game Board -->
+    <!-- At School Game Section-->
+
+    <section id="game-at-school">
+        <section class="language-game-en">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="1">
+                <img class="card-front sharpener" src="assets/images/at-school-images/sharpener-text-en.png"
+                    alt="sharpener-image">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="2">
+                <img class="card-front notebook" src="assets/images/at-school-images/notebook-text-en.png"
+                    alt="notebook">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="3">
+                <img class="card-front paintbrush" src="assets/images/at-school-images/paintbrush-text-en.png"
+                    alt="paintbrush">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="4">
+                <img class="card-front rubber" src="assets/images/at-school-images/rubber-text-en.png" alt="rubber">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="5">
+                <img class="card-front pen" src="assets/images/at-school-images/pen-text-en.png" alt="pen">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="6">
+                <img class="card-front scissors" src="assets/images/at-school-images/scissors-text-en.png"
+                    alt="scissors">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="test-card-back">
+            </div>
+        </section>
+
+        <section class="language-game-it">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="1" id="italian">
+                <img class="card-front-it language-game-it sharpener"
+                    src="assets/images/at-school-images/sharpener-text-it.png" alt="sharpener-image">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="2">
+                <img class="card-front-it notebook" src="assets/images/at-school-images/notebook-text-it.png"
+                    alt="notebook">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="3">
+                <img class="card-front-it paintbrush" src="assets/images/at-school-images/paintbrush-text-it.png"
+                    alt="paintbrush">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="4">
+                <img class="card-front-it rubber" src="assets/images/at-school-images/rubber-text-it.png" alt="rubber">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="5">
+                <img class="card-front-it pen" src="assets/images/at-school-images/pen-text-it.png" alt="pen">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="6">
+                <img class="card-front-it scissors" src="assets/images/at-school-images/scissors-text-it.png"
+                    alt="scissors">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+        <section class="language-game-fr">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="1">
+                <img class="card-front-fr sharpener" src="assets/images/at-school-images/sharpener-text-fr.png"
+                    alt="sharpener-image">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="2">
+                <img class="card-front-fr notebook" src="assets/images/at-school-images/notebook-text-fr.png"
+                    alt="notebook">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="3">
+                <img class="card-front-fr paintbrush" src="assets/images/at-school-images/paintbrush-text-fr.png"
+                    alt="paintbrush">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="4">
+                <img class="card-front-fr rubber" src="assets/images/at-school-images/rubber-text-fr.png" alt="rubber">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="5">
+                <img class="card-front-fr pen" src="assets/images/at-school-images/pen-text-fr.png" alt="pen">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="6">
+                <img class="card-front-fr scissors" src="assets/images/at-school-images/scissors-text-fr.png"
+                    alt="scissors">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+    </section>
+
+    <!-- Game Section Animals -->
+
+    <section id="game-animals">
+
+        <!--Animals Game English Section-->
+        <section class="language-game-en">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="1">
+                <img class="card-front cat" src="assets/images/animals-images/cat-text-en.png" alt="cat">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="2">
+                <img class="card-front dog" src="assets/images/animals-images/dog-text-en.png" alt="dog">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="3">
+                <img class="card-front lion" src="assets/images/animals-images/lion-text-en.png" alt="lion">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="4">
+                <img class="card-front monkey" src="assets/images/animals-images/monkey-text-en.png" alt="monkey">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="5">
+                <img class="card-front sheep" src="assets/images/animals-images/sheep-text-en.png" alt="sheep">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="6">
+                <img class="card-front tiger" src="assets/images/animals-images/tiger-text-en.png" alt="tiger">
+                <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
+            </div>
+
+
+        </section>
+        <section class="language-game-it">
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="1">
+                <img class="card-front-it cat" src="assets/images/animals-images/cat-text-it.png" alt="cat">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="2">
+                <img class="card-front-it dog" src="assets/images/animals-images/dog-text-it.png" alt="dog">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="3">
+                <img class="card-front-it lion" src="assets/images/animals-images/lion-text-it.png" alt="lion">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="4">
+                <img class="card-front-it monkey" src="assets/images/animals-images/monkey-text-it.png" alt="monkey">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="5">
+                <img class="card-front-it sheep" src="assets/images/animals-images/sheep-text-it.png" alt="sheep">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-it" data-ident="6">
+                <img class="card-front-it tiger" src="assets/images/animals-images/tiger-text-it.png" alt="tiger">
+                <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+        <section class="language-game-fr">
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="1">
+                <img class="card-front-fr cat" src="assets/images/animals-images/cat-text-fr.png" alt="cat">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="2">
+                <img class="card-front-fr dog" src="assets/images/animals-images/dog-text-fr.png" alt="dog">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="3">
+                <img class="card-front-fr lion" src="assets/images/animals-images/lion-text-fr.png" alt="lion">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="4">
+                <img class="card-front-fr monkey" src="assets/images/animals-images/monkey-text-fr.png" alt="monkey">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="5">
+                <img class="card-front-fr sheep" src="assets/images/animals-images/sheep-text-fr.png" alt="sheep">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+
+            <div class="col-3 game-card game-card-en language-game-fr" data-ident="6">
+                <img class="card-front-fr tiger" src="assets/images/animals-images/tiger-text-en.png" alt="tiger">
+                <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
+            </div>
+        </section>
+    </section>
+
+    <!-- Scoring Section -->
+
+    <div class="row info">
+        <div class="col timer">
+            <span id="timer">Seconds Left:
+                <span id="time">60 </span> </span>
+
         </div>
-        <div id="welcome-fr" class=" col-12 welcome bubble bottom">
-            Allons jouer àun jeu de paires pour apprendre l'anglaise!
+        <div class="col turns">
+            <span class="turns">Turns:</span> <span id="turns">00
+            </span>
+        </div>
+        <div class="col score">
+            <span class="score">Score:</span> <span id="points">
+            </span>
         </div>
 
-        <div id="go-en" class="col-12 welcome bubble-pink bottom-pink">
-            Let's Go!
-        </div>
-        <div id="go-it" class="col-12 welcome bubble-pink bottom-pink">
-            Andiamo!
-        </div>
-        <div id="go-fr" class="col-12 welcome bubble-pink bottom-pink">
-            On y va!
-        </div>
-    </div>
-    <div class="row justify-content-center button-div">
-        <a class="col-5 btn action-button" href="index2.html" target="_blank">Animals</a>
-        <a class="col-5 btn action-button" href="animals.html" target="_blank">Classroom</a>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+
+    <!-- How to Play Modal -->
+
+
+    <div id="play-modal" class="row-no-gutters play-modal">
+        <div class="how-to-play">
+            <span class="close-btn">&times;</span>
+            <h5>Lollalingua - How to play</h5>
+            <p>
+                1. Select your language <br>
+                2. Choose your subject <br>
+                3. See if you can match the pairs against the clock to win stars <br>
+                <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
+                Good Luck!
+            </p>
+            <button id="in-modal-lang-btn" class="col-5 btn action-button">Choose Language</button>
+        </div>
+    </div>
+
+    <!--Choose Language Modal-->
+
+    <div id="lang-modal" class="row-no-gutters lang-modal">
+        <div class="choose-language">
+            <span class="close-btn">&times;</span>
+            <h5>Choose your native language</h5>
+            <div class="row lang-choices">
+                <div class="col-xs lang-button-fr" id="lang-button-fr">
+                    <img src="assets/images/flag-images/french-flag-removebg-preview.png" alt="french-flag">
+                </div>
+                <div class="col-xs lang-button-it" id="lang-button-it"> <img alt="italian-flag"
+                        src="assets/images/flag-images/italy-flag-removebg-preview.png">
+                </div>
+                <div class="col-xs lang-button-en" id="lang-button-en"> <img alt="british-flag"
+                        src="assets/images/flag-images/british-flag-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Choose Subject Modal-->
+
+    <div id="subject-modal" class="row-no-gutters subject-modal">
+        <div class="choose-subject">
+            <span class="close-btn">&times;</span>
+            <h5>Choose your subject</h5>
+
+            <div id="choose-game" class="row justify-content-center button-div">
+                <button id="in-modal-btn-animals" class="col-5 btn action-button">Animals</button>
+                <button id="in-modal-btn-school" class="col-5 btn action-button">At School</button>
+            </div>
+
+        </div>
+    </div>
+    <!--Choose Game Section
+    <section class="container-fluid">
+        <div id="choose-game" class="row justify-content-center button-div">
+            <a class="col-5 btn action-button" href="at-school.html" target="_blank">Animals</a>
+            <a class="col-5 btn action-button" href="animals.html" target="_blank">Classroom</a>
+        </div>
+    </section>-->
+
+
+    <!--Footer Section-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
     <script src="javascript/lollalingua.js"></script>
     <script src="javascript/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
 
 </body>
 
