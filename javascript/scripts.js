@@ -8,7 +8,7 @@ $(document).ready(function () {
         shuffleDeckEn(); //shuffles the english cards deck on load
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
-        countdownTimer(); // starts the game timer on load 
+        countdownTimer();
      //   
     }
 
@@ -26,6 +26,12 @@ $(document).ready(function () {
             secondsLeft -= 1
         }, 1000);
     }
+
+    // counts number of flips a player has made
+    // function turnCounter(); {
+    //    turns++;
+    //    $('#turns').text(turns);
+    // }
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs 
     function shuffleDeckEn() {
@@ -65,12 +71,12 @@ $(document).ready(function () {
     let freezePlay = false; // to reference during playGame function to ensure not too many cards are turned or checked at once
     let cardOne, cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
     var matchedPairs = [];  // array populated by number of pairs matched in isPair function
-    var matchedPair = 0;  //  matchedPairs array length to display as score in info div
+    //  matchedPairs array length to display as score in info div
 
     
     gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
     gameCards.forEach(gameCards => gameCards.addEventListener("touchstart", playGame));
-   
+    
    // POTENTIAL FUNCTION FOR FREEXING ENGLISH BOARD
    // function cardInPlayEn() {
    //         gameCardsEn.removeEventListener("click", playGame);
@@ -80,13 +86,15 @@ $(document).ready(function () {
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
-       // if (this.parent.id  === cardOne.parent.id) return;
 
+       // if (this.parent.id  === cardOne.parent.id) return;
         $(this).addClass("flip");
+        //turnCounter(turns);
+        //countdownTimer();
+ // starts the game timer on first click
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
-            
             
         // POTENTIAL FUNCTION TO FREEZE ENGLISH BOARD 
         // if (cardOne === gameCardsEn) {
@@ -101,15 +109,18 @@ $(document).ready(function () {
 
         // compares cards one and two to see if they are a match based on the data-ident (identifier) in the html. If the cards are a matched, they get a matched class added and are pushed to  matchedPairs variable and disableCardClick prevents further play for a matched pair in this round, else unFlipCards is called to return face down. 
         function scoreCounter() {
-
+            $('#points').append('<img class="points" src="assets/images/scoring-images/star-point-removebg-preview.png" alt="star-points">');
         }
 
         function isPair() {
             if (cardOne.dataset.ident === cardTwo.dataset.ident) {
                 cardOne.classList.add("matched");
                 cardTwo.classList.add("matched");
-                matchedPairs.push($(".matched"));
-                matchedPair = matchedPairs.length;
+                matchedPairs++;
+                console.log(matchedPairs);
+                
+                
+                
 
                 disableCardClick();
                 scoreCounter(); // initites the score counter on load
