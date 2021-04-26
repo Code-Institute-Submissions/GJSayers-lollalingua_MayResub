@@ -8,14 +8,18 @@ $(document).ready(function () {
         shuffleDeckEn(); //shuffles the english cards deck on load
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
-        // countdownTimer();
-     //   
     }
-
-    function validateTimer(){
+    // checks if timer should be started by validating the number of turns played (two revealed cards = 1 turn)
+    function validateTimer() {
         if (turns === 1) {
             countdownTimer();
         }
+    }
+
+    // stops timer if all cards are matched
+
+    function stopTimer() {
+
     }
 
     // displays countdown time in the info div
@@ -23,22 +27,30 @@ $(document).ready(function () {
         let secondsLeft = 60;
         setInterval(function () {
             if (secondsLeft <= 0) {
-               
+
                 $('#timer').html("<h3>Time's Up!</h3>");
-             //   clearInterval(secondsLeft = 0);
+                //   clearInterval(secondsLeft = 0);
+            }
+
+            else if (turns === 6) {
+                $('#timer').html("<h3>You won!</h3>");
+                $('#time').text(secondsLeft);
+                secondsLeft;
+
+                //   clearInterval(secondsLeft = 0);
             }
             $('#time').text(secondsLeft);
-            secondsLeft -= 1
+            secondsLeft -= 1;
         }, 1000);
-   
+
     }
 
-    // counts number of flips a player has made
+    // counts number of flips/turns a player has made and pushes them to the html for front-end display - calls validate timer function to see if the countDownTimer should be called
     function turnsCounter() {
         $('#turns').text(turns);
         console.log(turns);
         validateTimer();
-        }
+    }
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs 
     function shuffleDeckEn() {
@@ -47,7 +59,7 @@ $(document).ready(function () {
             console.log(shuffledDeckEn);
             console.log(this.style.order);
             this.style.order = shuffledDeckEn;
-        })
+        });
     }
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs for the French deck
     function shuffleDeckFrench() {
@@ -56,7 +68,7 @@ $(document).ready(function () {
             console.log(shuffleDeckFrench);
             console.log(this.style.order);
             this.style.order = shuffleDeckFrench;
-        })
+        });
     }
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs for the Italian deck
@@ -66,7 +78,7 @@ $(document).ready(function () {
             console.log(shuffleDeckItalian);
             console.log(this.style.order);
             this.style.order = shuffleDeckItalian;
-        })
+        });
     }
 
     // global variables 
@@ -81,38 +93,55 @@ $(document).ready(function () {
     //  matchedPairs array length to display as score in info div
     var turns = [];  // array populated by number of clicks in turnCounter function
     //  turns array length to display as score in info div
+    var enCardInPlay = [];
 
-    
+
+
     gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
     gameCards.forEach(gameCards => gameCards.addEventListener("touchstart", playGame));
-    
-   // POTENTIAL FUNCTION FOR FREEXING ENGLISH BOARD
-   // function cardInPlayEn() {
-   //         gameCardsEn.removeEventListener("click", playGame);
-   //     };
+
+    // POTENTIAL FUNCTION FOR FREEZING ENGLISH BOARD
+
+
+
+    function freezeEnBoard() {
+        console.log(enCardInPlay);
+        if ((enCardInPlay >= 1) && (gameCardsEn)) {
+            $(".game-card-en").off("click", playGame);
+        };
+    }
+
+        function boardCheck() {
+        if (cardOne.classList.contains("game-card-en")) {
+            enCardInPlay++;
+            freezeEnBoard();
+        };
+    }
+
 
     // this funtion checks if cards are valid to play,  adds a flip class to cards that are valid, and also identifies which are first and second cards in play, then calls isPair. 
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
 
-       // if (this.parent.id  === cardOne.parent.id) return;
+        // if (this.parent.id  === cardOne.parent.id) return;
         $(this).addClass("flip");
-        //turnCounter(turns);
-        //countdownTimer();
- // starts the game timer on first click
+
+
+        // starts the game timer on first click
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
             turns++;
             console.log(turns);
             turnsCounter();
-            
-            
-        // POTENTIAL FUNCTION TO FREEZE ENGLISH BOARD 
-        // if (cardOne === gameCardsEn) {
-        //    cardInPlayEn();    
-        
+            boardCheck();
+
+
+            // POTENTIAL FUNCTION TO FREEZE ENGLISH BOARD 
+            // if (cardOne === gameCardsEn) {
+            //    cardInPlayEn();    
+
         } else {
             isFlippedCard = false;
             // if (cardOne.parents('section').attr('id') !== cardTwo.parents('section').attr('id'));
@@ -131,9 +160,9 @@ $(document).ready(function () {
                 cardTwo.classList.add("matched");
                 matchedPairs++;
                 console.log(matchedPairs);
-                
-                
-                
+
+
+
 
                 disableCardClick();
                 scoreCounter(); // initites the score counter on load
@@ -141,14 +170,16 @@ $(document).ready(function () {
                 unFlipCards();
             }
         }
-        
+
         // prevents further play for a matched pair in this round
         function disableCardClick() {
             cardOne.removeEventListener("click", playGame);
             cardTwo.removeEventListener("click", playGame);
         }
 
-       // returns cards to original un-flipped state after displaying for a short period of time and stops further cards being clicked in the meantime
+
+
+        // returns cards to original un-flipped state after displaying for a short period of time and stops further cards being clicked in the meantime
         function unFlipCards() {
             freezePlay = true;
             setTimeout(() => {
@@ -168,7 +199,7 @@ $(document).ready(function () {
         }
     }
 
-        
+
 });
 
 
