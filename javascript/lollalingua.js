@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".language-game-en").hide();
     $(".language-game-it").hide();
     $(".language-game-fr").hide();
+    $(".info").hide();
     $("#welcome-it").hide();
     $("#welcome-fr").hide();
     $("#go-it").hide();
@@ -86,6 +87,7 @@ $("#in-modal-btn-school").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
+    $(".info").show(1000);
     $("#game-at-school").show(1000); 
     $("#game-animals").hide(1000);
     $(".language-game-en").show(1000);
@@ -96,6 +98,7 @@ $("#in-modal-btn-animals").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
+    $(".info").show(1000);
     $("#game-animals").show(1000); 
     $("#game-at-school").hide(1000);
     $(".language-game-en").show(1000);
