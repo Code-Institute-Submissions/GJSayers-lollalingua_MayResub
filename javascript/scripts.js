@@ -8,13 +8,18 @@ $(document).ready(function () {
         shuffleDeckEn(); //shuffles the english cards deck on load
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
-        countdownTimer();
+        // countdownTimer();
      //   
+    }
+
+    function validateTimer(){
+        if (turns === 1) {
+            countdownTimer();
+        }
     }
 
     // displays countdown time in the info div
     function countdownTimer() {
-
         let secondsLeft = 60;
         setInterval(function () {
             if (secondsLeft <= 0) {
@@ -25,13 +30,15 @@ $(document).ready(function () {
             $('#time').text(secondsLeft);
             secondsLeft -= 1
         }, 1000);
+   
     }
 
     // counts number of flips a player has made
-    // function turnCounter(); {
-    //    turns++;
-    //    $('#turns').text(turns);
-    // }
+    function turnsCounter() {
+        $('#turns').text(turns);
+        console.log(turns);
+        validateTimer();
+        }
 
     // this function ensures the cards are not always displayed in the same format, and not next to each other in pairs 
     function shuffleDeckEn() {
@@ -72,6 +79,8 @@ $(document).ready(function () {
     let cardOne, cardTwo; // to identify the first and second cards flipped and be able to check them against each other. 
     var matchedPairs = [];  // array populated by number of pairs matched in isPair function
     //  matchedPairs array length to display as score in info div
+    var turns = [];  // array populated by number of clicks in turnCounter function
+    //  turns array length to display as score in info div
 
     
     gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
@@ -95,6 +104,10 @@ $(document).ready(function () {
         if (!isFlippedCard) {
             isFlippedCard = true;
             cardOne = this;
+            turns++;
+            console.log(turns);
+            turnsCounter();
+            
             
         // POTENTIAL FUNCTION TO FREEZE ENGLISH BOARD 
         // if (cardOne === gameCardsEn) {
@@ -157,3 +170,5 @@ $(document).ready(function () {
 
         
 });
+
+
