@@ -10,8 +10,25 @@ $(document).ready(function () {
     $("#go-it").hide();
     $("#go-fr").hide();
 
-    $("#lang-button-fr").click
-        (function () {
+    
+/* efforts at language storage
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    chooseLanguage();
+});
+ 
+const language = $('.language-choice');
+
+const saveLanguageChoice = $('.language-choice').each("click", () => {
+    saveLanguageChoice($('.language-choice'));
+})
+    
+});
+
+ 
+
+    $("#lang-button-fr").click(function () {
+        localStorage.setItem('language','french');   
         /*    $("#italian").hide(1000);
             $("#game-it").hide(1000);
             $("#french").show(1000);
@@ -28,6 +45,7 @@ $(document).ready(function () {
     
     $("#lang-button-it").click
         (function () {
+        localStorage.setItem('language','italian'); 
          /*   $("#french").hide(1000);
             $("#game-fr").hide(1000);
             $("#italian").show(1000);
@@ -39,8 +57,13 @@ $(document).ready(function () {
             $("#welcome-fr").hide(1000);
             $("#go-it").show(1000);
             $("#go-fr").hide(1000);
-            $("#go-en").hide(1000);*/
+            $("#go-en").hide(1000);
             }); 
+
+    $("#lang-button-en").click
+        (function () {
+        localStorage.setItem('Language','English'); 
+            });     */
 
 // get how to play modal using jquery click listner on play- button
 
