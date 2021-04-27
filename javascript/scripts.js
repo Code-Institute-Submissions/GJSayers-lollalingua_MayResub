@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 
     function freezeEnBoard() {
-        if (enCardInPlay >= 1) /*&& (gameCardsEn))*/ {
+        if ((enCardInPlay >= 1) && (gameCardsEn)) {
             $(".game-card-en").off("click", playGame);
             $(".game-card-it").on("click");
             $(".game-card-fr").on("click");
@@ -110,7 +110,7 @@ $(document).ready(function () {
     }
 
     function freezeFrBoard() {
-        if (frCardInPlay >= 1) /*&& (gameCardsFr))*/ {
+        if ((frCardInPlay >= 1) && (gameCardsFr)) {
             $(".game-card-fr").off("click", playGame);
             $(".game-card-en").on("click");
             $(".game-card-it").on("click");
@@ -118,7 +118,7 @@ $(document).ready(function () {
     }
 
     function freezeItBoard() {
-        if (itCardInPlay >= 1) /*&& (gameCardsIt))*/ {
+        if ((itCardInPlay >= 1) && (gameCardsIt)) {
             $(".game-card-it").off("click", playGame);
             $(".game-card-fr").on("click");
             $(".game-card-en").on("click");
