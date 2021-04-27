@@ -102,23 +102,26 @@ $(document).ready(function () {
 
 
     function freezeEnBoard() {
-        console.log(enCardInPlay);
-        if ((enCardInPlay >= 1) && (gameCardsEn)) {
+        if (enCardInPlay >= 1) /*&& (gameCardsEn))*/ {
             $(".game-card-en").off("click", playGame);
+            $(".game-card-it").on("click");
+            $(".game-card-fr").on("click");
         };
     }
 
     function freezeFrBoard() {
-        console.log(frCardInPlay);
-        if ((frCardInPlay >= 1) && (gameCardsFr)) {
+        if (frCardInPlay >= 1) /*&& (gameCardsFr))*/ {
             $(".game-card-fr").off("click", playGame);
+            $(".game-card-en").on("click");
+            $(".game-card-it").on("click");
         };
     }
 
     function freezeItBoard() {
-        console.log(itCardInPlay);
-        if ((itCardInPlay >= 1) && (gameCardsIt)) {
+        if (itCardInPlay >= 1) /*&& (gameCardsIt))*/ {
             $(".game-card-it").off("click", playGame);
+            $(".game-card-fr").on("click");
+            $(".game-card-en").on("click");
         };
     }
 
