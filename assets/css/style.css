@@ -172,6 +172,18 @@ header {
     background-color: rgba(233, 137, 126, .2);
 }
 
+.game-over-modal {
+    justify-content: space-around;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(233, 137, 126, .2);
+}
+
 .choose-subject {
     text-align: center;
     background-color: rgba(64, 163, 167, .2);
