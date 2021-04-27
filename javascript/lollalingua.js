@@ -40,7 +40,7 @@ const saveLanguageChoice = $('.language-choice').each("click", () => {
             $("#welcome-it").hide(1000);
             $("#go-it").hide(1000);
             $("#go-fr").show(1000);
-            $("#go-en").hide(1000); */          
+            $("#go-en").hide(1000);         
         });
     
     $("#lang-button-it").click
@@ -103,6 +103,11 @@ $(".close-btn").on("click",function() {
 $( "#in-modal-lang-btn" ).on("click",function() {
     $("#play-modal").css('display', 'none');
     $(".lang-modal").css('display', 'block');
+});
+
+$( "#in-modal-play-btn" ).on("click",function() {
+    $("#game-over-modal").css('display', 'none');
+    $(".play-modal").css('display', 'block');
 });
 
 $("#in-modal-btn-school").on("click",function() {
