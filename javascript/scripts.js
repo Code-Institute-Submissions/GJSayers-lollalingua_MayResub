@@ -86,11 +86,16 @@ $(document).ready(function () {
     var turns = [];  // array populated by number of clicks in turnCounter function
     
     var enCardInPlay = []; // to identify how many English cards are in play and avoid two flipping in any given turns
+    var frCardInPlay = []; // to identify how many French cards are in play and avoid two flipping in any given turns
+    var itCardInPlay = []; // to identify how many Italian cards are in play and avoid two flipping in any given turns
 
 
 
-    gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
-    gameCards.forEach(gameCards => gameCards.addEventListener("touchstart", playGame));
+    /* gameCards.forEach(gameCards => gameCards.addEventListener("click", playGame));
+    gameCards.forEach(gameCards => gameCards.addEventListener("touchstart", playGame)); */
+    $(".game-card-en").on("click",playGame);
+    $(".game-card-fr").on("click",playGame);
+    $(".game-card-it").on("click",playGame);
 
     // POTENTIAL FUNCTION FOR FREEZING ENGLISH BOARD
 
@@ -103,12 +108,33 @@ $(document).ready(function () {
         };
     }
 
+    function freezeFrBoard() {
+        console.log(frCardInPlay);
+        if ((frCardInPlay >= 1) && (gameCardsFr)) {
+            $(".game-card-fr").off("click", playGame);
+        };
+    }
+
+    function freezeItBoard() {
+        console.log(itCardInPlay);
+        if ((itCardInPlay >= 1) && (gameCardsIt)) {
+            $(".game-card-it").off("click", playGame);
+        };
+    }
+
         function boardCheck() {
         if (cardOne.classList.contains("game-card-en")) {
             enCardInPlay++;
             freezeEnBoard();
+        } else if  (cardOne.classList.contains("game-card-fr")) {
+            frCardInPlay++;
+            freezeFrBoard();
+        } else if  (cardOne.classList.contains("game-card-it")) {
+            itCardInPlay++;
+            freezeItBoard();        
+        }   
         };
-    }
+    
 
 
     // this funtion checks if cards are valid to play,  adds a flip class to cards that are valid, and also identifies which are first and second cards in play, then calls isPair. 
@@ -129,14 +155,8 @@ $(document).ready(function () {
             turnsCounter();
             boardCheck();
 
-
-            // POTENTIAL FUNCTION TO FREEZE ENGLISH BOARD 
-            // if (cardOne === gameCardsEn) {
-            //    cardInPlayEn();    
-
         } else {
             isFlippedCard = false;
-            // if (cardOne.parents('section').attr('id') !== cardTwo.parents('section').attr('id'));
             cardTwo = this;
             isPair();
         }
@@ -160,6 +180,9 @@ $(document).ready(function () {
                 scoreCounter(); // initites the score counter on load
             } else {
                 unFlipCards();
+                $(".game-card-en").on("click",playGame);
+                $(".game-card-fr").on("click",playGame);
+                $(".game-card-it").on("click",playGame);
             }
         }
 
