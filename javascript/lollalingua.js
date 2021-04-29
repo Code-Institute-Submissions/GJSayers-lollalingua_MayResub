@@ -107,7 +107,7 @@ $( "#in-modal-lang-btn" ).on("click",function() {
 
 $( "#in-modal-play-btn" ).on("click",function() {
     $("#game-over-modal").css('display', 'none');
-    $(".play-modal").css('display', 'block');
+    $("#subject-modal").css('display', 'block');
 });
 
 $("#in-modal-btn-school").on("click",function() {

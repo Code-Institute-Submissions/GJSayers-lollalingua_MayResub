@@ -102,39 +102,42 @@ $(document).ready(function () {
 
 
     function freezeEnBoard() {
-        if ((enCardInPlay >= 1) && (gameCardsEn)) {
-            $(".game-card-en").off("click", playGame);
-            $(".game-card-it").on("click");
-            $(".game-card-fr").on("click");
+        if ((enCardInPlay >= 1) && (gameCardsEn) && (frCardInPlay == 0 || itCardInPlay == 0)) {
+            $(".game-card-en").off("click",playGame);
+        } else if ((enCardInPlay >= 1) && (frCardInPlay == 1 || itCardInPlay == 1)){
+            $(".game-card-en").on("click");
+        }   
         };
-    }
+    
 
     function freezeFrBoard() {
         if ((frCardInPlay >= 1) && (gameCardsFr)) {
             $(".game-card-fr").off("click", playGame);
-            $(".game-card-en").on("click");
-            $(".game-card-it").on("click");
         };
     }
 
     function freezeItBoard() {
         if ((itCardInPlay >= 1) && (gameCardsIt)) {
             $(".game-card-it").off("click", playGame);
-            $(".game-card-fr").on("click");
-            $(".game-card-en").on("click");
         };
     }
 
         function boardCheck() {
         if (cardOne.classList.contains("game-card-en")) {
             enCardInPlay++;
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeEnBoard();
+            console.log("freezeEnBoard");   
         } else if  (cardOne.classList.contains("game-card-fr")) {
             frCardInPlay++;
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeFrBoard();
+            console.log("freezeFrBoard");   
         } else if  (cardOne.classList.contains("game-card-it")) {
             itCardInPlay++;
-            freezeItBoard();        
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+            freezeItBoard();  
+            console.log("freezeItBoard");      
         }   
         };
     
@@ -147,7 +150,7 @@ $(document).ready(function () {
 
         // if (this.parent.id  === cardOne.parent.id) return;
         $(this).addClass("flip");
-
+        console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
 
         // starts the game timer on first click
         if (!isFlippedCard) {
@@ -156,12 +159,15 @@ $(document).ready(function () {
             turns++;
             console.log(turns);
             turnsCounter();
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             boardCheck();
+            console.log("board check");
 
         } else {
             isFlippedCard = false;
             cardTwo = this;
             isPair();
+            console.log("is pair");
         }
 
         // compares cards one and two to see if they are a match based on the data-ident (identifier) in the html. If the cards are a matched, they get a matched class added and are pushed to  matchedPairs variable and disableCardClick prevents further play for a matched pair in this round, else unFlipCards is called to return face down. 
@@ -175,17 +181,20 @@ $(document).ready(function () {
                 cardTwo.classList.add("matched");
                 matchedPairs++;
                 console.log(matchedPairs);
+                console.log(enCardInPlay,frCardInPlay,itCardInPlay);
 
 
 
 
                 disableCardClick();
+                console.log("disableCardClick");
                 scoreCounter(); // initites the score counter on load
+                console.log("scoreCounter");
             } else {
                 unFlipCards();
-                $(".game-card-en").on("click",playGame);
-                $(".game-card-fr").on("click",playGame);
-                $(".game-card-it").on("click",playGame);
+                console.log("unflip cards");
+                console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+
             }
         }
 
@@ -203,8 +212,16 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
+                itCardInPlay === [];
+                enCardInPlay === [];
+                frCardInPlay === [];
+                console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+                $(".game-card-en").on("click");
+                $(".game-card-fr").on("click");
+                $(".game-card-it").on("click");
 
                 clearDeck();
+                console.log("clear deck");
             }, 1700);
         }
 
