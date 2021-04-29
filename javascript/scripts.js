@@ -55,7 +55,7 @@ $(document).ready(function () {
 
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-            }, 100);
+            }, 1000);
     };
 
     // counts number of flips/turns a player has made and pushes them to index.html for front-end display - calls validateTimer function to see if countdownTimer should be called.
