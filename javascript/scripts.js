@@ -190,6 +190,12 @@ $(document).ready(function () {
             $('#points').append('<img class="points" src="assets/images/scoring-images/star-point-removebg-preview.png" alt="star-points">');
         }
 
+        function continuePlay() {
+            if ($(".game-card").not(".matched")) {
+                $(".game-card-en,.game-card-fr,.game-card-it").on("click",playGame);
+            }
+        }
+
         function isPair() {
             if (cardOne.dataset.ident === cardTwo.dataset.ident) {
                 cardOne.classList.add("matched");
@@ -201,6 +207,7 @@ $(document).ready(function () {
                 console.log("disableCardClick");
                 scoreCounter(); // initites the score counter on load
                 console.log("scoreCounter");
+                continuePlay();
             } else {
                 unFlipCards();
                 console.log("unflip cards");
@@ -223,10 +230,6 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
-                $(".game-card-en").on("click");
-                $(".game-card-fr").on("click");
-                $(".game-card-it").on("click");
-
                 clearDeck();
                 console.log("clear deck");
             }, 1700);
@@ -242,6 +245,7 @@ $(document).ready(function () {
             enCardInPlay = [];
             frCardInPlay = [];
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+            $(".game-card-en,.game-card-fr,.game-card-it").on("click");
                 
         }
     
