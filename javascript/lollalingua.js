@@ -96,7 +96,8 @@ $(".close-btn").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
-    $("#game-over-modal").css('display', 'none');
+    $("#game-over-modal").css('display', 'none'),
+    location.reload();
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
 });
