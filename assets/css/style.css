@@ -240,11 +240,12 @@ header {
     width: 100px;
     height: 100px;
     background-color: #0CB1C4;
-    -webkit-transition-delay: 1000ms;
-    -moz-transition-delay: 1000ms;
-    -ms-transition-delay: 1000ms;
-    -o-transition-delay: 1000ms;
-    transition-delay: 1000ms;
+    
+    -webkit-transition-delay: 500ms;
+    -moz-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -o-transition-delay: 500ms;
+    transition-delay: 500ms;
     -webkit-transition-property: animation-name;
     -moz-transition-property: animation-name;
     -ms-transition-property: animation-name;
@@ -257,8 +258,8 @@ header {
     animation-timing-function: linear; 
     -webkit-animation-delay: 150ms;
     animation-delay: 150ms;
-    -webkit-animation-duration: 2000ms;
-    animation-duration: 2000ms;
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
     -webkit-animation-iteration-count: 2; 
     animation-iteration-count: 2;
 
@@ -317,7 +318,7 @@ header {
     height: 50px;
     display: inline;
     border-radius: 50%;
-    margin: 15px; 
+    padding: 15px; 
 }
 
 #lang-button-fr img:hover {
@@ -332,7 +333,7 @@ header {
     height: 50px;
     display: inline;
     border-radius: 50%;
-    margin: 15px;
+    padding: 15px;
 }
 
 #lang-button-it img:hover {
@@ -347,7 +348,7 @@ header {
     height: 50px;
     display: inline;
     border-radius: 50%;
-    margin: 15px;
+    padding: 15px;
 }
 
 #lang-button-en img:hover {
