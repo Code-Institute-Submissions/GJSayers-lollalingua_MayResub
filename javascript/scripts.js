@@ -172,6 +172,7 @@ $(document).ready(function () {
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
+        
 
         // if (this.parent.id  === cardOne.parent.id) return;
         $(this).addClass("flip");
@@ -200,16 +201,17 @@ $(document).ready(function () {
             $('#points').append('<img class="points" src="assets/images/scoring-images/star-point-removebg-preview.png" alt="star-points">');
         }
 
-        function continuePlay() {
-            if ($(".game-card").not(".matched")) {
-                $(".game-card-en,.game-card-fr,.game-card-it").on("click",playGame);
+        /*function continuePlay() {
+            if ($(".matched")) {
+                $(".matched").off("click",playGame);
             }
-        }
+        }*/
 
         function isPair() {
             if (cardOne.dataset.ident === cardTwo.dataset.ident) {
                 cardOne.classList.add("matched");
                 cardTwo.classList.add("matched");
+                console.log(cardOne,cardTwo);
                 matchedPairs++;
                 console.log(matchedPairs);
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay);
@@ -217,19 +219,21 @@ $(document).ready(function () {
                 console.log("disableCardClick");
                 scoreCounter(); // initites the score counter on load
                 console.log("scoreCounter");
-                continuePlay();
+                //continuePlay();
             } else {
                 unFlipCards();
                 console.log("unflip cards");
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+                //continuePlay();
 
             }
         }
 
         // prevents further play for a matched pair in this round
         function disableCardClick() {
-            cardOne.removeEventListener("click", playGame);
-            cardTwo.removeEventListener("click", playGame);
+            $(".matched").off("click", playGame);
+            $(".matched").removeClass(".flip");
+            //cardTwo.removeEventListener("click", playGame);
         }
 
 
@@ -240,6 +244,9 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
+                itCardInPlay = [];
+                enCardInPlay = [];
+                frCardInPlay = [];
                 clearDeck();
                 console.log("clear deck");
             }, 1700);
@@ -251,11 +258,10 @@ $(document).ready(function () {
             freezePlay = false;
             cardOne = null;
             cardTwo = null;
-            itCardInPlay = [];
-            enCardInPlay = [];
-            frCardInPlay = [];
+            
+           
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-            $(".game-card-en,.game-card-fr,.game-card-it").on("click");
+            
                 
         }
     
