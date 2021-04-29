@@ -64,7 +64,7 @@ header {
 }
 
 
-.play-modal {
+.modal-frame {
     justify-content: space-around;
     display: none;
     z-index: 1;
@@ -72,38 +72,18 @@ header {
     top: 0;
     height: 100%;
     width: 100%;
+    border-radius: 5%;
     overflow: auto;
     background-color: rgba(233, 137, 126, .2);
 }
 
-.how-to-play {
+.modal-panel {
     text-align: center;
     background-color: rgba(64, 163, 167, .2);
     margin: 20% auto;
     padding: 20px;
     width: 80%;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-
-}
-
-.lang-modal {
-    justify-content: space-around;
-    display: none;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(233, 137, 126, .2);
-}
-
-.choose-language {
-    text-align: center;
-    background-color: rgba(64, 163, 167, .2);
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
+    border-radius: 5%;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 
 }
@@ -111,50 +91,6 @@ header {
 .lang-choices {
     text-align: center;
     justify-content: space-around;
-}
-
-.subject-modal {
-    justify-content: space-around;
-    display: none;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(233, 137, 126, .2);
-}
-
-.game-over-modal {
-    justify-content: space-around;
-    display: none;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(233, 137, 126, .2);
-}
-
-.game-over {
-    text-align: center;
-    background-color: rgba(64, 163, 167, .2);
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-
-}
-
-.choose-subject {
-    text-align: center;
-    background-color: rgba(64, 163, 167, .2);
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-
 }
 
 .close-btn {
