@@ -96,6 +96,7 @@ $(".close-btn").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
+    $("#game-over-modal").css('display', 'none');
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
 });
@@ -106,8 +107,7 @@ $( "#in-modal-lang-btn" ).on("click",function() {
 });
 
 $( "#in-modal-play-btn" ).on("click",function() {
-    $("#game-over-modal").css('display', 'none');
-    $("#subject-modal").css('display', 'block');
+    location.reload();
 });
 
 $("#in-modal-btn-school").on("click",function() {
