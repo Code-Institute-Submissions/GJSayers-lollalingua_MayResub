@@ -23,13 +23,24 @@ $(document).ready(function () {
         setInterval(function () {
             if (secondsLeft <= 0) {
                 $('#timer').html("<h3>Time's Up!</h3>");
+                $(".info").hide(1500);
+                $("#game-at-school").hide(1500); 
+                $("#game-animals").hide(1500);
+                $("#game-over-modal").css('display', 'block');
+                secondsLeft = 60;
+                clearDeck();
                 //   clearInterval(secondsLeft = 0);
             }
 
             else if (matchedPairs === 6) {
                 $('#timer').html("<h3>You won!</h3>");
-                $('#time').text(secondsLeft);
-                secondsLeft;
+                $(".info").hide(1500);
+                $("#game-at-school").hide(1500); 
+                $("#game-animals").hide(1500);
+                $("#game-over-modal").css('display', 'block');
+                secondsLeft = 60;
+                clearDeck();
+                
             }
 
             $('#time').text(secondsLeft);
@@ -102,23 +113,27 @@ $(document).ready(function () {
 
 
     function freezeEnBoard() {
-        if ((enCardInPlay >= 1) && (gameCardsEn) && (frCardInPlay == 0 || itCardInPlay == 0)) {
-            $(".game-card-en").off("click",playGame);
-        } else if ((enCardInPlay >= 1) && (frCardInPlay == 1 || itCardInPlay == 1)){
-            $(".game-card-en").on("click");
-        }   
-        };
+        if ((enCardInPlay >= 1) && (gameCardsEn)) {
+            $(".game-card-en").off("click", playGame);
+            $(".game-card-fr").on("click", playGame);
+            $(".game-card-it").on("click", playGame);
+        };      
+    }
     
 
     function freezeFrBoard() {
         if ((frCardInPlay >= 1) && (gameCardsFr)) {
             $(".game-card-fr").off("click", playGame);
+            $(".game-card-en").on("click", playGame);
+            $(".game-card-it").on("click", playGame);
         };
     }
 
     function freezeItBoard() {
         if ((itCardInPlay >= 1) && (gameCardsIt)) {
             $(".game-card-it").off("click", playGame);
+            $(".game-card-en").on("click", playGame);
+            $(".game-card-fr").on("click", playGame);
         };
     }
 
@@ -168,7 +183,7 @@ $(document).ready(function () {
             cardTwo = this;
             isPair();
             console.log("is pair");
-        }
+        }};
 
         // compares cards one and two to see if they are a match based on the data-ident (identifier) in the html. If the cards are a matched, they get a matched class added and are pushed to  matchedPairs variable and disableCardClick prevents further play for a matched pair in this round, else unFlipCards is called to return face down. 
         function scoreCounter() {
@@ -182,10 +197,6 @@ $(document).ready(function () {
                 matchedPairs++;
                 console.log(matchedPairs);
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay);
-
-
-
-
                 disableCardClick();
                 console.log("disableCardClick");
                 scoreCounter(); // initites the score counter on load
@@ -212,10 +223,6 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
-                itCardInPlay === [];
-                enCardInPlay === [];
-                frCardInPlay === [];
-                console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
                 $(".game-card-en").on("click");
                 $(".game-card-fr").on("click");
                 $(".game-card-it").on("click");
@@ -231,8 +238,13 @@ $(document).ready(function () {
             freezePlay = false;
             cardOne = null;
             cardTwo = null;
+            itCardInPlay = [];
+            enCardInPlay = [];
+            frCardInPlay = [];
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+                
         }
-    }
+    
 
 
 });
