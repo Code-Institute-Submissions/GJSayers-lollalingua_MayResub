@@ -26,6 +26,11 @@ $(document).ready(function () {
                 $(".info").hide(1500);
                 $("#game-at-school").hide(1500); 
                 $("#game-animals").hide(1500);
+                $(".final-score").html(`Thanks for playing!  <br>
+                Point scored: ${matchedPairs} <br>
+                Turns taken: ${turns}  <br>
+                <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
+                Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
                 secondsLeft = 60;
                 clearDeck();
@@ -37,6 +42,11 @@ $(document).ready(function () {
                 $(".info").hide(1500);
                 $("#game-at-school").hide(1500); 
                 $("#game-animals").hide(1500);
+                $(".final-score").html(`Thanks for playing!  <br>
+                Point scored: ${matchedPairs} <br>
+                Turns taken: ${turns}  <br>
+                <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
+                Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
                 secondsLeft = 60;
                 clearDeck();
@@ -45,7 +55,7 @@ $(document).ready(function () {
 
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-            }, 1000);
+            }, 100);
     };
 
     // counts number of flips/turns a player has made and pushes them to index.html for front-end display - calls validateTimer function to see if countdownTimer should be called.
