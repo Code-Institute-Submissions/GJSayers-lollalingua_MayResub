@@ -11,24 +11,37 @@ $(document).ready(function () {
     $("#go-fr").hide();
 
     
-/* efforts at language storage
+/* efforts at language storage 
+saveLanguageChoice();
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    chooseLanguage();
-});
+
+function saveLanguageChoice () {
+   const languageButton = ($('.language-button'));   
+     $('.language-button').on("click"); {
+    if (languageButton.classList.contains('french')) {
+        localStorage.setItem("language", "french");
+    } else if (languageButton.classList.contains('english')){
+        localStorage.setItem("language", "english");
+    } else if (languageButton.classList.contains('italian')){
+        localStorage.setItem("language", "italian");
+  //  changeLanguageChoice();
+
+      } }
+}
+
+changeLanguageChoice ();
+
+function changeLanguageChoice () {
+    if (localStorage.getItem('language') !== null) {
+        const chosenLanguage = localStorage.getItem('language');
+       //thing that happens if language is chosen
+
+    }
+}*/
+
  
-const language = $('.language-choice');
-
-const saveLanguageChoice = $('.language-choice').each("click", () => {
-    saveLanguageChoice($('.language-choice'));
-})
-    
-});
 
  
-
-    $("#lang-button-fr").click(function () {
-        localStorage.setItem('language','french');   
         /*    $("#italian").hide(1000);
             $("#game-it").hide(1000);
             $("#french").show(1000);
