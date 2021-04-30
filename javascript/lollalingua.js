@@ -10,34 +10,55 @@ $(document).ready(function () {
     $("#go-it").hide();
     $("#go-fr").hide();
 
-    
-/* efforts at language storage 
-saveLanguageChoice();
 
+ /*efforts at language storage */
 
-function saveLanguageChoice () {
-   const languageButton = ($('.language-button'));   
-     $('.language-button').on("click"); {
+    document.cookie = "language=english";
+
+    const languageButton = ($('.language-button')); 
+
+    setCookie();
+
+    function setCookie(language, languageChoice, expiry) {
+
+    $('.language-button').on("click"); 
+
     if (languageButton.classList.contains('french')) {
-        localStorage.setItem("language", "french");
+        languageChoice = "french";
+        expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice};${expiry}`;
     } else if (languageButton.classList.contains('english')){
-        localStorage.setItem("language", "english");
+        languageChoice = "english";
+        expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice};${expiry}`;
     } else if (languageButton.classList.contains('italian')){
-        localStorage.setItem("language", "italian");
-  //  changeLanguageChoice();
+        languageChoice = "italian";
+        expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice};${expiry}`;
 
-      } }
-}
+        }
+    }
 
-changeLanguageChoice ();
 
-function changeLanguageChoice () {
-    if (localStorage.getItem('language') !== null) {
-        const chosenLanguage = localStorage.getItem('language');
+    getCookie ();
+
+function getCookie () {
+    if (document.cookie('language') !== null) {
+        const chosenLanguage = document.cookie(languageChoice);
        //thing that happens if language is chosen
+        if (chosenLanguage === "italian") {
+            $(".language-game-fr").hide();
+            $("#langauge-game-fr").hide();
+        } else if (chosenLanguage === "french") {
+            $(".language-game-it").hide();
+            $("#langauge-game-it").hide();
+        } else if (chosenLanguage === "english") {
+            $(".language-game-fr").hide();
+            $("#langauge-game-fr").hide();
+        }
 
     }
-}*/
+}
 
  
 
