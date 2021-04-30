@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
 
+    chooseLanguage(); 
+
     $(".language-game-en").hide();
     $(".language-game-it").hide();
     $(".language-game-fr").hide();
@@ -15,38 +17,54 @@ $(document).ready(function () {
 
     document.cookie = "language=english";
 
-    const languageButton = ($('.language-button')); 
-
+    $('.language-button').on("click",setCookie); 
+    console.log("lang button click");
     setCookie();
 
-    function setCookie(language, languageChoice, expiry) {
+    function setCookie(language, languageChoice) {
 
-    $('.language-button').on("click"); 
-
-    if (languageButton.classList.contains('french')) {
+    if ($(".language-button").hasClass(".french")) {
         languageChoice = "french";
-        expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice};${expiry}`;
-    } else if (languageButton.classList.contains('english')){
+        //expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice}`;
+    } else if ($(".language-button").hasClass('english')){
         languageChoice = "english";
-        expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice};${expiry}`;
-    } else if (languageButton.classList.contains('italian')){
+        //expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice}`;
+    } else if ($(".language-button").hasClass('italian')){
         languageChoice = "italian";
-        expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice};${expiry}`;
+        //expiry = (time() + (60*60*24*n));
+        document.cookie = `${language}=${languageChoice}`;
 
         }
-    }
+        console.log("cookie");
+    };
 
-
+    
     getCookie ();
 
-function getCookie () {
-    if (document.cookie('language') !== null) {
-        const chosenLanguage = document.cookie(languageChoice);
+    function getCookie (language) {
+        var name = language + "=";
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+    
        //thing that happens if language is chosen
-        if (chosenLanguage === "italian") {
+    function chooseLanguage() { 
+        var chosenLanguage = getCookie("language");
+        if (chosenLanguage !== "") {
+            console.log(chosenLanguage);
+        
+            if (chosenLanguage === "italian") {
             $(".language-game-fr").hide();
             $("#langauge-game-fr").hide();
         } else if (chosenLanguage === "french") {
@@ -55,49 +73,9 @@ function getCookie () {
         } else if (chosenLanguage === "english") {
             $(".language-game-fr").hide();
             $("#langauge-game-fr").hide();
+            }
         }
-
-    }
-}
-
- 
-
- 
-        /*    $("#italian").hide(1000);
-            $("#game-it").hide(1000);
-            $("#french").show(1000);
-            $("#game-fr").show(1000);
-            $("#lang-button-fr").hide();
-            $("#lang-button-it").show();
-            $("#welcome-en").hide(1000);
-            $("#welcome-fr").show(1000);
-            $("#welcome-it").hide(1000);
-            $("#go-it").hide(1000);
-            $("#go-fr").show(1000);
-            $("#go-en").hide(1000);         
-        });
-    
-    $("#lang-button-it").click
-        (function () {
-        localStorage.setItem('language','italian'); 
-         /*   $("#french").hide(1000);
-            $("#game-fr").hide(1000);
-            $("#italian").show(1000);
-            $("#game-it").show(1000);
-            $("#lang-button-fr").show();
-            $("#lang-button-it").hide();
-            $("#welcome-en").hide(1000);
-            $("#welcome-it").show(1000);
-            $("#welcome-fr").hide(1000);
-            $("#go-it").show(1000);
-            $("#go-fr").hide(1000);
-            $("#go-en").hide(1000);
-            }); 
-
-    $("#lang-button-en").click
-        (function () {
-        localStorage.setItem('Language','English'); 
-            });     */
+    };
 
 // get how to play modal using jquery click listner on play- button
 

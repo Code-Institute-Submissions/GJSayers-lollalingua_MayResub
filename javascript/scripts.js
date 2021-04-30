@@ -42,7 +42,7 @@ $(document).ready(function () {
                 $(".info").hide(1500);
                 $("#game-at-school").hide(1500); 
                 $("#game-animals").hide(1500);
-                $(".final-score").html(`Thanks for playing!  <br>
+                $(".final-score").html(`You matched all the pairs!  <br>
                 Point scored: ${matchedPairs} <br>
                 Turns taken: ${turns}  <br>
                 <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
@@ -172,8 +172,6 @@ $(document).ready(function () {
     function playGame() {
         if (freezePlay) return;
         if (this === cardOne) return;
-        
-
         // if (this.parent.id  === cardOne.parent.id) return;
         $(this).addClass("flip");
         console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
@@ -232,11 +230,9 @@ $(document).ready(function () {
         // prevents further play for a matched pair in this round
         function disableCardClick() {
             $(".matched").off("click", playGame);
-            $(".matched").removeClass(".flip");
+            ///$(".matched").removeClass(".flip");
             //cardTwo.removeEventListener("click", playGame);
         }
-
-
 
         // returns cards to original un-flipped state after displaying for a short period of time and stops further cards being clicked in the meantime
         function unFlipCards() {
@@ -244,9 +240,7 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
-                itCardInPlay = [];
-                enCardInPlay = [];
-                frCardInPlay = [];
+
                 clearDeck();
                 console.log("clear deck");
             }, 1700);
@@ -258,15 +252,13 @@ $(document).ready(function () {
             freezePlay = false;
             cardOne = null;
             cardTwo = null;
+            itCardInPlay = [];
+            enCardInPlay = [];
+            frCardInPlay = [];
             
-           
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-            
-                
+        
         }
-    
-
-
 });
 
 
