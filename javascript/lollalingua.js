@@ -84,7 +84,7 @@ $(document).ready(function () {
     const french = $(".french");
     const english = $(".english");
     const italian = $(".italian");
-    const langButton = $(".language-button");
+   // const langButton = $(".language-button");
     
 
     /* -----language event listener --------*/
@@ -95,29 +95,33 @@ $(document).ready(function () {
     /* -----change language function --------*/
 
     function chooseLanguage(lang) {
-    let lang = english;
 
     if ($(".language-button").hasClass(".french")) {
         let lang = french;
         $(".language-game-it").hide();
         $("#langauge-game-it").hide();
+        setLocalStorage(lang);
     
     } else if ($(".language-button").hasClass('english')){
         let lang = english;
+        $(".language-game-fr").hide();
+        $("#langauge-game-fr").hide();
+        setLocalStorage(lang);
     
     } else if ($(".language-button").hasClass('italian')){
         let lang = italian;
-        $(".language-game-it").hide();
-        $("#langauge-game-it").hide();
+        $(".language-game-fr").hide();
+        $("#langauge-game-fr").hide();
+        setLocalStorage(lang);
 
         }
         console.log("chooseLanguage");
-    };
+    }
     /* -----store language in local storage --------*/
     function setLocalStorage(lang) {
-    let userLang = {
+        let userLang = {
         lang: lang
-    }
+        };
 
     let languageChoice = JSON.stringify(userLang);
     localStorage.setItem('languageChoice', languageChoice);
@@ -130,20 +134,19 @@ $(document).ready(function () {
     if ('languageChoice' in localStorage) {
         let languageChoice = localStorage.getItem('languageChoice');
         let userLang = JSON.parse(languageChoice);
-        
+
         if (userLang.lang == 'french') {
             chooseLanguage('french');
         } else if (userLang.lang == 'italian') {
             chooseLanguage('italian');
         }
         else {
-            chooseLanguage('english')
+            chooseLanguage('english');
         }
     }
 }
 checkLocalStorage();
 
-   
 
 // get how to play modal using jquery click listner on play- button
 
@@ -177,7 +180,7 @@ $(".close-btn").on("click",function() {
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
     $("#game-over-modal").css('display', 'none'),
-    location.reload();
+    //location.reload();
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
 });
@@ -188,7 +191,7 @@ $( "#in-modal-lang-btn" ).on("click",function() {
 });
 
 $( "#in-modal-play-btn" ).on("click",function() {
-    location.reload();
+    //location.reload();
 });
 
 $("#in-modal-btn-school").on("click",function() {
