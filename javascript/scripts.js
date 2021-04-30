@@ -95,7 +95,7 @@ $(document).ready(function () {
     }
 
     // global variables 
-    const gameCards = document.querySelectorAll(".game-card"); //allows access to call and edit game-cards throughout the game
+    // const gameCards = document.querySelectorAll(".game-card"); //allows access to call and edit game-cards throughout the game
     const gameCardsEn = document.querySelectorAll(".game-card-en"); //allows access to call and edit English game-cards throughout the game
     const gameCardsIt = document.querySelectorAll(".game-card-it"); //allows access to call and edit Italian game-cards throughout the game
     const gameCardsFr = document.querySelectorAll(".game-card-fr"); //allows access to call and edit French game-cards throughout the game

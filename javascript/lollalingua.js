@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-   /* chooseLanguage(); */
+    chooseLanguage(); 
 
     $(".language-game-en").hide();
     $(".language-game-it").hide();
@@ -89,11 +89,17 @@ $(document).ready(function () {
 
     /* -----language event listener --------*/
 
-    
-    
-    
-    $('.language-button').on("click",(event) => {
-    let lang = event.target.dataset.lang;
+    // $('.language-button').on("click",(event) => {
+    // var lang = event.target.dataset.lang;
+    // console.log(`DATASET LANG: ${lang}`);
+    // chooseLanguage(lang);
+    // console.log("lang button click");
+
+    // });
+
+    $('.language-button').on("click",function(event) {
+    var lang = this.dataset.lang;
+    console.log(`DATASET LANG: ${lang}`);
     chooseLanguage(lang);
     console.log("lang button click");
 
@@ -103,35 +109,45 @@ $(document).ready(function () {
 
     function chooseLanguage(lang) {
 
-        if  (lang == 'french') {
-            
-            setLocalStorage(lang);
-        
-        } else if (lang == 'italian') {
-            
-            setLocalStorage(lang);
-            
-        
-        } else if (lang == 'english') {
-            
-            setLocalStorage(lang);
+        if  (lang === 'french') {
+            $(".language-game-it").hide();
+            $("#language-game-it").hide();
+            $(".language-game-fr").show();
+            $("#language-game-fr").show();
 
+            console.log("chooseLanguagefr");
+        } else if (lang === 'italian') {
+            $(".language-game-it").show();
+            $("#language-game-it").show();
+            $(".language-game-fr").hide();
+            $("#language-game-fr").hide();
+            
+            console.log("chooseLanguageit");
+        } else if (lang === 'english') {
+             
+            console.log("chooseLanguageen");
         }
-        console.log("chooseLanguage");
-    }
+        console.log(`LANG: ${lang}`);
+       setLocalStorage(lang);
+           
+        }
+    
     /* -----store language in local storage --------*/
     function setLocalStorage(lang) {
         let userLang = {
         lang: lang
-        };
+        }
+
+        console.log(`USER LANG: ${Object.keys(userLang)}`);
 
     let languageChoice = JSON.stringify(userLang);
+    console.log(`LANG CHOICE: ${languageChoice}`);
     localStorage.setItem('languageChoice', languageChoice);
 }
 
     /* -----retreive local storage on load --------*/
 
-    function checkLocalStorage(_lang) {
+    function checkLocalStorage() {
 
     if ('languageChoice' in localStorage) {
         let languageChoice = localStorage.getItem('languageChoice');
@@ -141,8 +157,7 @@ $(document).ready(function () {
             chooseLanguage('french');
         } else if (userLang.lang == 'italian') {
             chooseLanguage('italian');
-        }
-        else {
+        } else if (userLang.lang == 'english'){
             chooseLanguage('english');
         }
     }
@@ -181,7 +196,7 @@ $(".close-btn").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
-    $("#game-over-modal").css('display', 'none'),
+    $("#game-over-modal").css('display', 'none');
     //location.reload();
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
