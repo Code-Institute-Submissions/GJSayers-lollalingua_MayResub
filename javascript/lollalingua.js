@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    chooseLanguage(); 
+   /* chooseLanguage(); */
 
     $(".language-game-en").hide();
     $(".language-game-it").hide();
@@ -13,7 +13,7 @@ $(document).ready(function () {
     $("#go-fr").hide();
 
 
- /*efforts at language storage */
+ /*efforts at language storage 
 
     document.cookie = "language=english";
 
@@ -76,6 +76,74 @@ $(document).ready(function () {
             }
         }
     };
+
+    */
+
+    /* -----language variables --------*/
+
+    const french = $(".french");
+    const english = $(".english");
+    const italian = $(".italian");
+    const langButton = $(".language-button");
+    
+
+    /* -----language event listener --------*/
+
+    $('.language-button').on("click",chooseLanguage); 
+    console.log("lang button click");
+
+    /* -----change language function --------*/
+
+    function chooseLanguage(lang) {
+    let lang = english;
+
+    if ($(".language-button").hasClass(".french")) {
+        let lang = french;
+        $(".language-game-it").hide();
+        $("#langauge-game-it").hide();
+    
+    } else if ($(".language-button").hasClass('english')){
+        let lang = english;
+    
+    } else if ($(".language-button").hasClass('italian')){
+        let lang = italian;
+        $(".language-game-it").hide();
+        $("#langauge-game-it").hide();
+
+        }
+        console.log("chooseLanguage");
+    };
+    /* -----store language in local storage --------*/
+    function setLocalStorage(lang) {
+    let userLang = {
+        lang: lang
+    }
+
+    let languageChoice = JSON.stringify(userLang);
+    localStorage.setItem('languageChoice', languageChoice);
+}
+
+    /* -----retreive local storage on load --------*/
+
+    function checkLocalStorage() {
+
+    if ('languageChoice' in localStorage) {
+        let languageChoice = localStorage.getItem('languageChoice');
+        let userLang = JSON.parse(languageChoice);
+        
+        if (userLang.lang == 'french') {
+            chooseLanguage('french');
+        } else if (userLang.lang == 'italian') {
+            chooseLanguage('italian');
+        }
+        else {
+            chooseLanguage('english')
+        }
+    }
+}
+checkLocalStorage();
+
+   
 
 // get how to play modal using jquery click listner on play- button
 
