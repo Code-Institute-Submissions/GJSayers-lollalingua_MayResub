@@ -81,38 +81,40 @@ $(document).ready(function () {
 
     /* -----language variables --------*/
 
-    const french = $(".french");
-    const english = $(".english");
-    const italian = $(".italian");
+    //const french = $(".french");
+    //const english = $(".english");
+    //const italian = $(".italian");
    // const langButton = $(".language-button");
     
 
     /* -----language event listener --------*/
 
-    $('.language-button').on("click",chooseLanguage); 
+    
+    
+    
+    $('.language-button').on("click",(event) => {
+    let lang = event.target.dataset.lang;
+    chooseLanguage(lang);
     console.log("lang button click");
+
+    });
 
     /* -----change language function --------*/
 
     function chooseLanguage(lang) {
 
-    if ($(".language-button").hasClass(".french")) {
-        let lang = french;
-        $(".language-game-it").hide();
-        $("#langauge-game-it").hide();
-        setLocalStorage(lang);
-    
-    } else if ($(".language-button").hasClass('english')){
-        let lang = english;
-        $(".language-game-fr").hide();
-        $("#langauge-game-fr").hide();
-        setLocalStorage(lang);
-    
-    } else if ($(".language-button").hasClass('italian')){
-        let lang = italian;
-        $(".language-game-fr").hide();
-        $("#langauge-game-fr").hide();
-        setLocalStorage(lang);
+        if  (lang == 'french') {
+            
+            setLocalStorage(lang);
+        
+        } else if (lang == 'italian') {
+            
+            setLocalStorage(lang);
+            
+        
+        } else if (lang == 'english') {
+            
+            setLocalStorage(lang);
 
         }
         console.log("chooseLanguage");
@@ -129,7 +131,7 @@ $(document).ready(function () {
 
     /* -----retreive local storage on load --------*/
 
-    function checkLocalStorage() {
+    function checkLocalStorage(_lang) {
 
     if ('languageChoice' in localStorage) {
         let languageChoice = localStorage.getItem('languageChoice');
@@ -201,8 +203,6 @@ $("#in-modal-btn-school").on("click",function() {
     $(".info").show(1000);
     $("#game-at-school").show(1000); 
     $("#game-animals").hide(1000);
-    $(".language-game-en").show(1000);
-    $(".language-game-fr").show(1000);
 });
 
 $("#in-modal-btn-animals").on("click",function() {
@@ -212,8 +212,6 @@ $("#in-modal-btn-animals").on("click",function() {
     $(".info").show(1000);
     $("#game-animals").show(1000); 
     $("#game-at-school").hide(1000);
-    $(".language-game-en").show(1000);
-    $(".language-game-fr").show(1000);
 });
 
 });
