@@ -108,19 +108,27 @@ $(document).ready(function () {
     /* -----change language function --------*/
 
     function chooseLanguage(lang) {
-
+       
         if  (lang === 'french') {
+            $("#in-modal-btn-animals").on("click",function() {
             $(".language-game-it").hide();
             $("#language-game-it").hide();
             $(".language-game-fr").show();
             $("#language-game-fr").show();
-
+            $(".language-game-en").show();
+            $("#language-game-en").show();
+            })
             console.log("chooseLanguagefr");
+            
         } else if (lang === 'italian') {
-            $(".language-game-it").show();
-            $("#language-game-it").show();
+            $("#in-modal-btn-school").on("click",function() {
             $(".language-game-fr").hide();
             $("#language-game-fr").hide();
+            $(".language-game-it").show();
+            $("#language-game-it").show();
+            $(".language-game-en").show();
+            $("#language-game-en").show();
+            })
             
             console.log("chooseLanguageit");
         } else if (lang === 'english') {
@@ -225,9 +233,20 @@ $("#in-modal-btn-animals").on("click",function() {
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
     $(".info").show(1000);
-    $("#game-animals").show(1000); 
     $("#game-at-school").hide(1000);
-});
+    $("#game-animals").show(1000);
+   
+    /*checkLocalStorage(languageChoice);
+    if (lang == 'french') {
+        
+        $(".language-game-it").hide();
+        $("#language-game-it").hide();
+        $(".language-game-fr").show();
+        $("#language-game-fr").show();
+        $(".language-game-en").show();
+        $("#language-game-en").show();
+    } */
+
 
 });
-
+})
