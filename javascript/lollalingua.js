@@ -110,7 +110,7 @@ $(document).ready(function () {
     function chooseLanguage(lang) {
        
         if  (lang === 'french') {
-            $("#in-modal-btn-animals").on("click",function() {
+            $("#in-modal-btn-animals, #in-modal-btn-school").on("click",function() {
             $(".language-game-it").hide();
             $("#language-game-it").hide();
             $(".language-game-fr").show();
@@ -121,7 +121,7 @@ $(document).ready(function () {
             console.log("chooseLanguagefr");
             
         } else if (lang === 'italian') {
-            $("#in-modal-btn-school").on("click",function() {
+            $("#in-modal-btn-school, #in-modal-btn-animals").on("click",function() {
             $(".language-game-fr").hide();
             $("#language-game-fr").hide();
             $(".language-game-it").show();
