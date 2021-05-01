@@ -3,6 +3,7 @@
 * {
     padding: 0;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Paytone One', sans-serif;
     color: #2B3D4B;
@@ -15,6 +16,12 @@ body {
     justify-content: space-evenly;
     padding-left: 5%;
     padding-right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
 }
 
 header {
@@ -175,9 +182,9 @@ header {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: transform .5s;
-    -moz-transition: transform .5s;
+    /*-moz-transition: transform .5s;
     -ms-transition: transform .5s;
-    -o-transition: transform .5s;
+    -o-transition: transform .5s;*/
     transition: transform .5s;
 }
 
@@ -186,9 +193,9 @@ header {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
     -webkit-transition: transform .3s;
-    -moz-transition: transform .3s;
+    /*-moz-transition: transform .3s;
     -ms-transition: transform .3s;
-    -o-transition: transform .3s;
+    -o-transition: transform .3s;*/
     transition: transform .3s;
 }
 
@@ -281,12 +288,12 @@ header {
 } 
 @keyframes spin {
     from {
-        -webkit-transform:rotate(0deg);
+        -webkit-transform: rotate(0deg);
         transform:rotate(0deg);
         
     }
     to {
-        -webkit-transform:rotate(360deg);
+        -webkit-transform: rotate(360deg);
         transform:rotate(360deg);
         
     }
