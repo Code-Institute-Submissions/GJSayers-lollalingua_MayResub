@@ -5,13 +5,20 @@ $(document).ready(function () {
     startGame();
 
     function startGame() {
+        console.log(startGame);
         shuffleDeckEn(); //shuffles the english cards deck on load
         shuffleDeckFrench(); //shuffles the french cards deck on load
         shuffleDeckItalian(); //shuffles the italian cards deck on load
+        turns = [];
+        console.log(turns);
+        matchedPairs = [];
+        console.log(matchedPairs);
+        $(".game-card").removeClass(".matched");
     }
 
     // checks if countdownTimer should be called by validating the number of turns played (two revealed cards = 1 turn and the start of the timer)
     function validateTimer() {
+        console.log(validateTimer);
         if (turns === 1) {
             countdownTimer();
         }
@@ -19,6 +26,7 @@ $(document).ready(function () {
 
     // displays countdown time in the info div
     function countdownTimer() {
+        console.log(countdownTimer);
         let secondsLeft = 60;
         setInterval(function () {
             if (secondsLeft <= 0) {
@@ -33,7 +41,8 @@ $(document).ready(function () {
                 Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
                 secondsLeft = 60;
-                clearDeck();
+                //startGame();
+                //console.log(startGame);
                 //   clearInterval(secondsLeft = 0);
             }
 
@@ -49,13 +58,14 @@ $(document).ready(function () {
                 Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
                 secondsLeft = 60;
-                clearDeck();
+                //startGame();
+                //console.log(startGame);
                 
             }
 
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-            }, 1000);
+            }, 200);
     };
 
     // counts number of flips/turns a player has made and pushes them to index.html for front-end display - calls validateTimer function to see if countdownTimer should be called.
@@ -148,23 +158,35 @@ $(document).ready(function () {
     }
 
         function boardCheck() {
-        if (cardOne.classList.contains("game-card-en")) {
+        if (cardOne.classList.contains("game-card-en") && (!cardTwo)) {
             enCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeEnBoard();
             console.log("freezeEnBoard");   
-        } else if  (cardOne.classList.contains("game-card-fr")) {
+        } else if  (cardOne.classList.contains("game-card-fr") && (!cardTwo)) {
             frCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeFrBoard();
             console.log("freezeFrBoard");   
-        } else if  (cardOne.classList.contains("game-card-it")) {
+        } else if  (cardOne.classList.contains("game-card-it") && (!cardTwo)) {
             itCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeItBoard();  
             console.log("freezeItBoard");      
         }   
         };
+
+        function clearCardInPlay(){
+            if ((itCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
+                itCardInPlay-- ;
+
+            } else if ((enCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
+                enCardInPlay-- ;
+            } else if ((frCardInPlay >= 1) (!document.getElementsByClassName('matched'))) {
+                frCardInPlay-- ;
+            }
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+        }
     
 
 
@@ -192,6 +214,8 @@ $(document).ready(function () {
             cardTwo = this;
             isPair();
             console.log("is pair");
+            clearCardInPlay();
+            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
         }};
 
         // compares cards one and two to see if they are a match based on the data-ident (identifier) in the html. If the cards are a matched, they get a matched class added and are pushed to  matchedPairs variable and disableCardClick prevents further play for a matched pair in this round, else unFlipCards is called to return face down. 
@@ -206,25 +230,29 @@ $(document).ready(function () {
         }*/
 
         function isPair() {
-            if (cardOne.dataset.ident === cardTwo.dataset.ident) {
+            if (cardOne.dataset.ident ===      cardTwo.dataset.ident) {
                 cardOne.classList.add("matched");
                 cardTwo.classList.add("matched");
                 console.log(cardOne,cardTwo);
                 matchedPairs++;
+                // matched pairs 
                 console.log(matchedPairs);
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay);
                 disableCardClick();
                 console.log("disableCardClick");
                 scoreCounter(); // initites the score counter on load
+                clearCardInPlay(); // adds the click back on to frozen boards
                 console.log("scoreCounter");
                 //continuePlay();
             } else {
                 unFlipCards();
                 console.log("unflip cards");
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-                //continuePlay();
+                
+                console.log("clearCardInPlay");
 
             }
+            
         }
 
         // prevents further play for a matched pair in this round
@@ -240,6 +268,7 @@ $(document).ready(function () {
             setTimeout(() => {
                 cardOne.classList.remove("flip");
                 cardTwo.classList.remove("flip");
+                //clearCardInPlay(); // adds the click back on to frozen boards
 
                 clearDeck();
                 console.log("clear deck");
@@ -252,12 +281,7 @@ $(document).ready(function () {
             freezePlay = false;
             cardOne = null;
             cardTwo = null;
-            itCardInPlay = [];
-            enCardInPlay = [];
-            frCardInPlay = [];
-            
-            console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-        
+
         }
 });
 
