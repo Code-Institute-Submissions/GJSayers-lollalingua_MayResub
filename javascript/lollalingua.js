@@ -132,12 +132,10 @@ $(document).ready(function () {
             
             console.log("chooseLanguageit");
         } else if (lang === 'english') {
-             
             console.log("chooseLanguageen");
         }
         console.log(`LANG: ${lang}`);
-       setLocalStorage(lang);
-           
+        setLocalStorage(lang);
         }
     
     /* -----store language in local storage --------*/
@@ -192,6 +190,7 @@ $("#modal-subject-btn").on("click",function() {
     $("#subject-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
+    $("#game-over-modal").hide();
     });   
 
 $("#modal-start-play-btn").on("click",function() {
@@ -201,6 +200,7 @@ $("#modal-start-play-btn").on("click",function() {
     });      
 
 $(".close-btn").on("click",function() {
+    // if {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
@@ -216,7 +216,9 @@ $( "#in-modal-lang-btn" ).on("click",function() {
 });
 
 $( "#in-modal-play-btn" ).on("click",function() {
-    //location.reload();
+    $("#game-over-modal").hide();
+    $("#subject-modal").css('display', 'block');
+
 });
 
 $("#in-modal-btn-school").on("click",function() {
@@ -235,18 +237,5 @@ $("#in-modal-btn-animals").on("click",function() {
     $(".info").show(1000);
     $("#game-at-school").hide(1000);
     $("#game-animals").show(1000);
-   
-    /*checkLocalStorage(languageChoice);
-    if (lang == 'french') {
-        
-        $(".language-game-it").hide();
-        $("#language-game-it").hide();
-        $(".language-game-fr").show();
-        $("#language-game-fr").show();
-        $(".language-game-en").show();
-        $("#language-game-en").show();
-    } */
-
-
 });
 })
