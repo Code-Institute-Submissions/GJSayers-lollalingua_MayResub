@@ -171,6 +171,7 @@ header {
     position: relative;  
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
     transform: scale(1);
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: transform .5s;
     -moz-transition: transform .5s;
@@ -223,25 +224,29 @@ header {
 }
 
 .game-card.flip {
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
 }
 
 .card-front {
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
 }
 
 .card-front-it {
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
 }
 
 .card-front-fr {
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
 }
 
 .game-card.matched {
@@ -259,8 +264,9 @@ header {
     -ms-transition-property: animation-name;
     -o-transition-property: animation-name;
     transition-property: animation-name;
-    animation-name: spin;
     -webkit-animation-name: spin;
+    animation-name: spin;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear; 
     animation-timing-function: linear; 
@@ -274,12 +280,14 @@ header {
 } 
 @keyframes spin {
     from {
-        transform:rotate(0deg);
         -webkit-transform:rotate(0deg);
+        transform:rotate(0deg);
+        
     }
     to {
-        transform:rotate(360deg);
         -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+        
     }
 }
 
