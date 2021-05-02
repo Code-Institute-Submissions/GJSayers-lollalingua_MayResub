@@ -10,8 +10,8 @@
 }
 
 body {
-    background-color: #2B3D4B;
-    background-size: cover;
+    /*background-color: #2B3D4B;
+    background-size: cover;*/
     background-repeat: no-repeat;
     justify-content: space-evenly;
     padding-left: 5%;
@@ -54,10 +54,13 @@ header {
 
 /*----blocks & modals-----*/
 
-.welcome {
+.welcome-message {
     position: relative;
     text-align: center;
     justify-content: space-around;
+    padding: 10%;
+    background-color: rgba(233, 137, 126, .2);
+    border-radius: 15px;
 }
 
 .welcome-it {
