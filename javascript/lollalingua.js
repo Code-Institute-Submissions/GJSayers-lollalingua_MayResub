@@ -32,7 +32,7 @@ $(document).ready(function () {
             $("#language-game-fr").show();
             $(".language-game-en").show();
             $("#language-game-en").show();
-            })
+            });
             console.log("chooseLanguagefr");
             
         } else if (lang === 'italian') {
@@ -43,7 +43,7 @@ $(document).ready(function () {
             $("#language-game-it").show();
             $(".language-game-en").show();
             $("#language-game-en").show();
-            })
+            });
             
             console.log("chooseLanguageit");
         } else if (lang === 'english') {
@@ -57,7 +57,7 @@ $(document).ready(function () {
     function setLocalStorage(lang) {
         let userLang = {
         lang: lang
-        }
+        };
         console.log(`USER LANG: ${Object.keys(userLang)}`);
         let languageChoice = JSON.stringify(userLang);
         console.log(`LANG CHOICE: ${languageChoice}`);
@@ -120,7 +120,7 @@ $(".close-btn").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
-    $("#game-over-modal").css('display', 'none')
+    $("#game-over-modal").css('display', 'none');
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
 });
@@ -166,4 +166,4 @@ $("#in-modal-btn-animals").on("click",function() {
     $("#game-at-school").hide(1000);
     $("#game-animals").show(1000);
 });
-})
+});
