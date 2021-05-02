@@ -199,12 +199,7 @@ $("#modal-start-play-btn").on("click",function() {
     $(".welcome").hide(1000);
     });  
     
-$("#modal-play-again-btn").on("click",function() {
-    location.reload();
-   // $("#subject-modal").css('display', 'block',1000);
-    //$(".welcome-message").hide();
-    //$(".welcome").hide();
-    });   
+  
 
 $(".close-btn").on("click",function() {
     
