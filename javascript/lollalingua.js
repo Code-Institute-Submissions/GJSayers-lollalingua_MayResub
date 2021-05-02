@@ -171,37 +171,38 @@ $(document).ready(function () {
 checkLocalStorage();
 
 
-// get how to play modal using jquery click listner on play- button
-
-
+// get how to play modal using jquery click listner on play button
 $("#modal-play-btn").on("click",function() {
     $(".play-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
     });
-
+// get language modal to make lanugage choice by pressing 'choose language' button
 $("#modal-lang-btn").on("click",function() {
     $("#lang-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
     });
 
+// get subject modal to make suject choice by pressing 'choose subject' button, but will be re-routed to choose language first if they have not already done so and an alert box will pop up. 
 $("#modal-subject-btn").on("click",function() {
-    $("#subject-modal").css('display', 'block');
+    alert("Please choose your language first!");
+    $("#lang-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
     $("#game-over-modal").hide();
     });   
 
+// initiates the selection process for starting play
 $("#modal-start-play-btn").on("click",function() {
-    $("#subject-modal").css('display', 'block');
+    $("#lang-modal").css('display', 'block');
     $(".welcome-message").hide();
     $(".welcome").hide();
-    $(".welcom-section").hide();
+    $(".welcome-section").hide();
     });  
     
   
-
+// closes the modals
 $(".close-btn").on("click",function() {
     
     $("#play-modal").css('display', 'none');
@@ -212,20 +213,29 @@ $(".close-btn").on("click",function() {
     $(".welcome").show(1000);
 });
 
+// closes the game over modal and re-starts the game / reloads index
 $(".close-btn-game-over").on("click",function() {
     location.reload();
 });
 
+// displays the language choice modal from within 
 $( "#in-modal-lang-btn" ).on("click",function() {
     $("#play-modal").css('display', 'none');
     $(".lang-modal").css('display', 'block');
 });
 
+$(".language-button").on("click", function(){
+    $("#lang-modal").css('display', 'none');
+    $("#subject-modal").css('display', 'block');
+});
+
+// closes the game over modal and re-starts the game / reloads index
 $( "#modal-play-again-btn" ).on("click",function() {
     location.reload();
 
 });
 
+// on subject choice, gameto match school items and scoring panel will be displayed 
 $("#in-modal-btn-school").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
@@ -235,6 +245,7 @@ $("#in-modal-btn-school").on("click",function() {
     $("#game-animals").hide(1000);
 });
 
+// on subject choice, gameto match animals items and scoring panel will be displayed 
 $("#in-modal-btn-animals").on("click",function() {
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
