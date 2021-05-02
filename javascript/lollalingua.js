@@ -220,9 +220,8 @@ $( "#in-modal-lang-btn" ).on("click",function() {
     $(".lang-modal").css('display', 'block');
 });
 
-$( "#in-modal-play-btn" ).on("click",function() {
-    $("#game-over-modal").hide();
-    $("#subject-modal").css('display', 'block');
+$( "#modal-play-again-btn" ).on("click",function() {
+    location.reload();
 
 });
 

@@ -96,6 +96,11 @@ header {
 .lang-choices {
     text-align: center;
     justify-content: space-around;
+    background-color: #2B3D4B;
+    border-radius: 15px;
+    padding-left: 20%;
+    padding-right: 20%;
+
     
 }
 
@@ -346,6 +351,8 @@ header {
     width: 75px;
     height: 75px;
     display: inline;
+    position: relative;
+    z-index: 2;
     border-radius: 50%;
     padding: 15px; 
 }
@@ -361,6 +368,8 @@ header {
     width: 75px;
     height: 75px;
     display: inline;
+    position: relative;
+    z-index: 2;
     border-radius: 50%;
     padding: 15px;
 }
@@ -376,6 +385,8 @@ header {
     width: 75px;
     height: 75px;
     display: inline;
+    position: relative;
+    z-index: 2;
     border-radius: 50%;
     padding: 15px;
 }
