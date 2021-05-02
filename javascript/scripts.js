@@ -14,6 +14,7 @@ $(document).ready(function () {
         matchedPairs = [];
         console.log(matchedPairs);
         $(".game-card").removeClass(".matched");
+        secondsLeft = 60;
     }
 
     // checks if countdownTimer should be called by validating the number of turns played (two revealed cards = 1 turn and the start of the timer)
@@ -40,11 +41,15 @@ $(document).ready(function () {
                 <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
                 Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
-                secondsLeft = 60;
-                //startGame();
+                $(".welcome-message").hide(1000);
+                $(".welcome").hide(1000);
+                
+                startGame();
                 //console.log(startGame);
                 //   clearInterval(secondsLeft = 0);
             }
+
+            
 
             else if (matchedPairs === 6) {
                 $('#timer').html("<h3>You won!</h3>");
@@ -57,7 +62,7 @@ $(document).ready(function () {
                 <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
                 Want to play again?`);
                 $("#game-over-modal").css('display', 'block');
-                secondsLeft = 60;
+                // secondsLeft = 60;
                 //startGame();
                 //console.log(startGame);
                 
@@ -67,6 +72,14 @@ $(document).ready(function () {
             secondsLeft -= 1;
             }, 200);
     };
+
+            $("#modal-play-again-btn").on("click",function() {
+            // location.reload();
+            $("#subject-modal").css('display', 'block',1000);
+            $(".welcome-message").hide();
+            $(".welcome").hide();
+            startGame();
+            }); 
 
     // counts number of flips/turns a player has made and pushes them to index.html for front-end display - calls validateTimer function to see if countdownTimer should be called.
     function turnsCounter() {
@@ -179,6 +192,7 @@ $(document).ready(function () {
         function clearCardInPlay(){
             if ((itCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
                 itCardInPlay-- ;
+                
 
             } else if ((enCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
                 enCardInPlay-- ;
@@ -230,7 +244,7 @@ $(document).ready(function () {
         }*/
 
         function isPair() {
-            if (cardOne.dataset.ident ===      cardTwo.dataset.ident) {
+            if (cardOne.dataset.ident === cardTwo.dataset.ident) {
                 cardOne.classList.add("matched");
                 cardTwo.classList.add("matched");
                 console.log(cardOne,cardTwo);
@@ -248,7 +262,7 @@ $(document).ready(function () {
                 unFlipCards();
                 console.log("unflip cards");
                 console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-                
+                clearCardInPlay(); // adds the click back on to frozen boards
                 console.log("clearCardInPlay");
 
             }

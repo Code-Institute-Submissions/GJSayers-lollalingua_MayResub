@@ -98,11 +98,12 @@ header {
     justify-content: space-around;
 }
 
-.close-btn {
+.close-btn.close-btn-game-over {
     color: rgb(43, 61, 75);
     float: right;
     font-size: 30px;
 }
+
 
 .close-btn:hover, .close-btn:focus {
     color: rgba(43, 61, 75, .7);

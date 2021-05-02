@@ -197,17 +197,27 @@ $("#modal-start-play-btn").on("click",function() {
     $("#subject-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
-    });      
+    });  
+    
+$("#modal-play-again-btn").on("click",function() {
+    location.reload();
+   // $("#subject-modal").css('display', 'block',1000);
+    //$(".welcome-message").hide();
+    //$(".welcome").hide();
+    });   
 
 $(".close-btn").on("click",function() {
-    // if {
+    
     $("#play-modal").css('display', 'none');
     $("#lang-modal").css('display', 'none');
     $("#subject-modal").css('display', 'none');
-    $("#game-over-modal").css('display', 'none');
-    //location.reload();
+    $("#game-over-modal").css('display', 'none')
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
+});
+
+$(".close-btn-game-over").on("click",function() {
+    location.reload();
 });
 
 $( "#in-modal-lang-btn" ).on("click",function() {
