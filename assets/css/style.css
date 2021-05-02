@@ -346,7 +346,7 @@ header {
 }
 
 .btn.action-button:hover {
-    background-color: rgba(64, 163, 167, .5);
+    background-color: rgba(64, 163, 167, .3);
 }
 
 #lang-button-fr img {
