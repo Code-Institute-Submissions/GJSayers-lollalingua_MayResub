@@ -63,12 +63,14 @@ header {
     border-radius: 15px;
 }
 
-.welcome-it {
-    display: none;
+.welcome-section {
+    padding-top: 5%;
 }
 
-.welcome-fr {
-    display: none;
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3%;
 }
 
 
@@ -341,7 +343,7 @@ header {
     justify-content: center;
     padding: 12px;
     min-width: 100px;
-    background-color: #40A3A7;
+    background-color: rgba(64, 163, 167, .7);
     border: none;
     border-radius: 15px;
 }
