@@ -62,7 +62,7 @@ $(document).ready(function () {
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
             }, 1000);
-            };
+            }
             
             // reloads the page to play again
             $("#modal-play-again-btn").on("click",function() {
@@ -129,7 +129,7 @@ $(document).ready(function () {
                 $(".game-card-en").off("click", playGame);
                 $(".game-card-fr").on("click", playGame);
                 $(".game-card-it").on("click", playGame);
-            };      
+            }     
         }
         // activates on boardCheck(); based on first card turned to ensure that second card flipped cannot be from the French board
         function freezeFrBoard() {
@@ -137,7 +137,7 @@ $(document).ready(function () {
                 $(".game-card-fr").off("click", playGame);
                 $(".game-card-en").on("click", playGame);
                 $(".game-card-it").on("click", playGame);
-            };
+            }
         }
         // activates on boardCheck(); based on first card turned to ensure that second card flipped cannot be from the Italian board
         function freezeItBoard() {
@@ -145,7 +145,7 @@ $(document).ready(function () {
                 $(".game-card-it").off("click", playGame);
                 $(".game-card-en").on("click", playGame);
                 $(".game-card-fr").on("click", playGame);
-            };
+            }
         }
         // Checks which board the first card flipped is - Adds to the Cards in play lists for reference in freezeBoard functions
         function boardCheck() {
@@ -165,7 +165,7 @@ $(document).ready(function () {
             freezeItBoard();  
             console.log("freezeItBoard");      
         }   
-        };
+        }
 
         function clearCardInPlay(){
             if ((itCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
@@ -179,7 +179,7 @@ $(document).ready(function () {
                 $(".game-card-en").on("click",playGame);
                 $(".game-card-fr").on("click",playGame);
                 $(".game-card-it").on("click",playGame);
-            } else if ((frCardInPlay >= 1) (!document.getElementsByClassName('matched'))) {
+            } else if ((frCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
                 frCardInPlay-- ;
                 $(".game-card-en").on("click",playGame);
                 $(".game-card-fr").on("click",playGame);
@@ -213,7 +213,7 @@ $(document).ready(function () {
                     clearCardInPlay();
                     console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
                 }
-            };
+            }
 
             // Appends star image to the info board each time a pair is matched
             function scoreCounter() {
@@ -268,5 +268,3 @@ $(document).ready(function () {
                 cardTwo = null;
             }
     });
-
-
