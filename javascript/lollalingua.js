@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     chooseLanguage(); 
@@ -12,91 +11,7 @@ $(document).ready(function () {
     $("#go-it").hide();
     $("#go-fr").hide();
 
-
- /*efforts at language storage 
-
-    document.cookie = "language=english";
-
-    $('.language-button').on("click",setCookie); 
-    console.log("lang button click");
-    setCookie();
-
-    function setCookie(language, languageChoice) {
-
-    if ($(".language-button").hasClass(".french")) {
-        languageChoice = "french";
-        //expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice}`;
-    } else if ($(".language-button").hasClass('english')){
-        languageChoice = "english";
-        //expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice}`;
-    } else if ($(".language-button").hasClass('italian')){
-        languageChoice = "italian";
-        //expiry = (time() + (60*60*24*n));
-        document.cookie = `${language}=${languageChoice}`;
-
-        }
-        console.log("cookie");
-    };
-
-    
-    getCookie ();
-
-    function getCookie (language) {
-        var name = language + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-    
-       //thing that happens if language is chosen
-    function chooseLanguage() { 
-        var chosenLanguage = getCookie("language");
-        if (chosenLanguage !== "") {
-            console.log(chosenLanguage);
-        
-            if (chosenLanguage === "italian") {
-            $(".language-game-fr").hide();
-            $("#langauge-game-fr").hide();
-        } else if (chosenLanguage === "french") {
-            $(".language-game-it").hide();
-            $("#langauge-game-it").hide();
-        } else if (chosenLanguage === "english") {
-            $(".language-game-fr").hide();
-            $("#langauge-game-fr").hide();
-            }
-        }
-    };
-
-    */
-
-    /* -----language variables --------*/
-
-    //const french = $(".french");
-    //const english = $(".english");
-    //const italian = $(".italian");
-   // const langButton = $(".language-button");
-    
-
-    /* -----language event listener --------*/
-
-    // $('.language-button').on("click",(event) => {
-    // var lang = event.target.dataset.lang;
-    // console.log(`DATASET LANG: ${lang}`);
-    // chooseLanguage(lang);
-    // console.log("lang button click");
-
-    // });
-
+    // stores the chosen lanugage on selection using the flag language button 
     $('.language-button').on("click",function(event) {
     var lang = this.dataset.lang;
     console.log(`DATASET LANG: ${lang}`);
@@ -143,13 +58,11 @@ $(document).ready(function () {
         let userLang = {
         lang: lang
         }
-
         console.log(`USER LANG: ${Object.keys(userLang)}`);
-
-    let languageChoice = JSON.stringify(userLang);
-    console.log(`LANG CHOICE: ${languageChoice}`);
-    localStorage.setItem('languageChoice', languageChoice);
-}
+        let languageChoice = JSON.stringify(userLang);
+        console.log(`LANG CHOICE: ${languageChoice}`);
+        localStorage.setItem('languageChoice', languageChoice);
+    }
 
     /* -----retreive local storage on load --------*/
 
@@ -201,7 +114,6 @@ $("#modal-start-play-btn").on("click",function() {
     $(".welcome-section").hide();
     });  
     
-  
 // closes the modals
 $(".close-btn").on("click",function() {
     
