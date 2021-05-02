@@ -195,8 +195,9 @@ $("#modal-subject-btn").on("click",function() {
 
 $("#modal-start-play-btn").on("click",function() {
     $("#subject-modal").css('display', 'block');
-    $(".welcome-message").hide(1000);
-    $(".welcome").hide(1000);
+    $(".welcome-message").hide();
+    $(".welcome").hide();
+    $(".welcom-section").hide();
     });  
     
   
