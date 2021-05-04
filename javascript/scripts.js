@@ -61,7 +61,7 @@ $(document).ready(function () {
             // populates the info div with the countdown seconds. 
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-            }, 5000);
+            }, 1000);
             }
             
             // reloads the page to play again
