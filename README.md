@@ -12,15 +12,15 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 ## Contents 
 ---
 * UX
-  * Project Goals & Objectives 
-  * User Goals
-  * Stakeholder Goals
-  * User Requirements and Expectations 
-  * Design choices
-    * Layout & Wireframes
-    * Colours
-    * Icons
-    * Fonts
+    * [Project Goals & Objectives](### Project Goals & Objectives) 
+    * User Goals
+    * Stakeholder Goals 
+    * User Requirements and Expectations 
+    * Design choices
+       * Layout & Wireframes
+       * Colours
+       * Icons
+       * Fonts
 
 * Technologies 
   * Languages
@@ -38,10 +38,8 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
   *  Post-Deployment Results
 
 * Bugs
-*  Development Bug & Fixes
-  *  Pre-Deployment Bugs & Fixes
-  
-* Post-Deployment / Unresolved Bugs
+  * Development Bug & Fixes
+  * Post-Deployment / Unresolved Bugs
 
 * Deployment 
   * Method
@@ -52,15 +50,15 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 ---
 ### Project Goals & Objectives 
 ---
-* To provide a free memory game site that serves to;
-1) **teach** the user basic language skills through memory learning.
-2) **give a fun learning experience** to the user. 
-3) **give feedback to the user** throughout the game by keeping track of **matching pairs**  
-4) **give a summary of play** to the user at the end of the game with **final score** and **turns taken**
+#### To provide a free memory game site that serves to;
+1) **Teach** the user basic language skills through memory learning.
+2) **Give a fun learning experience** to the user. 
+3) **Give feedback to the user** throughout the game by keeping track of **matching pairs**  
+4) **Give a summary of play** to the user at the end of the game with **final score** and **turns taken**
 
 ### User Goals 
 ---
-* As a **Potential player of the game**, I want to;
+#### As a **Potential player of the game**, I want to;
 1) Easily **engage with and receive feedback from interaction with the game** to feel comfortable with trying to learn a new language, and be encouraged along the way.  
 2) Keep **track of progress** through a leaderboard, on-page scoring or similar. 
 
@@ -68,7 +66,7 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 
 ### Stakeholder Goals 
 ---
-* To Provide a free language learning game;
+#### To Provide a free language learning game;
 1) To **provide a free game** with the potential for future development into a paid progressive learning app. 
   
 
@@ -95,12 +93,12 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 
 ### Technologies Used
 ---
-* Languages;
+#### Languages;
 *  [HTML5](https://en.wikipedia.org/wiki/HTML5)
 *  [CSS3](https://en.wikipedia.org/wiki/CSS)
-* [JavaScript](https://www.javascript.com/)
+*  [JavaScript](https://www.javascript.com/)
  
-* Libraries, Frameworks & Resources;
+#### Libraries, Frameworks & Resources;
 *  [Bootstrap 4.5.3](https://getbootstrap.com/docs/4.5/getting-started/introduction/) was used as a framework to give structure to the layout. 
 *  [Hover.css](https://ianlunn.github.io/Hover/) I used hover to make buttons more interactive
 *  [Google Fonts](https://fonts.google.com/) I used Paytone as the font for the whole site
@@ -117,7 +115,7 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 
 ### Features
 ---
-* Included in current deployment;
+#### Included in current deployment;
 * A language selector for French and Italian users.  The language selector uses a local storage function, to enable the user to remain using the same choice until page-reload.  I wanted for the user to be able to leave the site and come back and still have the choice set, but without a backend to persist the data this is not possible using local storage.  This is something I would look to implement in the future. 
 * A language-based memory card game with different decks depending on which language you want to use.  If the user selects the Italian language choice, only the italian and English decks will show, if the French deck is chosen, only the English and French decks will show - This is built by using a function to check the stored langauge to decide which elements to display.  
 It has been very challenging to get the correct function to enable the user to only click one card from each deck - there have been many attempts at this. The solution finally was.. 
@@ -128,28 +126,32 @@ It has been very challenging to get the correct function to enable the user to o
 * I would like to add further difficulty levels and different suject choices, to make the game progressive. 
 * I would like to add a languages general knowledge section to make the site more informative and keep the user engaged for longer. 
 * I would like to add sounds, and would have liked to have included these in the first implementation, but due to the board-freezing bug this was not possible within the time scale. 
+* I would have like to have included JS email, but again due to a lot of time on de-bugging this was not possible. 
 
 ### Testing 
 ---
-*  Development & Pre-Deployment validation testing
+####  Development & Pre-Deployment validation testing
 Throughout development, the site has been tested using the following tools;
 1)[Jigsaw W3 CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 2)[W3 Mark-up Validator](https://validator.w3.org/css) and 
 3)[JSHINT](https://jshint.com/) as well as on 
 4)[Google Chome dev tools](https://developer.chrome.com/docs/devtools/)
 
-*  Design edits
+##### Design edits
 * Design edits made were fairly significant.
 1) The calls to action for the initial load of the page needed to be simplified and the layout pared back for a more simplified way to interact with the site.  
 Instead of cards on the inital load page, I introduced buttons for How to Play, Choose Language, Choose Subject and Play Game.  
 2) I decised for ease of use, it was better UX to have the game on one index page rather than leading to other pages, so I implemented the use of modals, triggered by the buttons and routing the user to game play. 
 3) I realised that the inital wireframe set was not truly mobile-first, and I wanted to make the design more compact to be easily accessible on mobile devices - This also led to the paring back of the colour scheme. 
 
-*  Peer-code review 
-The project was submitted to PeerCodeReview channel on the Code Institute's slack - Here it was identified that a bug that I thought has been fixed had mutated into another verion of the bug, forcing the user to choose two cards on the same language board after a matching pair occurred.
-* User-Goal testing
 
-### Project Goals & Objectives 
+
+#### User-Goal testing
+---
+#####  Peer-code review 
+The project was submitted to PeerCodeReview channel on the Code Institute's slack - Here it was identified that a bug that I thought has been fixed had mutated into another verion of the bug, forcing the user to choose two cards on the same language board after a matching pair occurred.  
+
+##### Project Goals & Objectives 
 ---
 * To provide a free memory game site that serves to;
 1) **teach** the user basic language skills through memory learning. 
@@ -164,7 +166,7 @@ The project was submitted to PeerCodeReview channel on the Code Institute's slac
 4) **give a summary of play** to the user at the end of the game with **final score** and **turns taken**
 * Game-Over modal contains the final score and the turns taken - There is a different message for whether the user has matched all pairs or only matched some. ✅
 
-### User Goals 
+##### User Goals 
 ---
 * As a **Potential player of the game**, I want to;
 1) Easily **engage with and receive feedback from interaction with the game** to feel comfortable with trying to learn a new language, and be encouraged along the way.  
@@ -173,21 +175,32 @@ The project was submitted to PeerCodeReview channel on the Code Institute's slac
 * flipping cards to display the potential pairs ✅
 * info panel to give feeback on score,turn and countdown timer status ✅
 * game-over modal to give feedback on the final outcome of the round played with option to start again ✅ 
-2) Keep **track of progress** through a leaderboard, on-page scoring or similar. 
-* Progress is tracked in the info panel to give feeback on score,turn and countdown timer status ✅
+2) Keep **track of progress** through a leaderboard, on-page scoring or similar. ✅
+* Progress is tracked in the info panel to give feeback on score, turns and countdown timer status ✅
 
 
-### Stakeholder Goals 
+##### Stakeholder Goals 
 ---
-* To Provide a free language learning game;
+##### To Provide a free language learning game;
 1) To **provide a free game** with the potential for future development into a paid progressive learning app. 
+* The game has been created and is functional with the opportunity for future development. ✅
 
-### User Requirements and Expectations 
+##### User Requirements and Expectations 
 ---
 1) Responsive design for accessibility across a range of devices, with **primary focus on mobile devices** for quick and easy play access. 
+* The game has been thoroughly tested for mobile use and plenty of de-bugging has gone into ensuring that the game is functional across mobile devices. ✅
 2) Minimal design for easy navigation.
+* The game design has been simplified throughout the development process and condensed onto a single page with the use of buttons and modals to guide the user journey. ✅ 
+* Leaving only clear, clean calls-to action and minimised content for a simplified experience. ✅ 
 3) A clean and simple design that is **pleasant to interact with** and engaging with **bright colours** 
-* Devices & Browser Testing  
+* Now that all remaining bugs are resolved, the game envokes a pleasant user experience. ✅
+* The user is prevented from choosing two cards from the same language and is made aware of the differences between the boards by the use of flag imagery. ✅ 
+* All call to action buttons are in the green shade chosen in the initial colour pallet and include hover for ease of use.  The shade of green was lightened upon alert from the lighthouse testing that the contrast was not strong enough. ✅
+* The player is kept up to date of the progress of the scoring, turns and time  in the info board ✅
+* In order for the game to function correctly, the user must choose a language, the user is subtly guided to do so, apart from one occasion on the choost subject where an alert is issued and the user is re-directed to choose a language.  The reason for retaining the button is for future intention to persist data in the back end / a quicker future rout for the user.  ✅
+
+#### Devices & Browser Testing  
+---
 The live project has been tested by friends, family and myself on the following devices:
 * Samsung A20e 
 * Dell laptop (model unknown)
@@ -196,7 +209,8 @@ The live project has been tested by friends, family and myself on the following 
 * Apple Iphone 11 (standard size)
 * Apple Iphone SE 
 * Apple Ipad Pro 
-The live project has been tested predominantly on Chrome and Safari as these were the browsers of choice on the mobile devices. 
+
+* The live project has been tested predominantly on Chrome and Safari as these were the browsers of choice on the mobile devices. 
 The phone usage (all devices)was initially a huge issue as the card flip activation was not working correctly - This was solved eventually and is detailed below in bugs section. 
 
 *  Post-Deployment Results
@@ -204,17 +218,16 @@ Towards the later stages of development and pre-submission, tests on the above-m
 
 ### Bugs
 ---
-*  Development Bug & Fixes
+####  Development Bug & Fixes
 1) **Problem seeing active flip cards on click** even though was sure script was correct - Google dev tools errored showing 'Uncaught reference error: $ is not defined'
 **Fix** Add jquery reference script to Animals html file to define $ in scripts.js 
 2) **Issue with background size & location.**  Initial size of background caused failed loading of page, before discovering it was also in the wrong location - general styling rules rather than in the body.  Researched best sizes and re-sized image to 1920 x 1080 pixels.
 **Fix** Discard background image to save on loading time. 
-3) **Problem with using jquery to try and identify a first and second card each from a different deck when allowing flipping**  
-4) Decided that needed a different design for the back of each different language so as to ensure the user experience was clear from a design perspective 
-5) tried to add a match-card img class to use in js function, but two images seem to be the only possibility. 
-6) issue with hidden non-uniform card in the English card container set. 
-*  Pre-Deployment Bugs & Fixes
-
+3) **Problem with using jquery to try and identify a first and second card each from a different deck when allowing flipping**  This bug took many hours to fix, and there were a combinaton of items that contributed to the final fix;
+ * Creating a simplified function to **clear the cards in play** was essential to **take the board out of freeze funtion** 
+ * **Finding the correct positioning** for this function throughout the stages of play. 
+ * **Identifying areas to include a time-out function** was crucial, as I identifies in dev tools that in a number of cases functions were being actioned sooner than they were being called. 
+ * **Editing and testing multiple different timing options** concerning the set time-out was the final peice of the puzzle. 
 
 ### Post-Deployment / Unresolved Bugs
 ---
@@ -255,5 +268,6 @@ To make a copy of the repository, which may be necessary if you wish to make cha
 
 ### Acknowledgements
 --- 
-* Thank you to my mentor Gurjot Singh for advice and guidance since I started. 
-* Thank you to the tutor team at Code Institute 
+* A huge thank you to the tutor team at CodeInstitute for their support in the marathon bug fix that was the freezing card deck! 
+* Thank you to my mentor Gurjot Singh for advice and guidance since I started, and always bringing me back to the logic. 
+* Thank you very much to Quinn and Francesca in [SlackChannel](https://app.slack.com/client/T0L30B202/C0L316Z96) for feedback in the code review. 
