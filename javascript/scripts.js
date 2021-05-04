@@ -108,9 +108,6 @@ $(document).ready(function () {
             }
 
         // global variables 
-        const gameCardsEn = document.querySelectorAll(".game-card-en"); //allows access to call/ edit English game-cards throughout the game
-        const gameCardsIt = document.querySelectorAll(".game-card-it"); //allows access to call/ edit Italian game-cards throughout the game
-        const gameCardsFr = document.querySelectorAll(".game-card-fr"); //allows access to call/ edit French game-cards throughout the game
         let isFlippedCard = false; // to identify which cards are turned 
         let freezePlay = false;    // to reference during playGame function to ensure not too many cards are turned or checked at once
         let cardOne, cardTwo;      // to identify the first and second cards flipped and be able to check them against each other. 
