@@ -9,10 +9,9 @@
     color: #2B3D4B;
     text-align: center;
 }
+/*----Main Structural Items---*/
 
 body {
-    /*background-color: #2B3D4B;
-    background-size: cover;*/
     background-repeat: no-repeat;
     justify-content: space-evenly;
     padding-left: 5%;
@@ -26,7 +25,6 @@ body {
 }
 
 header {
-    
     text-align: center;
     justify-content: space-around;
     padding: 0%;
@@ -41,6 +39,17 @@ header {
     max-width: 250px;
 }
 
+footer {
+    margin-top: 8%;
+    justify-content: center;
+    padding-top: 5%;
+    font-size: x-small;
+    font-weight: lighter;
+    
+}
+
+/*----Scoring display-----*/
+
 .info {
     margin: 0%;
     display: flexbox;
@@ -52,6 +61,7 @@ header {
     transition-delay: 200ms;
     background-color: rgba(64, 163, 167, .5);
 }
+
 
 /*----blocks & modals-----*/
 
@@ -126,18 +136,6 @@ header {
     justify-content: space-around;
 }
 
-
-/*----Game sections-----*/
-/*.language-game-general {
-    width: 350px; 
-    height: 250px; 
-    margin: auto;
-    display: flex;
-    position:sticky;
-    justify-content:space-evenly;
-    flex-wrap: wrap; 
-    perspective: 1000px;
-}*/
 .language-game {
     text-align: center;
     justify-content: space-around;
@@ -181,6 +179,7 @@ header {
 }
 
 /*----Game-cards-----*/
+
 .game-card {
     width: calc(30% - 5px);
     height: calc(45% - 5px); 
@@ -192,20 +191,13 @@ header {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: transform .5s;
-    /*-moz-transition: transform .5s;
-    -ms-transition: transform .5s;
-    -o-transition: transform .5s;*/
     transition: transform .5s;
 }
-
 
 .game-card:active {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
     -webkit-transition: transform .3s;
-    /*-moz-transition: transform .3s;
-    -ms-transition: transform .3s;
-    -o-transition: transform .3s;*/
     transition: transform .3s;
 }
 
@@ -276,14 +268,8 @@ header {
     background-color: #0CB1C4;
     
     -webkit-transition-delay: 500ms;
-    /*-moz-transition-delay: 500ms;
-    -ms-transition-delay: 500ms;
-    -o-transition-delay: 500ms;*/
     transition-delay: 500ms;
     -webkit-transition-property: animation-name;
-    /*-moz-transition-property: animation-name;
-    -ms-transition-property: animation-name;
-    -o-transition-property: animation-name;*/
     transition-property: animation-name;
     -webkit-animation-name: spin;
     animation-name: spin;
@@ -303,8 +289,8 @@ header {
     from {
         -webkit-transform: rotate(0deg);
         transform:rotate(0deg);
-        
     }
+
     to {
         -webkit-transform: rotate(360deg);
         transform:rotate(360deg);
@@ -318,7 +304,6 @@ header {
     display: block;
     justify-content: space-around;
     padding: 25px;
-   
 }
 
 .choose-subject {
@@ -398,21 +383,4 @@ header {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
     
-}
-
-
-
-
-/*----footer---
-
-footer {
-    background-color: #2B3D4B;
-    min-width:350px;
-    color: #40A3A7;
-    justify-content:space-evenly;
-}--*/
-
-.about.contact {
-    color: #40A3A7;
-
 }
