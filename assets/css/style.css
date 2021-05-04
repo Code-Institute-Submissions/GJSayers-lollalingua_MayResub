@@ -52,7 +52,6 @@ footer {
 
 .info {
     margin: 0%;
-    display: flexbox;
     overflow-y: auto;
     min-width: fit-content;
     justify-content: space-around;
