@@ -129,7 +129,8 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
   * I would like to add a languages general knowledge section to make the site more informative and keep the user engaged for longer. 
   * I would like to add sounds, and would have liked to have included these in the first implementation, but due to the board-freezing bug this was not possible within the time scale. 
 
-* Testing 
+### Testing 
+  ---
   *  Development & Pre-Deployment validation testing
   Throughout development, the site has been tested using the following tools;
   1)[Jigsaw W3 CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
@@ -146,7 +147,48 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 
   *  Peer-code review 
    The project was submitted to PeerCodeReview channel on the Code Institute's slack - Here it was identified that a bug that I thought has been fixed had mutated into another verion of the bug, forcing the user to choose two cards on the same language board after a matching pair occurred.
-  * User-testing
+  * User-Goal testing
+
+### Project Goals & Objectives 
+---
+* To provide a free memory game site that serves to;
+  1) **teach** the user basic language skills through memory learning. 
+    * The user is able to compare French and English or Italian and English names for animals or school items depending on game subject choice ✅ 
+  2) **give a fun learning experience** to the user. 
+    * The user gets encoraging feedback and registers acheivement by a fun star-styled scoring system.✅
+    * The user gets a fun spinning match effect on the matched pairs ✅
+    * There is excitement from having a countdown timer  ✅
+  3) **give feedback to the user** throughout the game by keeping track of **matching pairs** 
+    * Matching pairs are appended as a stars image for each matching pair in the info bar  ✅
+    * Total number of matching pairs is given in the Game-Over modal  ✅ 
+  4) **give a summary of play** to the user at the end of the game with **final score** and **turns taken**
+    * Game-Over modal contains the final score and the turns taken - There is a different message for whether the user has matched all pairs or only matched some. ✅
+
+### User Goals 
+---
+ * As a **Potential player of the game**, I want to;
+   1) Easily **engage with and receive feedback from interaction with the game** to feel comfortable with trying to learn a new language, and be encouraged along the way.  
+ * There are multiple interactions on the site;
+   * choices of which subject to play ✅
+   * flipping cards to display the potential pairs ✅
+   * info panel to give feeback on score,turn and countdown timer status ✅
+   * game-over modal to give feedback on the final outcome of the round played with option to start again ✅ 
+   2) Keep **track of progress** through a leaderboard, on-page scoring or similar. 
+   * Progress is tracked in the info panel to give feeback on score,turn and countdown timer status ✅
+   
+
+
+### Stakeholder Goals 
+---
+* To Provide a free language learning game;
+  1) To **provide a free game** with the potential for future development into a paid progressive learning app. 
+  
+
+### User Requirements and Expectations 
+---
+1) Responsive design for accessibility across a range of devices, with **primary focus on mobile devices** for quick and easy play access. 
+2) Minimal design for easy navigation.
+3) A clean and simple design that is **pleasant to interact with** and engaging with **bright colours** 
     * Devices & Browser Testing  
     The live project has been tested by friends, family and myself on the following devices:
        * Samsung A20e 
@@ -177,10 +219,10 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 
 ### Post-Deployment / Unresolved Bugs
 ---
- 1) Major issue with cards not clicking on mobile devices - despite adding webkits.  It was very challenging to get to the bottom of this, but in the end the problem was solved by looking at webkits in use on similar games **Fix** add webkit-backface-visibility: hidden; this was a property that had gone under my radar in terms of webkits.  The flipping function is now fully functional on the mobile devices listed in device and browser testing.  The game where I found the necessary webkits is a Pokemon card flipping came was by fellow student Kiran Satyarthy https://github.com/Kiran6248/MS2-PokemonGo;
- 2) At time of initial deployement 
+ 1) Major issue with cards not clicking on mobile devices - despite adding webkits.  It was very challenging to get to the bottom of this, but in the end the problem was solved by looking at webkits in use on similar games **Fix** add webkit-backface-visibility: hidden; this was a property that had gone under my radar in terms of webkits.  The flipping function is now fully functional on the mobile devices listed in device and browser testing.  The game where I found the necessary webkits is a Pokemon card flipping game was created by fellow student Kiran Satyarthy [Repo for the game here](https://github.com/Kiran6248/MS2-PokemonGo)
+ 2) At time of initial deployment 
 
-  ### Deployment 
+### Deployment 
 
 ---
 #### GitHub Pages
@@ -210,7 +252,6 @@ To make a copy of the repository, which may be necessary if you wish to make cha
    * Stars - Royalty-free stock vector image ID: 400731628 by [KSStar](https://www.shutterstock.com/it/g/K3Star)
    * Animals - Royalty-free stock vector image ID: 783342166 by [Biscuit Design](https://www.shutterstock.com/it/g/biscotto)
    * At School - Royalty-free stock illustration ID: 294169949 by [NextMarsMedia](https://www.shutterstock.com/it/g/NextMars)
-   * Cats - Royalty-free stock illustration ID: 1911434692 by [Vector Up] (https://www.shutterstock.com/it/g/hellolittleboy)
 
 
 ### Acknowledgements
