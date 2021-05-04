@@ -35,7 +35,7 @@ $(document).ready(function () {
                 $("#game-at-school").hide(1500); 
                 $("#game-animals").hide(1500);
                 $(".final-score").html(`Thanks for playing!  <br>
-                Point scored: ${matchedPairs} <br>
+                Points scored: ${matchedPairs} <br>
                 Turns taken: ${turns}  <br>
                 <img src="assets/images/scoring-images/star-point-removebg-preview.png" alt="stars-image"> <br>
                 Want to play again?`);
