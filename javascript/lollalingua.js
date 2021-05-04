@@ -14,16 +14,12 @@ $(document).ready(function () {
     // stores the chosen lanugage on selection using the flag language button 
     $('.language-button').on("click",function() {
     var lang = this.dataset.lang;
-    console.log(`DATASET LANG: ${lang}`);
     chooseLanguage(lang);
-    console.log("lang button click");
-
     });
 
     /* -----change language function --------*/
 
     function chooseLanguage(lang) {
-       
         if  (lang === 'french') {
             $("#in-modal-btn-animals, #in-modal-btn-school").on("click",function() {
             $(".language-game-it").hide();
@@ -33,7 +29,6 @@ $(document).ready(function () {
             $(".language-game-en").show();
             $("#language-game-en").show();
             });
-            console.log("chooseLanguagefr");
             
         } else if (lang === 'italian') {
             $("#in-modal-btn-school, #in-modal-btn-animals").on("click",function() {
@@ -46,21 +41,16 @@ $(document).ready(function () {
             });
             
             console.log("chooseLanguageit");
-        } else if (lang === 'english') {
-            console.log("chooseLanguageen");
-        }
-        console.log(`LANG: ${lang}`);
+        } else if (lang === 'english') 
         setLocalStorage(lang);
         }
     
-    /* -----store language in local storage --------*/
+    /* -----store language in local storage inspiration from https://github.com/Wings30306/jokeheyndelscv/blob/master/assets/js/language.js--------*/
     function setLocalStorage(lang) {
         let userLang = {
         lang: lang
         };
-        console.log(`USER LANG: ${Object.keys(userLang)}`);
         let languageChoice = JSON.stringify(userLang);
-        console.log(`LANG CHOICE: ${languageChoice}`);
         localStorage.setItem('languageChoice', languageChoice);
     }
 
@@ -82,7 +72,6 @@ $(document).ready(function () {
     }
 }
 checkLocalStorage();
-
 
 // get how to play modal using jquery click listner on play button
 $("#modal-play-btn").on("click",function() {
