@@ -49,12 +49,30 @@
             <button id="modal-start-play-btn" class="col-8 btn action-button">Start Play</button>
         </div>
     </section>
+        <!-- Scoring Section -->
+
+    <div class="row info">
+        <div class="col timer">
+            <span id="timer">Seconds Left:
+                <span id="time">60 </span> </span>
+
+        </div>
+        <div class="col turns">
+            <span class="turns">Turns:</span> <span id="turns">00
+            </span>
+        </div>
+        <div class="col score">
+            <span class="score">Score:</span> <span id="points">
+            </span>
+        </div>
+
+    </div>
 
     <!-- Game Board -->
     <!-- At School Game Section-->
 
     <section id="game-at-school" class="row language-game justify-content-center">
-        <section class="row language-game-en justify-content-center" data-lang="italian">
+        <section class="row language-game-en justify-content-center" data-lang="english">
             <div class="col-3 game-card game-card-en language-game-en" data-lang="english" data-ident="1" name="enCardInPlay">
                 <img class="card-front sharpener" src="assets/images/at-school-images/sharpener-text-en.png"
                     alt="sharpener-image">
@@ -159,31 +177,31 @@
 
         <!--Animals Game English Section-->
         <section class="row language-game-en justify-content-center">
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="1">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="1" name="enCardInPlay">
                 <img class="card-front cat" src="assets/images/animals-images/cat-text-en.png" alt="cat">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="2">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="2" name="enCardInPlay">
                 <img class="card-front dog" src="assets/images/animals-images/dog-text-en.png" alt="dog">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="3">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="3" name="enCardInPlay">
                 <img class="card-front lion" src="assets/images/animals-images/lion-text-en.png" alt="lion">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="4">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="4" name="enCardInPlay">
                 <img class="card-front monkey" src="assets/images/animals-images/monkey-text-en.png" alt="monkey">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="5">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="5" name="enCardInPlay">
                 <img class="card-front sheep" src="assets/images/animals-images/sheep-text-en.png" alt="sheep">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-en language-game-en" data-ident="6">
+            <div class="col-3 game-card game-card-en language-game-en" data-ident="6" name="enCardInPlay">
                 <img class="card-front tiger" src="assets/images/animals-images/tiger-text-en.png" alt="tiger">
                 <img class="card-back" src="assets/images/flag-images/british-flag.png" alt="flag-card-back">
             </div>
@@ -191,79 +209,62 @@
 
         </section>
         <section class="row language-game-it justify-content-center">
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="1">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="1" name="itCardInPlay">
                 <img class="card-front-it cat" src="assets/images/animals-images/cat-text-it.png" alt="cat">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="2">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="2" name="itCardInPlay">
                 <img class="card-front-it dog" src="assets/images/animals-images/dog-text-it.png" alt="dog">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="3">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="3" name="itCardInPlay">
                 <img class="card-front-it lion" src="assets/images/animals-images/lion-text-it.png" alt="lion">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="4">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="4" name="itCardInPlay">
                 <img class="card-front-it monkey" src="assets/images/animals-images/monkey-text-it.png" alt="monkey">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="5">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="5" name="itCardInPlay">
                 <img class="card-front-it sheep" src="assets/images/animals-images/sheep-text-it.png" alt="sheep">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-it language-game-it" data-ident="6">
+            <div class="col-3 game-card game-card-it language-game-it" data-ident="6" name="itCardInPlay">
                 <img class="card-front-it tiger" src="assets/images/animals-images/tiger-text-it.png" alt="tiger">
                 <img class="card-back-it" src="assets/images/flag-images/italy-flag.png" alt="flag-card-back">
             </div>
         </section>
         <section class="row language-game-fr justify-content-center">
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="1">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="1" name="frCardInPlay">
                 <img class="card-front-fr cat" src="assets/images/animals-images/cat-text-fr.png" alt="cat">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="2">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="2" name="frCardInPlay">
                 <img class="card-front-fr dog" src="assets/images/animals-images/dog-text-fr.png" alt="dog">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="3">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="3" name="frCardInPlay">
                 <img class="card-front-fr lion" src="assets/images/animals-images/lion-text-fr.png" alt="lion">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="4">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="4" name="frCardInPlay">
                 <img class="card-front-fr monkey" src="assets/images/animals-images/monkey-text-fr.png" alt="monkey">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="5">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="5" name="frCardInPlay">
                 <img class="card-front-fr sheep" src="assets/images/animals-images/sheep-text-fr.png" alt="sheep">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
 
-            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="6">
+            <div class="col-3 game-card game-card-fr language-game-fr" data-ident="6" name="frCardInPlay">
                 <img class="card-front-fr tiger" src="assets/images/animals-images/tiger-text-en.png" alt="tiger">
                 <img class="card-back-fr" src="assets/images/flag-images/french-flag.png" alt="flag-card-back">
             </div>
         </section>
     </section>
 
-    <!-- Scoring Section -->
 
-    <div class="row info">
-        <div class="col timer">
-            <span id="timer">Seconds Left:
-                <span id="time">60 </span> </span>
-
-        </div>
-        <div class="col turns">
-            <span class="turns">Turns:</span> <span id="turns">00
-            </span>
-        </div>
-        <div class="col score">
-            <span class="score">Score:</span> <span id="points">
-            </span>
-        </div>
-
-    </div>
 
 
     <!-- How to Play Modal -->
@@ -297,9 +298,6 @@
                 <div class="col-xs lang-button-it language-button italian" id="lang-button-it" data-lang="italian"> <img alt="italian-flag"
                         src="assets/images/flag-images/italy-flag-removebg-preview.png">
                 </div>
-                <!--<div class="col-xs lang-button-en language-button english" id="lang-button-en" data-lang="english"> <img alt="british-flag"
-                        src="assets/images/flag-images/british-flag-removebg-preview.png">
-                </div>-->
             </div>
         </div>
     </div>
@@ -333,6 +331,10 @@
 
 
     <!--Footer Section-->
+
+    <footer>
+contact for more info
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
