@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#go-fr").hide();
 
     // stores the chosen lanugage on selection using the flag language button 
-    $('.language-button').on("click",function(event) {
+    $('.language-button').on("click",function() {
     var lang = this.dataset.lang;
     console.log(`DATASET LANG: ${lang}`);
     chooseLanguage(lang);
@@ -89,6 +89,7 @@ $("#modal-play-btn").on("click",function() {
     $(".play-modal").css('display', 'block');
     $(".welcome-message").hide(1000);
     $(".welcome").hide(1000);
+    $("#footer").hide(1000);
     });
 // get language modal to make lanugage choice by pressing 'choose language' button
 $("#modal-lang-btn").on("click",function() {
@@ -112,6 +113,7 @@ $("#modal-start-play-btn").on("click",function() {
     $(".welcome-message").hide();
     $(".welcome").hide();
     $(".welcome-section").hide();
+    $("#footer").hide(1000);
     });  
     
 // closes the modals
@@ -123,6 +125,7 @@ $(".close-btn").on("click",function() {
     $("#game-over-modal").css('display', 'none');
     $(".welcome-message").show(1000);
     $(".welcome").show(1000);
+    $("#footer").show(1000);
 });
 
 // closes the game over modal and re-starts the game / reloads index
