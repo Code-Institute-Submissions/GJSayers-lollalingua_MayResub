@@ -12,7 +12,7 @@ View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalin
 ## Contents 
 ---
 * UX
-    * [Project Goals & Objectives](### Project Goals & Objectives) 
+    * Project Goals & Objectives
     * User Goals
     * Stakeholder Goals 
     * User Requirements and Expectations 
@@ -156,15 +156,18 @@ The project was submitted to PeerCodeReview channel on the Code Institute's slac
 * To provide a free memory game site that serves to;
 1) **teach** the user basic language skills through memory learning. 
 * The user is able to compare French and English or Italian and English names for animals or school items depending on game subject choice ✅ 
+![Screenshot here](assets/images/screenshots/lollalingua-language-choice.png)
 2) **give a fun learning experience** to the user. 
 * The user gets encoraging feedback and registers acheivement by a fun star-styled scoring system.✅
 * The user gets a fun spinning match effect on the matched pairs ✅
 * There is excitement from having a countdown timer  ✅
+![Screenshot here](assets/images/screenshots/lollalingua-game-play.png)
 3) **give feedback to the user** throughout the game by keeping track of **matching pairs** 
 * Matching pairs are appended as a stars image for each matching pair in the info bar  ✅
 * Total number of matching pairs is given in the Game-Over modal  ✅ 
 4) **give a summary of play** to the user at the end of the game with **final score** and **turns taken**
 * Game-Over modal contains the final score and the turns taken - There is a different message for whether the user has matched all pairs or only matched some. ✅
+![Screenshot here](assets/images/screenshots/lollalingua-game-over.png)
 
 ##### User Goals 
 ---
@@ -192,6 +195,7 @@ The project was submitted to PeerCodeReview channel on the Code Institute's slac
 2) Minimal design for easy navigation.
 * The game design has been simplified throughout the development process and condensed onto a single page with the use of buttons and modals to guide the user journey. ✅ 
 * Leaving only clear, clean calls-to action and minimised content for a simplified experience. ✅ 
+![Screenshot here](assets/images/screenshots/lollalingua-how-to-play.png)
 3) A clean and simple design that is **pleasant to interact with** and engaging with **bright colours** 
 * Now that all remaining bugs are resolved, the game envokes a pleasant user experience. ✅
 * The user is prevented from choosing two cards from the same language and is made aware of the differences between the boards by the use of flag imagery. ✅ 
@@ -232,7 +236,16 @@ Towards the later stages of development and pre-submission, tests on the above-m
 ### Post-Deployment / Unresolved Bugs
 ---
 1) Major issue with cards not clicking on mobile devices - despite adding webkits.  It was very challenging to get to the bottom of this, but in the end the problem was solved by looking at webkits in use on similar games **Fix** add webkit-backface-visibility: hidden; this was a property that had gone under my radar in terms of webkits.  The flipping function is now fully functional on the mobile devices listed in device and browser testing.  The game where I found the necessary webkits is a Pokemon card flipping game was created by fellow student Kiran Satyarthy repository [epository](https://github.com/Kiran6248/MS2-PokemonGo)
-2) At time of initial deployment 
+2) At time of initial deployment bug with flipping one card from each deck as detailed above. 
+3) Code validator from w3 html picked up on h tags missing from sections but these are addressed by the simple design. 
+4) name attributes in the report from w3 html were picked up - these were a hangover from trying to address the flipping issue, and have now been removed
+5) CSS validator picked up on the webkits, but some internet research proved that this is a common alert and that the usefulness of the extentions outweighs the removal - In this case without them the game did not function on mobile. 
+6) a rogue flexbox diplay was found as an error and removed. 
+7) A few syntactical suggestions were found in jshint, but nothing notable - at time of final submission no errors are present in the javascripts. 
+8) A final check on google lighthouse gave very positive results - as you can see here, everything is 90% or higher.  It did however highlight that I did not create a 404 - I simple ran out of time and will create in the next iteration. 
+![Screenshot](testing/code-validation/lighthouse-testing-final.png)
+
+* Again, testing docs can be found ![here](testing)
 
 ### Deployment 
 
