@@ -7,7 +7,7 @@ View the live project [Lollalingua](https://gjsayers.github.io/lollalingua/)
 
 View the repository in GitHub [Lollalingua](https://github.com/GJSayers/lollalingua)
 
-![Screenshot here](assets/images/screenshots)
+![Screenshot here](assets/images/screenshots/lollalingua-homepage.png)
 
 ## Contents 
 ---
