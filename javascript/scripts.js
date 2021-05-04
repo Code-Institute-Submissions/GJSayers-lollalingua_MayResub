@@ -13,7 +13,7 @@ $(document).ready(function () {
         console.log(turns);
         matchedPairs = [];
         console.log(matchedPairs);
-        $(".game-card").removeClass(".matched");
+        
         secondsLeft = 60;
     }
     // checks if countdownTimer should be called by validating the number of turns played (two revealed cards = 1 turn and the start of the timer)
@@ -61,7 +61,7 @@ $(document).ready(function () {
             // populates the info div with the countdown seconds. 
             $('#time').text(secondsLeft);
             secondsLeft -= 1;
-            }, 1000);
+            }, 5000);
             }
             
             // reloads the page to play again
@@ -74,6 +74,8 @@ $(document).ready(function () {
             $('#turns').text(turns);
             console.log(turns);
             validateTimer();
+            
+                console.log("call board check");
             }
 
             // shuffles English cards so they are not always displayed in the same format, and not next to each other in pairs 
@@ -125,71 +127,86 @@ $(document).ready(function () {
 
         // activates on boardCheck(); based on first card turned to ensure that second card flipped cannot be from the English board
         function freezeEnBoard() {
-            if ((enCardInPlay >= 1) && (gameCardsEn)) {
+            setTimeout(() => {
+            console.log("freezeEnBoard");
+            if (enCardInPlay >= 1)  {
                 $(".game-card-en").off("click", playGame);
-                $(".game-card-fr").on("click", playGame);
-                $(".game-card-it").on("click", playGame);
-            }     
+                //$(".game-card-fr").on("click", playGame);
+                //$(".game-card-it").on("click", playGame);
+            }  }, 100);   
         }
         // activates on boardCheck(); based on first card turned to ensure that second card flipped cannot be from the French board
         function freezeFrBoard() {
-            if ((frCardInPlay >= 1) && (gameCardsFr)) {
+            setTimeout(() => {
+            console.log("freezeFrBoard");
+            if (frCardInPlay >= 1) {
                 $(".game-card-fr").off("click", playGame);
-                $(".game-card-en").on("click", playGame);
-                $(".game-card-it").on("click", playGame);
-            }
+                //$(".game-card-en").on("click", playGame);
+               // $(".game-card-it").on("click", playGame);
+            } }, 100);
         }
         // activates on boardCheck(); based on first card turned to ensure that second card flipped cannot be from the Italian board
         function freezeItBoard() {
-            if ((itCardInPlay >= 1) && (gameCardsIt)) {
+            console.log("freezeItBoard");
+            setTimeout(() => {
+            if (itCardInPlay >= 1)  {
                 $(".game-card-it").off("click", playGame);
-                $(".game-card-en").on("click", playGame);
-                $(".game-card-fr").on("click", playGame);
-            }
+                //$(".game-card-en").on("click", playGame);
+                //$(".game-card-fr").on("click", playGame);
+            } }, 100);
         }
         // Checks which board the first card flipped is - Adds to the Cards in play lists for reference in freezeBoard functions
         function boardCheck() {
-        if (cardOne.classList.contains("game-card-en") && (!cardTwo)) {
+            console.log("boardCheck");
+            setTimeout(() => {
+        if (cardOne.classList.contains("game-card-en")) {
             enCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeEnBoard();
-            console.log("freezeEnBoard");   
-        } else if  (cardOne.classList.contains("game-card-fr") && (!cardTwo)) {
+            console.log("call freezeEnBoard");   
+        } else if  (cardOne.classList.contains("game-card-fr")) {
             frCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeFrBoard();
-            console.log("freezeFrBoard");   
-        } else if  (cardOne.classList.contains("game-card-it") && (!cardTwo)) {
+            console.log(" call freezeFrBoard");   
+        } else if  (cardOne.classList.contains("game-card-it")) {
             itCardInPlay++;
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
             freezeItBoard();  
-            console.log("freezeItBoard");      
-        }   
+            console.log("call freezeItBoard");      
+        }   }, 100);
         }
 
         function clearCardInPlay(){
-            if ((itCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
-                itCardInPlay-- ;
-                $(".game-card-en").on("click",playGame);
-                $(".game-card-fr").on("click",playGame);
+            setTimeout(() => {
+            if (itCardInPlay >= 1)  {
+                itCardInPlay = [];
+                
+                $(".matched").off("click");
                 $(".game-card-it").on("click",playGame);
 
-            } else if ((enCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
-                enCardInPlay-- ;
+            } else if (enCardInPlay >= 1) {
+                enCardInPlay = [];
+                $(".matched").off("click");
                 $(".game-card-en").on("click",playGame);
+                
+
+            } else if (frCardInPlay >= 1)  {
+                frCardInPlay = [];
+                $(".matched").off("click");
                 $(".game-card-fr").on("click",playGame);
-                $(".game-card-it").on("click",playGame);
-            } else if ((frCardInPlay >= 1) && (!document.getElementsByClassName('matched'))) {
-                frCardInPlay-- ;
-                $(".game-card-en").on("click",playGame);
-                $(".game-card-fr").on("click",playGame);
-                $(".game-card-it").on("click",playGame);
+                
+                
             }
+        
+    }, 100);
+            console.log("clearCardInPlay");
             console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
         }
             
         // this funtion checks if cards are valid to play,  adds a flip class to cards that are valid, and also identifies which are first and second cards in play, then calls isPair. 
         function playGame() {
+            console.log("playGame");
             if (freezePlay) return;
             if (this === cardOne) return;
             $(this).addClass("flip");
@@ -198,19 +215,24 @@ $(document).ready(function () {
             if (!isFlippedCard) {
                 isFlippedCard = true;
                 cardOne = this;
+                console.log("cardONe = this");
                 turns++;
                 console.log(turns);
                 turnsCounter();
-                console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
                 boardCheck();
-                console.log("board check");
+                console.log("call boardCheck");
+                console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
+                //clearCardInPlay();
                 // If this is the second flip of a turn, activates isPair(); and clearCardInPlay(); to decrement the card in play lists
                 } else {
                     isFlippedCard = false;
                     cardTwo = this;
-                    isPair();
-                    console.log("is pair");
+                    console.log("cardTwo = this");
                     clearCardInPlay();
+                    console.log("call clearCardInPlay");
+                    isPair();
+                    console.log("call is pair");
+                    
                     console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
                 }
             }
@@ -222,6 +244,7 @@ $(document).ready(function () {
 
             // Compares cards one and two to see if they are a match based on the data-ident (identifier) in the html. If the cards are a matched, matched class is added, matchedPairs list increments and disableCardClick(); prevents further play for a matched pair in this round, else unFlipCards is called to return face down. 
             function isPair() {
+                console.log("is pair");
                 if (cardOne.dataset.ident === cardTwo.dataset.ident) {
                     cardOne.classList.add("matched");
                     cardTwo.classList.add("matched");
@@ -229,29 +252,36 @@ $(document).ready(function () {
                     matchedPairs++;
                     // matched pairs 
                     console.log(matchedPairs);
+                    
                     console.log(enCardInPlay,frCardInPlay,itCardInPlay);
                     disableCardClick();
                     console.log("disableCardClick");
                     scoreCounter(); // initites the score counter on load
-                    clearCardInPlay(); // adds the click back on to frozen boards
+                    //clearCardInPlay(); // adds the click back on to frozen boards
                     console.log("scoreCounter");
-                    //continuePlay();
+                    //clearCardInPlay();
+                    //console.log("call clearcardinplay" );
                 } else {
                     unFlipCards();
                     console.log("unflip cards");
                     console.log(enCardInPlay,frCardInPlay,itCardInPlay, "cards in play");
-                    clearCardInPlay(); // adds the click back on to frozen boards
-                    console.log("clearCardInPlay");
+                    //clearCardInPlay(); // adds the click back on to frozen boards
+                    //console.log("clearCardInPlay");
                 }
             }
 
             // prevents further play for a matched pair in this round
             function disableCardClick() {
-                $(".matched").off("click", playGame);
-            }
+                   setTimeout(() => {
+                $(".matched").off("click", clearCardInPlay);
+                console.log("call clearCardInPlay");
+                
+            }, 500);}
 
             // returns cards to original un-flipped state after displaying for a short period of time and stops further cards being clicked in the meantime
             function unFlipCards() {
+                clearCardInPlay();
+                console.log("call clearcardinplay");
                 freezePlay = true;
                 setTimeout(() => {
                     cardOne.classList.remove("flip");
@@ -266,5 +296,11 @@ $(document).ready(function () {
                 freezePlay = false;
                 cardOne = null;
                 cardTwo = null;
-            }
+                /*enCardInPlay = [];     // to identify how many English cards are in play and avoid two flipping in any given turns
+                frCardInPlay = [];     // to identify how many French cards are in play and avoid two flipping in any given turns
+                itCardInPlay = []; */    // to identify how many Italian cards are in play and avoid two flipping in any given turns
+                //clearCardInPlay();
+                //console.log("call clearcardinplay");
+                }
+            
     });
